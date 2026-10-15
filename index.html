@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Galle Builder">
+  <meta name="theme-color" content="#1d2330">
+  <title>Galle Builder</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icones/apple-touch-icon.png">
+  <link rel="icon" href="icones/icone-192.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topo">
+    <a href="#/" class="marca" aria-label="Início">
+      <span class="logo-bloco" aria-hidden="true"></span>
+      <span>Galle Builder</span>
+    </a>
+    <span id="topo-kit" class="topo-kit"></span>
+  </header>
+  <main id="tela"></main>
+  <footer class="rodape">
+    Colégio Galle · Laboratório de Robótica · <a href="#/professor">Área do professor</a><br>
+    Lista de peças e imagens: <a href="https://rebrickable.com" target="_blank" rel="noopener">Rebrickable</a>. LEGO® é marca do Grupo LEGO, que não patrocina este site.
+  </footer>
+
+  <script src="dados/kits.js"></script>
+  <script src="dados/inventario.js"></script>
+  <script src="dados/desafios.js"></script>
+  <script src="dados/ideias_prime.js"></script>
+  <script src="dados/ideias_essential.js"></script>
+  <script src="dados/ideias_ev3.js"></script>
+  <script src="app.js"></script>
+  <script>
+    // Funciona offline depois do primeiro acesso (só em https ou localhost)
+    if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(() => {});
+  </script>
+</body>
+</html>
