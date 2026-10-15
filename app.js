@@ -232,7 +232,7 @@ function abaIdeias(el, amb, idIdeia, caminho, fira) {
   function desenhar() {
     lista.innerHTML = ideias.filter((i) => !nivel || i.nivel === nivel).map((i) => `
       <a class="card-ideia" href="${caminho}?aba=${aba}&ideia=${i.id}">
-        <span class="nivel">${i.missao ? `<b class="selo-prova">${i.missao.prova === "todas" ? "Treino" : i.missao.prova}</b> ` : ""}${"★".repeat(i.nivel)}${"☆".repeat(3 - i.nivel)} ${NIVEIS[i.nivel]} · ${i.tempo} min</span>
+        <span class="nivel">${i.missao ? `<b class="selo-prova">${i.missao.prova === "todas" ? "Treino" : provasDe(i).join(" + ")}</b> ` : ""}${"★".repeat(i.nivel)}${"☆".repeat(3 - i.nivel)} ${NIVEIS[i.nivel]} · ${i.tempo} min</span>
         <strong>${esc(i.titulo)}</strong>
         <span>${esc(i.resumo)}</span>
         <span class="chips">${(i.tags || []).map((t) => `<span class="chip">${esc(t)}</span>`).join("")}</span>
@@ -275,41 +275,93 @@ function htmlBlocos(lista) {
     </div>`).join("");
 }
 
-function htmlProgramacao(i) {
-  const portas = Object.entries(i.portas || {}).map(([p, d]) =>
+// Tempo de cada prova (segundos) para o "modo prova"
+const TEMPO_PROVA = { M1: 90, M2: 180, M3: 120, M4: 120 };
+// Uma ideia pode servir a mais de uma prova (missao.provas); cada estratégia pode dizer a sua (bloco.prova)
+const provasDe = (i) => (i.missao.provas || [i.missao.prova]);
+const fmtTempo = (s) => (s >= 60 ? `${Math.floor(s / 60)}min${s % 60 ? String(s % 60).padStart(2, "0") : ""}` : `${s} s`);
+
+function htmlPortas(portas) {
+  return Object.entries(portas || {}).map(([p, d]) =>
     `<span class="porta-item"><span class="porta">${p}</span> ${esc(curto(d))}</span>`).join("");
+}
+
+// Modo prova: zera o cronômetro na largada e acrescenta uma 2ª pilha que para tudo no fim do tempo.
+function comModoProva(lista, portas, prova) {
+  const t = TEMPO_PROVA[prova];
+  const motores = Object.entries(portas || {}).filter(([, d]) => d.startsWith("Motor")).map(([p]) => p);
+  const principal = [lista[0], { t: "sensor", txt: "zerar cronômetro" }, ...lista.slice(1)];
+  const fim = [
+    { t: "evento", txt: `quando cronômetro for maior que ${t} segundos (fim da prova ${prova}: ${fmtTempo(t)})` },
+    ...motores.map((p) => ({ t: "motor", txt: `parar motor {${p}}` })),
+    { t: "luz", txt: "mostrar FIM nas luzes / tela do hub" },
+    { t: "controle", txt: "parar e sair do programa" }
+  ];
+  return { principal, fim };
+}
+
+function htmlPilhas(lista, portas, prova, modo) {
+  if (!modo) return `<div class="blocos">${htmlBlocos(lista)}</div>`;
+  const { principal, fim } = comModoProva(lista, portas, prova);
+  return `<div class="blocos">${htmlBlocos(principal)}</div>
+    <p class="dica">E, separada, esta pilha (ela roda ao mesmo tempo):</p>
+    <div class="blocos pilha-fim">${htmlBlocos(fim)}</div>`;
+}
+
+function htmlProgramacao(i) {
+  const tempo = i.missao && TEMPO_PROVA[i.missao.prova];
+  const varias = i.missao && provasDe(i).length > 1;
   return `
     ${i.missao ? `<div class="aviso-calibrar">⚠ Os números dos blocos são exemplos: <b>calibre na arena real</b>.</div>` : ""}
-    <div class="portas-lista"><b>Ligue assim:</b> ${portas}</div>
+    ${i.robo2 ? "" : `<div class="portas-lista"><b>Ligue assim:</b> ${htmlPortas(i.portas)}</div>`}
     <div class="filtros" role="tablist">
       ${i.blocos.map((s, k) => `<button class="filtro" data-estr="${k}" aria-pressed="${k === 0}">${esc(s.estrategia)}</button>`).join("")}
     </div>
+    ${tempo ? `<label class="opcao modo-prova"><input type="checkbox" id="modo-prova">
+      ${varias ? "Modo prova: cronômetro com o tempo da prova de cada estratégia, que para o robô no fim"
+        : `Modo prova: cronômetro de ${fmtTempo(tempo)} que para o robô no fim do tempo`}</label>` : ""}
     <div id="estrategia"></div>
-    <p class="dica">Os nomes dos blocos podem mudar um pouco conforme a versão do app SPIKE.</p>`;
+    <p class="dica">Os nomes dos blocos podem mudar um pouco conforme a versão do app SPIKE / EV3 Classroom.</p>`;
 }
 
 function ligarEstrategias(el, i) {
   const caixa = el.querySelector("#estrategia");
+  const chk = el.querySelector("#modo-prova");
+  let atual = 0;
   const mostrar = (k) => {
+    atual = k;
     const s = i.blocos[k];
+    const prova = s.prova || (i.missao && i.missao.prova);
+    const modo = !!(chk && chk.checked);
+    const robo = (titulo, portas, lista) => `
+      <div class="robo-bloco">
+        <h4>${esc(titulo)}</h4>
+        <div class="portas-lista"><b>Ligue assim:</b> ${htmlPortas(portas)}</div>
+        ${htmlPilhas(lista, portas, prova, modo)}
+      </div>`;
     caixa.innerHTML = `
       <p class="estr-desc">${esc(s.descricao)}</p>
-      <div class="blocos">${htmlBlocos(s.lista)}</div>
+      ${i.robo2
+        ? `<div class="dois-robos">${robo(i.robo1_titulo || "Robô 1", i.portas, s.lista)}${robo(i.robo2.titulo, i.robo2.portas, s.lista2)}</div>`
+        : htmlPilhas(s.lista, i.portas, prova, modo)}
+      ${modo ? `<p class="dica">Dica: se o juiz para o tempo exatamente no fim, use 1 ou 2 segundos a menos no cronômetro.</p>` : ""}
       <div class="ajustes"><b>O que ajustar e calibrar:</b><ul>${s.ajustes.map((a) => `<li>${esc(a)}</li>`).join("")}</ul></div>`;
     el.querySelectorAll("[data-estr]").forEach((b) => b.setAttribute("aria-pressed", b.dataset.estr === String(k)));
   };
   el.querySelectorAll("[data-estr]").forEach((b) => { b.onclick = () => mostrar(Number(b.dataset.estr)); });
+  if (chk) chk.onchange = () => mostrar(atual);
   mostrar(0);
 }
 
 function detalheIdeia(el, i, caminho, aba = "ideias") {
-  const mod = (window.MODELOS3D || {})[i.id];
+  const mod = (window.MODELOS3D || {})[i.modelo3d || i.id];
   const separar = (lista) => lista.map(([nome, q]) => `
     <label class="separar"><input type="checkbox"><span><b>${q}×</b> ${esc(nome)}</span></label>`).join("");
   const itens = (lista) => lista.map((t) => `<li>${esc(t)}</li>`).join("");
   const listaPecas = mod
     ? `<p class="dica">Lista exata do modelo 3D. Marque cada peça quando tirar da maleta.</p>
-       <div class="lista-separar">${separar(pecasDoModelo(mod, i.kit))}</div>`
+       <div class="lista-separar">${separar(pecasDoModelo(mod, i.kit))}${(mod.extras || []).map(([nome, q, motivo]) => `
+         <label class="separar"><input type="checkbox"><span><b>${q}×</b> ${esc(nome)}<small>Não aparece no 3D: ${esc(motivo)}</small></span></label>`).join("")}</div>`
     : `<p class="dica">Marque cada peça quando tirar da maleta. São as principais: pode precisar de mais pinos e buchas.</p>
        <div class="lista-separar">${separar(i.eletronica)}${separar(i.pecas)}</div>`;
   const impressas = (i.pecas_impressas || []).length
@@ -319,11 +371,11 @@ function detalheIdeia(el, i, caminho, aba = "ideias") {
     : "";
   const missao = i.missao
     ? `<div class="caixa-missao">
-         <b>${i.missao.prova === "todas" ? "Robô de treino" : "Prova " + i.missao.prova} · ${esc((PROVAS_FIRA[i.missao.prova] || {}).nome || "")}</b>
+         <b>${i.missao.prova === "todas" ? "Robô de treino" : (provasDe(i).length > 1 ? "Provas " : "Prova ") + provasDe(i).join(" + ")} · ${esc(provasDe(i).map((p) => (PROVAS_FIRA[p] || {}).nome || "").join(" / "))}</b>
          <span>${esc(i.missao.parte)}</span>
          <span><b>Pontos:</b> ${esc(i.missao.pontos)}</span>
          ${i.medidas_cm ? `<span><b>Tamanho estimado:</b> ${i.medidas_cm.map((n) => String(n).replace(".", ",")).join(" x ")} cm
-           (limite: ${esc((PROVAS_FIRA[i.missao.prova] || {}).limite || "")}). Meça o robô pronto!</span>` : ""}
+           (limite: ${esc(provasDe(i).map((p) => (provasDe(i).length > 1 ? p + " " : "") + ((PROVAS_FIRA[p] || {}).limite || "")).join("; "))}). Meça o robô pronto!</span>` : ""}
        </div>`
     : "";
   const montar = mod

@@ -1,0 +1,165 @@
+{
+ "passos": [
+  "Base: quadro 11x15 deitado.",
+  "Motores médios embaixo do quadro, na frente, presos com 2 pinos cada (portas A e B).",
+  "Rodas grandes: eixo de 5 na saída de cada motor.",
+  "Atrás, embaixo: viga de 3 + 2 pinos longos + rodízio com a bola. Sensor de cor ao lado (porta D), olhando o chão.",
+  "Duas vigas de 11 atravessadas em cima do quadro (uma no meio, uma atrás).",
+  "Hub em cima das vigas, mais para trás, preso com 8 pinos.",
+  "Na frente: duas vigas em L 3x5 deitadas, saindo para frente do quadro (2 pinos cada).",
+  "Torre: dois quadros 5x7 em pé em cima das vigas em L, presos por baixo com 2 pinos cada.",
+  "Motor grande (porta C) de pé ao lado da torre, preso numa viga de 5 (espaçador). Eixo de 7 com a engrenagem de 12 dentes entre os quadros.",
+  "Carrinho: cremalheira IMPRESSA (dentes para trás) presa na viga de 15 da frente com 2 pinos.",
+  "No alto do carrinho: viga conectora 3x3 em pé (2 pinos).",
+  "Braço: vigas em L 3x5 dos dois lados da viga conectora (2 pinos cada).",
+  "Vigas de 9 por dentro das vigas em L, indo para frente (2 pinos cada).",
+  "Garras: 4 vigas de 7 penduradas na frente das vigas de 9 (2 pares), presas no 2º furo (elas giram). Passe um elástico em volta de cada par.",
+  "Sensor de distância (porta E) embaixo, à esquerda: viga conectora 3x3 em pé na face da frente do quadro e o sensor ao lado."
+ ],
+ "pecas": [
+  [
+   "32073",
+   71,
+   2
+  ],
+  [
+   "32270",
+   0,
+   1
+  ],
+  [
+   "32278",
+   0,
+   1
+  ],
+  [
+   "32316",
+   26,
+   1
+  ],
+  [
+   "32523",
+   14,
+   1
+  ],
+  [
+   "32524",
+   322,
+   4
+  ],
+  [
+   "32525",
+   26,
+   2
+  ],
+  [
+   "32526",
+   322,
+   4
+  ],
+  [
+   "3713",
+   71,
+   1
+  ],
+  [
+   "37308",
+   15,
+   1
+  ],
+  [
+   "37316",
+   15,
+   1
+  ],
+  [
+   "39367pat0001",
+   0,
+   2
+  ],
+  [
+   "39370",
+   322,
+   1
+  ],
+  [
+   "39790",
+   322,
+   1
+  ],
+  [
+   "39793",
+   26,
+   2
+  ],
+  [
+   "40490",
+   0,
+   2
+  ],
+  [
+   "44294",
+   14,
+   1
+  ],
+  [
+   "45601",
+   14,
+   1
+  ],
+  [
+   "52629",
+   15,
+   1
+  ],
+  [
+   "54675",
+   322,
+   1
+  ],
+  [
+   "54696",
+   322,
+   2
+  ],
+  [
+   "61332",
+   0,
+   50
+  ],
+  [
+   "64179",
+   0,
+   2
+  ],
+  [
+   "6558",
+   1,
+   2
+  ]
+ ],
+ "impressas": [
+  [
+   "64781",
+   25,
+   1
+  ]
+ ],
+ "extras": [
+  [
+   "Elástico 33 mm",
+   2,
+   "um em volta de cada par de garras, embaixo: mantém a pinça fechada."
+  ],
+  [
+   "Viga 3 furos (batente)",
+   1,
+   "presa no alto da torre: quando o carrinho sobe, as pontas de cima das garras batem nela e a pinça abre. Ajuste a altura na prática."
+  ]
+ ],
+ "caixa_cm": [
+  23.1,
+  15.6,
+  14.2
+ ]
+}

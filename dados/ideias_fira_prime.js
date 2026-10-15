@@ -11,29 +11,29 @@ window.IDEIAS = (window.IDEIAS || []).concat([
   "tempo": 100,
   "tags": ["FIRA M1", "cremalheira impressa", "pá"],
   "missao": {"prova": "M1", "parte": "Percurso até a linha vermelha + levar 3 pneus empilhados", "pontos": "Mira 50 (linha vermelha) + 25 por linha de progressão + 200 (3 pneus)"},
-  "medidas_cm": [20.5, 14.4, 13],
-  "resumo": "Robô baixo e estreito (cabe em meia folha A4) com uma pá na frente que sobe e desce numa cremalheira. A pá entra embaixo da pilha de pneus, levanta só a frente e leva tudo até a linha vermelha.",
+  "medidas_cm": [18.3, 13.2, 13.6],
+  "resumo": "Robô estreito (cabe em meia folha A4) com uma pá na frente que sobe e desce numa cremalheira impressa. A pá empurra a pilha de pneus rente ao chão ou levanta um pouco a frente dela. Tem montagem em 3D passo a passo.",
   "aprende": "Cremalheira e pinhão: o giro do motor vira movimento reto (sobe e desce). E a regra da prova: no máximo metade do pneu pode ficar dentro do robô.",
-  "pecas": [["Quadro 7x11", 1], ["Viga 15 furos", 2], ["Viga 9 furos", 2], ["Viga 7 furos", 2], ["Viga em L 3x5", 2], ["Painel 3x11", 2], ["Engrenagem 12 dentes dupla cônica", 2], ["Eixo 9", 1], ["Bucha", 4], ["Pino com atrito", 34], ["Pino longo com atrito", 6], ["Roda 57 x 14 com pneu", 2], ["Viga 3x5 com bola giratória", 1], ["Bola 19 mm", 1]],
-  "pecas_impressas": [["Cremalheira LEGO impressa 3D (cópia da 64781)", 2, "testada e aprovada em 15/10/2026. Uma de cada lado da pá, presas em pé nas vigas de 9."]],
+  "pecas": [["Eixo 5", 2], ["Engrenagem 12 dentes dupla cônica", 1], ["Viga 15 furos", 1], ["Viga 5 furos", 1], ["Viga 3 furos", 1], ["Viga 11 furos", 3], ["Viga em L 3x5", 2], ["Bucha", 1], ["Roda 57 x 14 com pneu", 2], ["Viga 3x5 com bola giratória", 1], ["Quadro 11x15", 1], ["Eixo 7", 1], ["Bola 19 mm", 1], ["Viga em T 3x3", 1], ["Pino com atrito", 36], ["Quadro 5x7", 2], ["Pino longo com atrito", 3]],
+  "pecas_impressas": [["Cremalheira LEGO impressa 3D (cópia da 64781)", 1, "testada e aprovada em 15/10/2026. Em pé no meio da torre, dentes para trás (no pinhão)."]],
   "eletronica": [["Hub grande SPIKE (6 portas)", 1], ["Motor médio SPIKE", 2], ["Motor grande SPIKE", 1], ["Sensor de cor SPIKE", 1], ["Sensor de distância SPIKE", 1]],
   "portas": {"A": "Motor médio SPIKE", "B": "Motor médio SPIKE", "C": "Motor grande SPIKE", "D": "Sensor de cor SPIKE", "E": "Sensor de distância SPIKE"},
   "passos": [
-    "Base: quadro 7x11 deitado, um motor médio de cada lado (portas A e B) com as rodas grandes. Largura máxima: 18 furos (14,4 cm).",
-    "Rodízio atrás (viga com bola giratória + bola). O robô inteiro não pode passar de 26 furos de comprimento (21 cm) com a pá.",
-    "Na frente, duas vigas de 9 em pé. Prenda uma cremalheira impressa em cada uma, com os dentes para dentro.",
-    "Pá: dois painéis 3x11 presos numa viga de 15. Ela desliza entre as vigas em pé.",
-    "Motor grande (porta C) gira um eixo de 9 com duas engrenagens de 12 dentes, uma em cada cremalheira: a pá sobe reto, sem entortar.",
-    "Sensor de cor (D) embaixo, a 1 cm do chão, e sensor de distância (E) acima da pá, olhando para frente."
+    "Base: quadro 11x15 deitado, motores médios A e B embaixo com as rodas na frente, rodízio e sensor de cor (D) atrás, hub mais para trás.",
+    "Torre na frente: duas vigas em L 3x5 deitadas e dois quadros 5x7 em pé. Confira: no máximo 21 x 14,8 cm com a pá.",
+    "Motor grande (C) de pé ao lado da torre; eixo de 7 com a engrenagem de 12 dentes na coluna de trás dos quadros.",
+    "Carrinho: cremalheira impressa (dentes para trás) presa numa viga de 15 que desliza entre os quadros.",
+    "Pá: viga em T presa no carrinho e uma viga de 11 atravessada, rente ao chão.",
+    "Sensor de distância (E) na lateral da torre, acima da pá, olhando para frente."
   ],
   "programa": [
-    "Estratégia 1: segue a linha empurrando os pneus com a pá baixa e conta as linhas de progressão.",
+    "Estratégia 1: vai reto empurrando os pneus com a pá baixa e conta as linhas de progressão com o sensor de cor (atrás).",
     "Estratégia 2: desvia dos obstáculos com o sensor de distância e carrega os pneus com a pá um pouco levantada."
   ],
   "blocos": [
     {
-      "estrategia": "Seguir a linha + empurrar",
-      "descricao": "Mais rápida e simples. Funciona se a pista tiver uma linha para seguir e os obstáculos forem baixos.",
+      "estrategia": "Reto contando linhas + empurrar",
+      "descricao": "Mais rápida e simples, se o caminho até a linha vermelha for reto. O sensor de cor fica atrás: quando ele vê o vermelho, a pá já passou uns 15 cm da linha (os pneus ficam além dela).",
       "lista": [
         {"t": "evento", "txt": "quando o programa começar"},
         {"t": "movimento", "txt": "definir motores de movimento {A} e {B}"},
@@ -47,17 +47,13 @@ window.IDEIAS = (window.IDEIAS || []).concat([
             {"t": "som", "txt": "tocar bipe 72 por 0,1 segundo"},
             {"t": "movimento", "txt": "mover para frente 2 cm a 35% (para não contar a mesma linha de novo)"}
           ]},
-          {"t": "controle", "txt": "se sensor de cor {D} ver preto então", "filhos": [
-            {"t": "movimento", "txt": "iniciar mover com direção 30 a 35%"}
-          ], "senao": [
-            {"t": "movimento", "txt": "iniciar mover com direção -30 a 35%"}
-          ]}
+          {"t": "movimento", "txt": "iniciar mover para frente a 35%"}
         ]},
         {"t": "movimento", "txt": "parar movimento"},
         {"t": "luz", "txt": "matriz do hub: escrever linhas"},
         {"t": "som", "txt": "tocar som Vitória até o fim"}
       ],
-      "ajustes": ["Velocidade 35%: mais rápido escorrega a pilha de pneus.", "Direção 30: mais alto = curva mais fechada, porém mais zigue-zague.", "Cor das linhas de progressão (azul é um exemplo: confira na arena).", "17,6 cm por rotação: confira medindo 1 volta da roda."]
+      "ajustes": ["Velocidade 35%: mais rápido escorrega a pilha de pneus.", "Para seguir uma linha de verdade, leve o sensor de cor para a frente (embaixo da torre).", "Cor das linhas de progressão (azul é um exemplo: confira na arena).", "17,6 cm por rotação: confira medindo 1 volta da roda."]
     },
     {
       "estrategia": "Desviar de obstáculos + carregar",
@@ -99,17 +95,17 @@ window.IDEIAS = (window.IDEIAS || []).concat([
   "tempo": 100,
   "tags": ["FIRA M2", "coleta", "dupla de robôs"],
   "missao": {"prova": "M2", "parte": "Coletar 1 cubo + 1 esfera, depositar e estacionar no quadrado vermelho (robô parceiro: Essential 'Coletor varredor')", "pontos": "Mira 20+10 (coleta) + 20+30 (depósito) + 30 (bônus cubo+esfera) + 50 (os dois estacionados)"},
-  "medidas_cm": [19.2, 16, 14],
-  "resumo": "Robô com uma gaiola na frente que tem dois compartimentos: um para o cubo e outro para a esfera. Uma porta basculante fecha a gaiola e abre de novo no depósito.",
+  "medidas_cm": [18.4, 17.6, 9.6],
+  "resumo": "Robô com uma gaiola na frente (paredes laterais e uma porta basculante). O robô empurra o item para dentro, a porta desce e prende; no depósito, a porta sobe. Tem montagem em 3D passo a passo.",
   "aprende": "Procurar um objeto girando e medindo distância, e organizar uma missão em etapas com variáveis.",
-  "pecas": [["Quadro 11x15", 1], ["Viga 15 furos", 2], ["Viga 11 furos", 2], ["Viga 7 furos", 4], ["Viga em L 3x5", 4], ["Viga em T 3x3", 2], ["Engrenagem 12 dentes dupla cônica", 1], ["Engrenagem 36 dentes dupla cônica", 1], ["Eixo 7", 2], ["Bucha", 4], ["Pino com atrito", 40], ["Pino longo com atrito", 6], ["Roda 57 x 14 com pneu", 2], ["Viga 3x5 com bola giratória", 1], ["Bola 19 mm", 1]],
+  "pecas": [["Eixo 11", 2], ["Eixo 5", 2], ["Viga em L 2x4", 2], ["Viga 3 furos", 1], ["Viga 11 furos", 2], ["Viga em L 3x5", 2], ["Bucha", 2], ["Roda 57 x 14 com pneu", 2], ["Viga 3x5 com bola giratória", 1], ["Quadro 11x15", 1], ["Viga conectora 3x3", 2], ["Bola 19 mm", 1], ["Pino com atrito", 25], ["Pino longo com atrito", 4]],
   "eletronica": [["Hub grande SPIKE (6 portas)", 1], ["Motor médio SPIKE", 2], ["Motor grande SPIKE", 1], ["Sensor de cor SPIKE", 1], ["Sensor de distância SPIKE", 1]],
   "portas": {"A": "Motor médio SPIKE", "B": "Motor médio SPIKE", "C": "Motor grande SPIKE", "D": "Sensor de cor SPIKE", "E": "Sensor de distância SPIKE"},
   "passos": [
-    "Base com o quadro 11x15 deitado, motores médios A e B e rodízio atrás. Limite: 25 furos (20 cm) em cada direção, contando a gaiola.",
-    "Gaiola: vigas de 7 em pé e vigas em L formam dois 'boxes' lado a lado na frente do robô (um do tamanho do cubo, outro da esfera).",
-    "Porta: viga de 15 presa num eixo de 7 que atravessa a frente. Motor grande (C) gira a engrenagem de 12, que gira a de 36 no eixo da porta (3 vezes mais força).",
-    "Sensor de distância (E) no meio, logo acima da porta. Sensor de cor (D) embaixo, para achar o quadrado vermelho."
+    "Base com o quadro 11x15 deitado, motores médios A e B, rodízio e sensor de cor (D) atrás, hub mais para trás. Limite: 20 x 20 cm contando a gaiola.",
+    "Gaiola: duas vigas conectoras 3x3 em pé na face da frente do quadro e duas vigas em L 3x5 como paredes. Confira o tamanho dos itens da arena: por dentro ela tem cerca de 7 x 3,5 cm; se não couberem cubo e esfera juntos, aumente as paredes.",
+    "Porta: eixo de 11 que sai do motor grande (C), passa pela parede direita e segura duas vigas em L 2x4 (o 1º furo delas é de eixo: giram junto). Embaixo, outro eixo de 11 com 2 buchas é a barra da porta.",
+    "Sensor de distância (E) por fora da parede esquerda, olhando para frente."
   ],
   "programa": ["Estratégia 1: varre o labirinto em zigue-zague em caminho decorado.", "Estratégia 2: gira no lugar procurando o objeto mais perto e vai direto até ele."],
   "blocos": [
@@ -182,10 +178,10 @@ window.IDEIAS = (window.IDEIAS || []).concat([
   "tempo": 100,
   "tags": ["FIRA M3", "cremalheira impressa", "elevador"],
   "missao": {"prova": "M3", "parte": "Enfiar argola e clipe na haste das estações e voltar ao início", "pontos": "Mira 50 (argola) + 100 (clipe) + 100 (voltar à partida)"},
-  "medidas_cm": [19.2, 15.2, 28],
+  "medidas_cm": [18.3, 13.2, 16.0],
   "resumo": "Um elevador vertical com a cremalheira impressa leva um gancho até a altura da haste. O robô encosta devagar, a haste entra na argola, o gancho desce e a argola fica pendurada. Tem montagem em 3D passo a passo.",
   "aprende": "Movimento linear preciso: cada volta da engrenagem de 12 dentes sobe 12 dentes da cremalheira (cerca de 3,8 cm).",
-  "pecas": [["Quadro 11x15", 1], ["Quadro 5x7", 2], ["Viga 15 furos", 1], ["Viga 11 furos", 2], ["Viga 3 furos", 1], ["Viga em L 3x5", 2], ["Engrenagem 12 dentes dupla cônica", 1], ["Eixo 7", 1], ["Eixo 5", 2], ["Bucha", 1], ["Pino com atrito", 32], ["Pino longo com atrito", 2], ["Pino longo com atrito + eixo 2", 1], ["Roda 57 x 14 com pneu", 2], ["Viga 3x5 com bola giratória", 1], ["Bola 19 mm", 1]],
+  "pecas": [["Pino longo com atrito + eixo 2", 1], ["Eixo 5", 2], ["Engrenagem 12 dentes dupla cônica", 1], ["Viga 15 furos", 1], ["Viga 5 furos", 1], ["Viga 3 furos", 1], ["Viga 11 furos", 2], ["Viga em L 3x5", 2], ["Bucha", 1], ["Roda 57 x 14 com pneu", 2], ["Viga 3x5 com bola giratória", 1], ["Quadro 11x15", 1], ["Eixo 7", 1], ["Bola 19 mm", 1], ["Pino com atrito", 34], ["Quadro 5x7", 2], ["Pino longo com atrito", 2]],
   "pecas_impressas": [["Cremalheira LEGO impressa 3D (cópia da 64781)", 1, "testada e aprovada em 15/10/2026. Uma dá cerca de 7 cm de curso (gancho de 11 a 18 cm do chão). Para mais altura, emende a segunda girada 180°."]],
   "eletronica": [["Hub grande SPIKE (6 portas)", 1], ["Motor médio SPIKE", 2], ["Motor grande SPIKE", 1], ["Sensor de cor SPIKE", 1], ["Sensor de distância SPIKE", 1]],
   "portas": {"A": "Motor médio SPIKE", "B": "Motor médio SPIKE", "C": "Motor grande SPIKE", "D": "Sensor de cor SPIKE", "E": "Sensor de distância SPIKE"},
@@ -251,19 +247,19 @@ window.IDEIAS = (window.IDEIAS || []).concat([
   "tempo": 100,
   "tags": ["FIRA M4", "cremalheira impressa", "precisão"],
   "missao": {"prova": "M4", "parte": "Tirar o palito do copo A, levar ao copo B sem tocar no chão, soltar dentro e se afastar 15 cm", "pontos": "Mira a prova completa sem derrubar nem mover os copos (tempo só desempata)"},
-  "medidas_cm": [22, 16, 24],
-  "resumo": "Elevador com cremalheira impressa e uma pinça 'de pregador' que fecha sozinha com elástico: ela desce sobre o palito, abre ao encostar e se fecha em volta dele. No copo B, sobe até um batente que abre a pinça e o palito cai dentro.",
+  "medidas_cm": [23.1, 15.6, 14.2],
+  "resumo": "Elevador com cremalheira impressa e um braço que leva a pinça 'de pregador' ~11 cm para frente da torre, para o copo caber embaixo. A pinça fecha sozinha com elástico: desce sobre o palito e se fecha em volta dele. No copo B, sobe até um batente que abre a pinça e o palito cai dentro. Tem montagem em 3D passo a passo.",
   "aprende": "Mecanismo passivo: menos motores, mais engenharia. E aproximação lenta e precisa para não mexer nos copos.",
-  "pecas": [["Quadro 11x15", 1], ["Viga 15 furos", 2], ["Viga 13 furos", 2], ["Viga dobrada 7 furos", 2], ["Viga em T 3x3", 2], ["Viga 3 furos", 2], ["Elástico 33 mm", 2], ["Dente 1x3", 2], ["Engrenagem 12 dentes dupla cônica", 1], ["Eixo 5", 1], ["Bucha", 4], ["Pino com atrito", 34], ["Pino-eixo sem atrito", 4], ["Pino longo com atrito", 6], ["Roda 57 x 14 com pneu", 2], ["Viga 3x5 com bola giratória", 1], ["Bola 19 mm", 1]],
-  "pecas_impressas": [["Cremalheira LEGO impressa 3D (cópia da 64781)", 1, "testada e aprovada em 15/10/2026. Uma basta: o elevador sobe cerca de 10 cm."]],
-  "eletronica": [["Hub grande SPIKE (6 portas)", 1], ["Motor médio SPIKE", 2], ["Motor grande SPIKE", 1], ["Sensor de distância SPIKE", 1], ["Sensor de força SPIKE", 1]],
-  "portas": {"A": "Motor médio SPIKE", "B": "Motor médio SPIKE", "C": "Motor grande SPIKE", "E": "Sensor de distância SPIKE", "F": "Sensor de força SPIKE"},
+  "pecas": [["Eixo 5", 2], ["Engrenagem 12 dentes dupla cônica", 1], ["Viga 15 furos", 1], ["Viga 5 furos", 1], ["Viga 3 furos", 2], ["Viga 7 furos", 4], ["Viga 11 furos", 2], ["Viga em L 3x5", 4], ["Bucha", 1], ["Roda 57 x 14 com pneu", 2], ["Viga 3x5 com bola giratória", 1], ["Quadro 11x15", 1], ["Viga conectora 3x3", 2], ["Viga 9 furos", 2], ["Eixo 7", 1], ["Bola 19 mm", 1], ["Pino com atrito", 50], ["Quadro 5x7", 2], ["Pino longo com atrito", 2], ["Elástico 33 mm", 2]],
+  "pecas_impressas": [["Cremalheira LEGO impressa 3D (cópia da 64781)", 1, "testada e aprovada em 15/10/2026. Uma basta: o elevador sobe cerca de 7 cm."]],
+  "eletronica": [["Hub grande SPIKE (6 portas)", 1], ["Motor médio SPIKE", 2], ["Motor grande SPIKE", 1], ["Sensor de cor SPIKE", 1], ["Sensor de distância SPIKE", 1]],
+  "portas": {"A": "Motor médio SPIKE", "B": "Motor médio SPIKE", "C": "Motor grande SPIKE", "D": "Sensor de cor SPIKE", "E": "Sensor de distância SPIKE"},
   "passos": [
-    "Base com motores médios A e B e rodízio. Limite: cubo de 25 cm (31 furos), contando o elevador todo para cima.",
-    "Elevador: viga de 13 com a cremalheira impressa, deslizando entre duas vigas de 15 em pé. Motor grande (C) com a engrenagem de 12 dentes.",
-    "Pinça: duas vigas dobradas de 7 presas com pino sem atrito (giram livres), unidas embaixo por um elástico que as mantém fechadas. Pontas com os dentes 1x3 chanfrados para fora: ao descer sobre o palito, ele força a pinça a abrir e ela 'morde'.",
+    "Base com motores médios A e B, rodízio e sensor de cor (D) atrás, hub mais para trás. Limite: cubo de 25 cm.",
+    "Torre: vigas em L 3x5 e quadros 5x7 em pé; carrinho com a cremalheira impressa (dentes para trás) numa viga de 15. Motor grande (C) com a engrenagem de 12 dentes.",
+    "Braço: no alto do carrinho, viga conectora 3x3 em pé, vigas em L 3x5 dos lados e vigas de 9 para frente. Pinça: 4 vigas de 7 (2 pares) penduradas na frente, giram no pino; um elástico em volta de cada par mantém fechado. Ao descer sobre o palito, ele força a pinça a abrir e ela 'morde'.",
     "Batente: uma viga de 3 presa na torre, na altura máxima. Quando a pinça sobe até lá, as pontas de cima das vigas batem nela e a pinça abre.",
-    "Sensor de distância (E) baixo, olhando para frente, para encostar nos copos sem bater. Sensor de força (F) atrás: é o botão de largada."
+    "Sensor de distância (E) embaixo, à esquerda, olhando para frente, para encostar nos copos sem bater. A largada é no botão esquerdo do hub."
   ],
   "programa": ["Estratégia 1: aproximação pelo sensor de distância, devagar.", "Estratégia 2: trajeto medido (odometria) com calibração de ida."],
   "blocos": [
@@ -272,7 +268,7 @@ window.IDEIAS = (window.IDEIAS || []).concat([
       "descricao": "Mais segura para os copos (parada pelo sensor). Use quando os copos podem estar um pouco fora do lugar marcado.",
       "lista": [
         {"t": "evento", "txt": "quando o programa começar"},
-        {"t": "controle", "txt": "esperar até sensor de força {F} ser pressionado (largada)"},
+        {"t": "controle", "txt": "esperar até botão esquerdo do hub ser pressionado (largada)"},
         {"t": "movimento", "txt": "definir motores de movimento {A} e {B}"},
         {"t": "motor", "txt": "definir velocidade do motor {C} = 25%"},
         {"t": "motor", "txt": "ligar motor {C} por 900 graus (pinça na altura de passagem, acima do copo)"},
@@ -302,7 +298,7 @@ window.IDEIAS = (window.IDEIAS || []).concat([
       "descricao": "Mais rápida se os copos estiverem sempre no mesmo lugar. Arriscada: um erro de 2 cm já pode derrubar o copo.",
       "lista": [
         {"t": "evento", "txt": "quando o programa começar"},
-        {"t": "controle", "txt": "esperar até sensor de força {F} ser pressionado"},
+        {"t": "controle", "txt": "esperar até botão esquerdo do hub ser pressionado"},
         {"t": "movimento", "txt": "definir motores de movimento {A} e {B}"},
         {"t": "motor", "txt": "ligar motor {C} por 900 graus"},
         {"t": "movimento", "txt": "mover para frente 30 cm a 20%"},
@@ -317,7 +313,7 @@ window.IDEIAS = (window.IDEIAS || []).concat([
       "ajustes": ["30 cm e 190 cm: meça na arena (os copos ficam a 2 m).", "Faça 5 tentativas e anote onde o robô parou: se variar mais de 2 cm, use a estratégia 1."]
     }
   ],
-  "variacoes": ["Troque a pinça de pregador por uma pinça com pinhão entre duas cremalheiras (precisa de mais um motor: tire o sensor de força e use a porta F).", "Ponta da pinça com mangueira flexível para não escorregar o palito.", "Desça a pinça em duas etapas: rápido até perto, devagar no final."],
+  "variacoes": ["Troque a pinça de pregador por uma pinça com pinhão entre duas cremalheiras (precisa de um 4º motor, que o kit base não tem).", "Ponta da pinça com mangueira flexível para não escorregar o palito.", "Desça a pinça em duas etapas: rápido até perto, devagar no final."],
   "desafio": "Complete a prova 3 vezes seguidas sem mexer nos copos.",
   "pergunta": "O que é mais difícil: pegar o palito ou soltar no copo? Por quê?"
 }

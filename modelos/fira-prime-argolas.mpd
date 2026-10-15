@@ -387,13 +387,16 @@
 1 0 -20 -30 -160 0 -1 0 1 0 0 0 0 1 61332.dat
 1 0 -20 -100 -180 0 1 0 0 0 1 1 0 0 64179.dat
 0 STEP
-0 // Passo 9: Motor grande (porta C) de pé ao lado da torre. Eixo de 7 com a engrenagem de 12 dentes entre os quadros.
+0 // Passo 9: Motor grande (porta C) de pé ao lado da torre, preso numa viga de 5 (espaçador). Eixo de 7 com a engrenagem de 12 dentes entre os quadros.
 1 0 30 -120 -220 1 0 0 0 1 0 0 0 1 61332.dat
-1 0 30 -80 -220 1 0 0 0 1 0 0 0 1 61332.dat
-1 322 80 -100 -220 0 1 0 0 0 -1 -1 0 0 54675.dat
-1 14 20 -100 -220 1 0 0 0 1 0 0 0 1 44294.dat
-1 0 0 -100 -220 0 0 1 0 1 0 -1 0 0 32270.dat
-1 71 -40 -100 -220 0 0 1 0 1 0 -1 0 0 3713.dat
+1 0 30 -40 -220 1 0 0 0 1 0 0 0 1 61332.dat
+1 26 40 -80 -220 0 1 0 0 0 1 1 0 0 32316.dat
+1 0 50 -100 -220 1 0 0 0 1 0 0 0 1 61332.dat
+1 0 50 -60 -220 1 0 0 0 1 0 0 0 1 61332.dat
+1 322 100 -80 -220 0 1 0 0 0 -1 -1 0 0 54675.dat
+1 14 20 -80 -220 1 0 0 0 1 0 0 0 1 44294.dat
+1 0 0 -80 -220 0 0 1 0 1 0 -1 0 0 32270.dat
+1 71 -40 -80 -220 0 0 1 0 1 0 -1 0 0 3713.dat
 0 STEP
 0 // Passo 10: Carrinho: cremalheira IMPRESSA presa numa viga de 15 (2 pinos). Encaixe entre os quadros, dentes no pinhão. No alto, o pino-eixo é o gancho da argola.
 1 25 0 -140 -200 0 0 1 1 0 0 0 1 0 64781.dat
@@ -14633,6 +14636,47 @@
 1 16 0 0 -50 -8 0 0 0 0 -8 0 -1 0 2-4edge.dat
 0 //
 0 //
+0 FILE parts/s/32316s01.dat
+0 ~Technic Beam  5 without Side
+0 Name: s\32316s01.dat
+0 Author: Jens Brühl [jb70]
+0 !LDRAW_ORG Subpart UPDATE 2023-04
+0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt
+
+0 BFC CERTIFY CCW
+
+0 !HISTORY 2022-08-02 [jb70] subfiled from 32316.dat by Philo
+0 !HISTORY 2022-08-04 [MagFors] Unmirrored primitives, reduced
+0 !HISTORY 2023-08-25 [OrionP] Official Update 2023-04
+
+
+1 16 0 -10 40 -9 0 0 0 20 0 0 0 9 2-4cylo.dat
+1 16 -9 0 0 0 1 0 0 0 -10 -40 0 0 rect2p.dat
+2 24 9 10 -40 9 10 40
+2 24 9 -10 40 9 -10 -40
+1 16 0 -10 -40 9 0 0 0 20 0 0 0 -9 2-4cylo.dat
+1 16 0 0 -40 1 0 0 0 1 0 0 0 1 beamhole.dat
+1 16 0 0 -20 1 0 0 0 1 0 0 0 1 beamhole.dat
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 beamhole.dat
+1 16 0 0 20 1 0 0 0 1 0 0 0 1 beamhole.dat
+1 16 0 0 40 1 0 0 0 1 0 0 0 1 connhole.dat
+0 FILE 32316.dat
+0 Technic Beam  5
+0 Name: 32316.dat
+0 Author: Philippe Hurbain [Philo]
+0 !LDRAW_ORG Part UPDATE 2024-02
+0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt
+
+0 BFC CERTIFY CCW
+
+0 !HISTORY 2004-11-26 [guyvivan] Use more primitives
+0 !HISTORY 2009-05-02 [PTadmin] Official Update 2009-01
+0 !HISTORY 2022-08-02 [jb70] using subpart s\32316s01.dat
+0 !HISTORY 2024-03-24 [OrionP] Official Update 2024-02
+
+
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 s/32316s01.dat
+4 16 9 -10 -40 9 10 -40 9 10 40 9 -10 40
 0 FILE parts/s/u9367s01.dat
 0 ~Electric Powered Up Large Angular Motor Front Top Half
 0 Name: s\u9367s01.dat

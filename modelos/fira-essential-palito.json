@@ -1,0 +1,77 @@
+{
+ "passos": [
+  "Motor A deitado, saída para a direita. Eixo de 6 na saída e as duas rodas grandes lado a lado.",
+  "Do lado esquerdo do motor A: 4 pinos e duas vigas em pé (11 na frente, 7 atrás). A ponta de baixo é o apoio.",
+  "Hub pequeno (com a bateria) deitado em cima do motor A, preso na viga de 11 com 2 pinos.",
+  "Em cima do hub: 2 pinos e uma viga de 7 deitada.",
+  "Motor B deitado em cima da viga de 7 (2 pinos), saída para a direita.",
+  "Alavanca: eixo de 7 na saída do motor B e, na ponta dele, a viga dobrada (furo de eixo), reta para a frente.",
+  "Viga de 11 por fora da viga dobrada (2 pinos), indo para a frente.",
+  "Gancho: viga em L com a perna curta na ponta da viga de 11 (2 pinos) e a perna longa para baixo.",
+  "Pé do gancho: outra viga em L presa no poste (2 pinos), com o pé virado para a FRENTE."
+ ],
+ "pecas": [
+  [
+   "32524",
+   1,
+   2
+  ],
+  [
+   "32525",
+   26,
+   2
+  ],
+  [
+   "32526",
+   10,
+   2
+  ],
+  [
+   "3706",
+   4,
+   1
+  ],
+  [
+   "44294",
+   14,
+   1
+  ],
+  [
+   "61332",
+   0,
+   16
+  ],
+  [
+   "65834pat0002",
+   15,
+   2
+  ],
+  [
+   "6629",
+   25,
+   1
+  ],
+  [
+   "66757",
+   14,
+   1
+  ],
+  [
+   "67351",
+   14,
+   1
+  ],
+  [
+   "68488",
+   15,
+   2
+  ]
+ ],
+ "impressas": [],
+ "extras": [],
+ "caixa_cm": [
+  13.6,
+  12.8,
+  12.4
+ ]
+}

@@ -1,17 +1,19 @@
 // Service worker: guarda o app no iPad para funcionar sem internet.
 // Ao mudar qualquer arquivo do app, aumente a VERSAO para os iPads baixarem de novo.
-const VERSAO = "galle-builder-v4";
+const VERSAO = "galle-builder-v8";
 const ARQUIVOS = [
   "./", "index.html", "styles.css", "app.js", "manifest.webmanifest",
   "dados/kits.js", "dados/inventario.js", "dados/desafios.js",
   "dados/ideias_prime.js", "dados/ideias_essential.js", "dados/ideias_ev3.js", "dados/modelos3d.js",
-  "dados/ideias_fira_prime.js", "dados/ideias_fira_essential.js", "dados/ideias_fira_ev3.js", "dados/ideias_fira_rodada2.js",
+  "dados/ideias_fira_prime.js", "dados/ideias_fira_essential.js", "dados/ideias_fira_ev3.js", "dados/ideias_fira_rodada2.js", "dados/ideias_fira_rodada3.js", "dados/ideias_fira_rodada4.js",
   "icones/apple-touch-icon.png", "icones/icone-192.png", "icones/icone-512.png"
 ];
 // O 3D (three.js e modelos) é grande: fica guardado só depois da primeira vez que alguém abre.
 
 self.addEventListener("install", (e) => {
-  e.waitUntil(caches.open(VERSAO).then((c) => c.addAll(ARQUIVOS)).then(() => self.skipWaiting()));
+  // cache: "reload" = baixa do servidor, nunca do cache do navegador (senão a versão nova podia guardar arquivo velho)
+  e.waitUntil(caches.open(VERSAO).then((c) => c.addAll(ARQUIVOS.map((u) => new Request(u, { cache: "reload" }))))
+    .then(() => self.skipWaiting()));
 });
 
 self.addEventListener("activate", (e) => {
@@ -24,7 +26,7 @@ self.addEventListener("activate", (e) => {
 
 function guardarDepois(nomeCache, req) {
   return caches.open(nomeCache).then((c) =>
-    c.match(req, { ignoreSearch: true }).then((r) => r || fetch(req).then((resp) => {
+    c.match(req, { ignoreSearch: true }).then((r) => r || fetch(req.mode === "navigate" ? req : new Request(req, { cache: "no-cache" })).then((resp) => {
       if (resp.ok || resp.type === "opaque") c.put(req, resp.clone());
       return resp;
     }))

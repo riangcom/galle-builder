@@ -1,0 +1,141 @@
+{
+ "passos": [
+  "Base: quadro 11x15 deitado.",
+  "Motores médios embaixo do quadro, na frente, presos com 2 pinos cada (portas A e B).",
+  "Rodas grandes: eixo de 5 na saída de cada motor.",
+  "Atrás, embaixo: viga de 3 + 2 pinos longos + rodízio com a bola. Sensor de cor ao lado (porta D), olhando o chão.",
+  "Duas vigas de 11 atravessadas em cima do quadro (uma no meio, uma atrás).",
+  "Hub em cima das vigas, mais para trás, preso com 8 pinos.",
+  "Na frente: duas vigas em L 3x5 deitadas, saindo para frente do quadro (2 pinos cada).",
+  "Torre: dois quadros 5x7 em pé em cima das vigas em L, presos por baixo com 2 pinos cada.",
+  "Motor grande (porta C) de pé ao lado da torre, preso numa viga de 5 (espaçador). Eixo de 7 com a engrenagem de 12 dentes entre os quadros.",
+  "Carrinho: cremalheira IMPRESSA (dentes para trás, no pinhão) presa na viga de 15 da frente.",
+  "Pá: viga em T presa no carrinho (um pino longo passa pela viga e pela cremalheira) e a viga de 11 atravessada embaixo.",
+  "Sensor de distância (porta E) na lateral da torre, acima da pá, olhando para frente."
+ ],
+ "pecas": [
+  [
+   "32073",
+   71,
+   2
+  ],
+  [
+   "32270",
+   0,
+   1
+  ],
+  [
+   "32278",
+   0,
+   1
+  ],
+  [
+   "32316",
+   26,
+   1
+  ],
+  [
+   "32523",
+   14,
+   1
+  ],
+  [
+   "32525",
+   26,
+   3
+  ],
+  [
+   "32526",
+   322,
+   2
+  ],
+  [
+   "3713",
+   71,
+   1
+  ],
+  [
+   "37308",
+   15,
+   1
+  ],
+  [
+   "37316",
+   15,
+   1
+  ],
+  [
+   "39367pat0001",
+   0,
+   2
+  ],
+  [
+   "39370",
+   322,
+   1
+  ],
+  [
+   "39790",
+   322,
+   1
+  ],
+  [
+   "44294",
+   14,
+   1
+  ],
+  [
+   "45601",
+   14,
+   1
+  ],
+  [
+   "52629",
+   15,
+   1
+  ],
+  [
+   "54675",
+   322,
+   1
+  ],
+  [
+   "54696",
+   322,
+   2
+  ],
+  [
+   "60484",
+   0,
+   1
+  ],
+  [
+   "61332",
+   0,
+   36
+  ],
+  [
+   "64179",
+   0,
+   2
+  ],
+  [
+   "6558",
+   1,
+   3
+  ]
+ ],
+ "impressas": [
+  [
+   "64781",
+   25,
+   1
+  ]
+ ],
+ "extras": [],
+ "caixa_cm": [
+  18.3,
+  13.2,
+  13.6
+ ]
+}

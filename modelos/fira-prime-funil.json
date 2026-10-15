@@ -1,0 +1,98 @@
+{
+ "passos": [
+  "Base: quadro 11x15 deitado.",
+  "Motores médios embaixo do quadro, na frente, presos com 2 pinos cada (portas A e B).",
+  "Rodas grandes: eixo de 5 na saída de cada motor.",
+  "Atrás, embaixo: viga de 3 + 2 pinos longos + rodízio com a bola. Sensor de cor ao lado (porta D), olhando o chão.",
+  "Duas vigas de 11 atravessadas em cima do quadro (uma no meio, uma atrás).",
+  "Hub em cima das vigas, mais para trás, preso com 8 pinos.",
+  "Na frente: duas vigas conectoras 3x3 em pé, presas na face da frente do quadro (2 pinos cada).",
+  "Paredes do corredor: vigas em L 3x5 em pé nas laterais (2 pinos cada).",
+  "Por fora de cada parede: 2 pinos e uma viga conectora 3x3 deitada.",
+  "Boca do funil: embaixo de cada viga conectora, 2 pinos e uma viga dobrada deitada, com a ponta dobrada para fora."
+ ],
+ "pecas": [
+  [
+   "32073",
+   71,
+   2
+  ],
+  [
+   "32271",
+   14,
+   2
+  ],
+  [
+   "32523",
+   14,
+   1
+  ],
+  [
+   "32525",
+   26,
+   2
+  ],
+  [
+   "32526",
+   322,
+   2
+  ],
+  [
+   "37308",
+   15,
+   1
+  ],
+  [
+   "39367pat0001",
+   0,
+   2
+  ],
+  [
+   "39370",
+   322,
+   1
+  ],
+  [
+   "39790",
+   322,
+   1
+  ],
+  [
+   "39793",
+   26,
+   4
+  ],
+  [
+   "45601",
+   14,
+   1
+  ],
+  [
+   "52629",
+   15,
+   1
+  ],
+  [
+   "54696",
+   322,
+   2
+  ],
+  [
+   "61332",
+   0,
+   34
+  ],
+  [
+   "6558",
+   1,
+   2
+  ]
+ ],
+ "impressas": [],
+ "extras": [],
+ "caixa_cm": [
+  19.3,
+  14.5,
+  8.8
+ ]
+}

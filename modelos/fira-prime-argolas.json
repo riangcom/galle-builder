@@ -8,7 +8,7 @@
   "Hub em cima das vigas, preso com 8 pinos.",
   "Na frente: duas vigas em L 3x5 deitadas, saindo para frente do quadro (2 pinos cada).",
   "Torre: dois quadros 5x7 em pé em cima das vigas em L, presos por baixo com 2 pinos cada.",
-  "Motor grande (porta C) de pé ao lado da torre. Eixo de 7 com a engrenagem de 12 dentes entre os quadros.",
+  "Motor grande (porta C) de pé ao lado da torre, preso numa viga de 5 (espaçador). Eixo de 7 com a engrenagem de 12 dentes entre os quadros.",
   "Carrinho: cremalheira IMPRESSA presa numa viga de 15 (2 pinos). Encaixe entre os quadros, dentes no pinhão. No alto, o pino-eixo é o gancho da argola.",
   "Sensor de distância (porta E) na lateral da torre, olhando para frente."
  ],
@@ -31,6 +31,11 @@
   [
    "32278",
    0,
+   1
+  ],
+  [
+   "32316",
+   26,
    1
   ],
   [
@@ -106,7 +111,7 @@
   [
    "61332",
    0,
-   32
+   34
   ],
   [
    "64179",
@@ -125,5 +130,11 @@
    25,
    1
   ]
+ ],
+ "extras": [],
+ "caixa_cm": [
+  18.3,
+  13.2,
+  16.0
  ]
 }

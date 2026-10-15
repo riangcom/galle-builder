@@ -1,0 +1,96 @@
+{
+ "passos": [
+  "Base: quadro 11x15 deitado.",
+  "Motores médios embaixo do quadro, na frente, presos com 2 pinos cada (portas A e B).",
+  "Rodas grandes: eixo de 5 na saída de cada motor.",
+  "Atrás, embaixo: sensor de cor (porta D) no meio, olhando o chão.",
+  "Duas vigas de 11 atravessadas em cima do quadro (uma no meio, uma atrás).",
+  "Hub em cima das vigas, mais para trás, preso com 8 pinos.",
+  "Atrás: duas vigas conectoras 3x3 em pé na face de trás do quadro (2 pinos cada).",
+  "Suportes das rodas de trás: vigas em L 3x5 em pé, presas por fora das vigas conectoras (2 pinos cada).",
+  "Rodas de trás (livres): bucha, eixo de 5 pelo furo de baixo da viga em L e a roda grande.",
+  "Na frente: duas vigas conectoras 3x3 em pé na face da frente do quadro (2 pinos cada).",
+  "Paredes da muleta: vigas em L 3x5 em pé, presas por fora das vigas conectoras (2 pinos cada).",
+  "Motor grande (porta C) de pé, por fora da parede direita, preso com 1 pino.",
+  "Muleta: eixo de 11 do motor até a esquerda, com as duas vigas em L 2x4 e a barra de baixo (eixo de 11 + 2 buchas)."
+ ],
+ "pecas": [
+  [
+   "23948",
+   14,
+   2
+  ],
+  [
+   "32073",
+   71,
+   4
+  ],
+  [
+   "32140",
+   14,
+   2
+  ],
+  [
+   "32525",
+   26,
+   2
+  ],
+  [
+   "32526",
+   322,
+   4
+  ],
+  [
+   "3713",
+   71,
+   4
+  ],
+  [
+   "37308",
+   15,
+   1
+  ],
+  [
+   "39367pat0001",
+   0,
+   4
+  ],
+  [
+   "39790",
+   322,
+   1
+  ],
+  [
+   "39793",
+   26,
+   4
+  ],
+  [
+   "45601",
+   14,
+   1
+  ],
+  [
+   "54675",
+   322,
+   1
+  ],
+  [
+   "54696",
+   322,
+   2
+  ],
+  [
+   "61332",
+   0,
+   35
+  ]
+ ],
+ "impressas": [],
+ "extras": [],
+ "caixa_cm": [
+  20.8,
+  14.0,
+  9.6
+ ]
+}
