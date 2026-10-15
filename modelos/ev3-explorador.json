@@ -1,0 +1,101 @@
+{
+ "passos": [
+  "Coloque os dois motores grandes lado a lado, com a parte larga para trás.",
+  "Una os motores por trás: pinos nos furos de trás e duas vigas de 11.",
+  "Encaixe as duas vigas em L vermelhas nos pinos azuis.",
+  "Monte o rodízio: bola de aço no encaixe, preso com 2 pinos nas vigas em L.",
+  "Coloque um pino longo em cada furo da aleta de cima dos motores e uma viga de 3 por fora.",
+  "Encaixe as vigas de 9 em pé nos pinos longos, duas de cada lado.",
+  "Coloque pinos nas laterais do Brick e encaixe o Brick nas vigas de 9.",
+  "Na frente, por baixo do Brick: pinos (2 longos), viga de 7 deitada e a viga em L 3x5.",
+  "Prenda o sensor ultrassônico deitado embaixo da viga em L, com 2 pinos.",
+  "Rodas: eixo de 8 na saída de cada motor, bucha, roda e pneu."
+ ],
+ "pecas": [
+  [
+   "2780",
+   0,
+   25
+  ],
+  [
+   "32140",
+   4,
+   2
+  ],
+  [
+   "32523",
+   1,
+   2
+  ],
+  [
+   "32524",
+   71,
+   1
+  ],
+  [
+   "32525",
+   71,
+   2
+  ],
+  [
+   "32526",
+   15,
+   1
+  ],
+  [
+   "3707",
+   0,
+   2
+  ],
+  [
+   "3713",
+   71,
+   2
+  ],
+  [
+   "40490",
+   71,
+   4
+  ],
+  [
+   "41897",
+   0,
+   2
+  ],
+  [
+   "56908",
+   71,
+   2
+  ],
+  [
+   "6558",
+   1,
+   10
+  ],
+  [
+   "92911",
+   72,
+   1
+  ],
+  [
+   "95646c01",
+   15,
+   1
+  ],
+  [
+   "95652",
+   71,
+   1
+  ],
+  [
+   "95658",
+   71,
+   2
+  ],
+  [
+   "99948",
+   383,
+   1
+  ]
+ ]
+}

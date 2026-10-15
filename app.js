@@ -118,7 +118,7 @@ function telaKit(base, extras, aba, idIdeia) {
   pintarKit(base);
   const amb = montarAmbiente(base, extras);
   const caminho = `#/kit/${base}${extras.length ? "/" + extras.join(",") : ""}`;
-  const abas = [["pecas", "Peças"], ["ideias", "Ideias"], ["desafio", "Desafio surpresa"]];
+  const abas = [["pecas", "Peças"], ["ideias", "Ideias"], ["fira", "Missões FIRA"], ["desafio", "Desafio surpresa"]];
   const mistura = extras.length ? ` + peças de ${extras.map((e) => KITS[e].nome).join(" e ")}` : "";
 
   tela.innerHTML = `
@@ -133,7 +133,8 @@ function telaKit(base, extras, aba, idIdeia) {
   });
 
   const conteudo = document.getElementById("conteudo");
-  if (aba === "ideias") return abaIdeias(conteudo, amb, idIdeia, caminho);
+  if (aba === "ideias") return abaIdeias(conteudo, amb, idIdeia, caminho, false);
+  if (aba === "fira") return abaIdeias(conteudo, amb, idIdeia, caminho, true);
   if (aba === "desafio") return abaDesafio(conteudo, amb);
   return abaPecas(conteudo, amb);
 }
@@ -197,16 +198,31 @@ function abaPecas(el, amb) {
 
 const NIVEIS = { 1: "Iniciante", 2: "Intermediário", 3: "Desafiador" };
 
-function abaIdeias(el, amb, idIdeia, caminho) {
-  const ideias = (window.IDEIAS || []).filter((i) => i.kit === amb.base);
+// Provas FIRA (resumo de docs/missoes_fira.md)
+const PROVAS_FIRA = {
+  M1: { nome: "Percurso e pneus", limite: "meia folha A4 (21 x 14,8 cm)", tempo: "1min30" },
+  M2: { nome: "Dois robôs: cubos e esferas", limite: "20 x 20 cm", tempo: "3 min" },
+  M3: { nome: "Argolas e clipes na haste", limite: "20 x 20 cm", tempo: "2 min" },
+  M4: { nome: "Palito entre copos", limite: "cubo de 25 cm", tempo: "2 min" },
+  todas: { nome: "Treino para todas as provas", limite: "meia A4 e até 25 cm de altura (cabe em todas)", tempo: "-" }
+};
+
+function abaIdeias(el, amb, idIdeia, caminho, fira) {
+  const aba = fira ? "fira" : "ideias";
+  const ideias = (window.IDEIAS || []).filter((i) => i.kit === amb.base && !!i.missao === fira);
   const ideia = ideias.find((i) => i.id === idIdeia);
-  if (ideia) return detalheIdeia(el, ideia, caminho);
+  if (ideia) return detalheIdeia(el, ideia, caminho, aba);
   if (!ideias.length) {
-    el.innerHTML = `<div class="aviso">Ainda não há ideias para este kit. Experimente o <b>Desafio surpresa</b>.</div>`;
+    el.innerHTML = fira
+      ? `<div class="aviso">As ideias FIRA deste kit ainda estão sendo preparadas.</div>`
+      : `<div class="aviso">Ainda não há ideias para este kit. Experimente o <b>Desafio surpresa</b>.</div>`;
     return;
   }
   let nivel = 0;
   el.innerHTML = `
+    ${fira ? `<div class="provas">${Object.entries(PROVAS_FIRA).filter(([k]) => k !== "todas").map(([k, p]) =>
+      `<div class="prova"><b>${k}</b> ${esc(p.nome)}<span>${esc(p.limite)} · ${esc(p.tempo)}</span></div>`).join("")}</div>
+      <div class="aviso-calibrar">⚠ Distâncias, ângulos e cores dos programas são exemplos: <b>calibre na arena real</b> antes da prova. Comece pelo robô de treino.</div>` : ""}
     <div class="filtros">
       <button class="filtro" data-n="0" aria-pressed="true">Todas</button>
       ${Object.entries(NIVEIS).map(([n, r]) => `<button class="filtro" data-n="${n}" aria-pressed="false">${"★".repeat(n)} ${r}</button>`).join("")}
@@ -215,8 +231,8 @@ function abaIdeias(el, amb, idIdeia, caminho) {
   const lista = el.querySelector("#lista-ideias");
   function desenhar() {
     lista.innerHTML = ideias.filter((i) => !nivel || i.nivel === nivel).map((i) => `
-      <a class="card-ideia" href="${caminho}?aba=ideias&ideia=${i.id}">
-        <span class="nivel">${"★".repeat(i.nivel)}${"☆".repeat(3 - i.nivel)} ${NIVEIS[i.nivel]} · ${i.tempo} min</span>
+      <a class="card-ideia" href="${caminho}?aba=${aba}&ideia=${i.id}">
+        <span class="nivel">${i.missao ? `<b class="selo-prova">${i.missao.prova === "todas" ? "Treino" : i.missao.prova}</b> ` : ""}${"★".repeat(i.nivel)}${"☆".repeat(3 - i.nivel)} ${NIVEIS[i.nivel]} · ${i.tempo} min</span>
         <strong>${esc(i.titulo)}</strong>
         <span>${esc(i.resumo)}</span>
         <span class="chips">${(i.tags || []).map((t) => `<span class="chip">${esc(t)}</span>`).join("")}</span>
@@ -232,27 +248,117 @@ function abaIdeias(el, amb, idIdeia, caminho) {
   desenhar();
 }
 
-function detalheIdeia(el, i, caminho) {
+// Lista exata de peças de um modelo 3D: [código, cor LDraw, qtd] -> [nome, qtd]
+function pecasDoModelo(mod, kit) {
+  const inv = INVENTARIO[KITS[kit].conjunto] || [];
+  return mod.pecas.map(([pid, cid, q]) => {
+    const p = inv.find((x) => x.id === pid && x.cid === cid) || inv.find((x) => x.id === pid);
+    return [p ? `${p.nome} (${p.cor.toLowerCase()})` : pid, q];
+  });
+}
+
+// Blocos estilo app SPIKE: {X} vira um selo de porta; "filhos" e "senao" ficam indentados.
+const NOMES_TIPO = { evento: "Eventos", controle: "Controle", movimento: "Movimento", motor: "Motores",
+  sensor: "Sensores", luz: "Luz", som: "Som", operador: "Operadores", variavel: "Variáveis" };
+
+function textoBloco(txt) {
+  return esc(txt).replace(/\{(\w)\}/g, '<span class="porta">$1</span>');
+}
+
+function htmlBlocos(lista) {
+  return lista.map((b) => `
+    <div class="bloco-grupo">
+      <div class="bloco b-${b.t}" title="${NOMES_TIPO[b.t] || ""}">${textoBloco(b.txt)}</div>
+      ${b.filhos ? `<div class="bloco-dentro b-borda-${b.t}">${htmlBlocos(b.filhos)}</div>` : ""}
+      ${b.senao ? `<div class="bloco b-${b.t} bloco-senao">senão</div>
+                   <div class="bloco-dentro b-borda-${b.t}">${htmlBlocos(b.senao)}</div>` : ""}
+    </div>`).join("");
+}
+
+function htmlProgramacao(i) {
+  const portas = Object.entries(i.portas || {}).map(([p, d]) =>
+    `<span class="porta-item"><span class="porta">${p}</span> ${esc(curto(d))}</span>`).join("");
+  return `
+    ${i.missao ? `<div class="aviso-calibrar">⚠ Os números dos blocos são exemplos: <b>calibre na arena real</b>.</div>` : ""}
+    <div class="portas-lista"><b>Ligue assim:</b> ${portas}</div>
+    <div class="filtros" role="tablist">
+      ${i.blocos.map((s, k) => `<button class="filtro" data-estr="${k}" aria-pressed="${k === 0}">${esc(s.estrategia)}</button>`).join("")}
+    </div>
+    <div id="estrategia"></div>
+    <p class="dica">Os nomes dos blocos podem mudar um pouco conforme a versão do app SPIKE.</p>`;
+}
+
+function ligarEstrategias(el, i) {
+  const caixa = el.querySelector("#estrategia");
+  const mostrar = (k) => {
+    const s = i.blocos[k];
+    caixa.innerHTML = `
+      <p class="estr-desc">${esc(s.descricao)}</p>
+      <div class="blocos">${htmlBlocos(s.lista)}</div>
+      <div class="ajustes"><b>O que ajustar e calibrar:</b><ul>${s.ajustes.map((a) => `<li>${esc(a)}</li>`).join("")}</ul></div>`;
+    el.querySelectorAll("[data-estr]").forEach((b) => b.setAttribute("aria-pressed", b.dataset.estr === String(k)));
+  };
+  el.querySelectorAll("[data-estr]").forEach((b) => { b.onclick = () => mostrar(Number(b.dataset.estr)); });
+  mostrar(0);
+}
+
+function detalheIdeia(el, i, caminho, aba = "ideias") {
+  const mod = (window.MODELOS3D || {})[i.id];
   const separar = (lista) => lista.map(([nome, q]) => `
     <label class="separar"><input type="checkbox"><span><b>${q}×</b> ${esc(nome)}</span></label>`).join("");
   const itens = (lista) => lista.map((t) => `<li>${esc(t)}</li>`).join("");
+  const listaPecas = mod
+    ? `<p class="dica">Lista exata do modelo 3D. Marque cada peça quando tirar da maleta.</p>
+       <div class="lista-separar">${separar(pecasDoModelo(mod, i.kit))}</div>`
+    : `<p class="dica">Marque cada peça quando tirar da maleta. São as principais: pode precisar de mais pinos e buchas.</p>
+       <div class="lista-separar">${separar(i.eletronica)}${separar(i.pecas)}</div>`;
+  const impressas = (i.pecas_impressas || []).length
+    ? `<h4 class="sub-impressas">Peças impressas em 3D (fora da maleta)</h4>
+       <div class="lista-separar">${i.pecas_impressas.map(([nome, q, obs]) => `
+         <label class="separar impressa"><input type="checkbox"><span><b>${q}×</b> ${esc(nome)}<small>${esc(obs)}</small></span></label>`).join("")}</div>`
+    : "";
+  const missao = i.missao
+    ? `<div class="caixa-missao">
+         <b>${i.missao.prova === "todas" ? "Robô de treino" : "Prova " + i.missao.prova} · ${esc((PROVAS_FIRA[i.missao.prova] || {}).nome || "")}</b>
+         <span>${esc(i.missao.parte)}</span>
+         <span><b>Pontos:</b> ${esc(i.missao.pontos)}</span>
+         ${i.medidas_cm ? `<span><b>Tamanho estimado:</b> ${i.medidas_cm.map((n) => String(n).replace(".", ",")).join(" x ")} cm
+           (limite: ${esc((PROVAS_FIRA[i.missao.prova] || {}).limite || "")}). Meça o robô pronto!</span>` : ""}
+       </div>`
+    : "";
+  const montar = mod
+    ? `<div class="visor3d">
+         <div class="visor3d-tela" id="visor3d"><button class="btn" id="abrir3d">▶ Ver montagem em 3D</button></div>
+         <div class="visor3d-controles" hidden id="controles3d">
+           <button class="btn secundario" id="ant3d" aria-label="Passo anterior">◀</button>
+           <div class="visor3d-passo"><b id="num3d"></b><span id="leg3d"></span></div>
+           <button class="btn" id="prox3d" aria-label="Próximo passo">▶</button>
+         </div>
+         <div class="acoes" hidden id="extras3d">
+           <button class="btn secundario" id="pronto3d">Ver robô pronto</button>
+           <button class="btn secundario" id="girar3d">Girar sozinho</button>
+         </div>
+         <p class="dica">Gire com um dedo, aproxime com dois. Cabos não aparecem no modelo.</p>
+       </div>`
+    : `<ol>${itens(i.passos)}</ol>`;
   el.innerHTML = `
-    <a class="voltar" href="${caminho}?aba=ideias">‹ Todas as ideias</a>
+    <a class="voltar" href="${caminho}?aba=${aba}">‹ ${aba === "fira" ? "Todas as missões FIRA" : "Todas as ideias"}</a>
     <article class="ideia">
-      <span class="nivel">${"★".repeat(i.nivel)}${"☆".repeat(3 - i.nivel)} ${NIVEIS[i.nivel]} · ${i.tempo} min</span>
+      <span class="nivel">${"★".repeat(i.nivel)}${"☆".repeat(3 - i.nivel)} ${NIVEIS[i.nivel]} · ${i.tempo} min${mod ? " · <b>3D</b>" : ""}</span>
       <h2 class="titulo-ideia">${esc(i.titulo)}</h2>
+      ${missao}
       <p>${esc(i.resumo)}</p>
       <p class="aprende"><b>O que vamos aprender:</b> ${esc(i.aprende)}</p>
 
       <h3>1. Separe as peças</h3>
-      <p class="dica">Marque cada peça quando tirar da maleta. São as principais: pode precisar de mais pinos e buchas.</p>
-      <div class="lista-separar">${separar(i.eletronica)}${separar(i.pecas)}</div>
+      ${listaPecas}
+      ${impressas}
 
       <h3>2. Monte</h3>
-      <ol>${itens(i.passos)}</ol>
+      ${montar}
 
       <h3>3. Programe</h3>
-      <ol class="programa">${itens(i.programa)}</ol>
+      ${i.blocos ? htmlProgramacao(i) : `<ol class="programa">${itens(i.programa)}</ol>`}
 
       <h3>4. Vá além do básico</h3>
       <ul>${itens(i.variacoes)}</ul>
@@ -260,6 +366,48 @@ function detalheIdeia(el, i, caminho) {
       <div class="caixa-desafio"><b>Desafio extra:</b> ${esc(i.desafio)}</div>
       <div class="caixa-pergunta"><b>Para conversar:</b> ${esc(i.pergunta)}</div>
     </article>`;
+  if (mod) ligarVisor3d(el, mod);
+  if (i.blocos) ligarEstrategias(el, i);
+}
+
+// O three.js (1,3 MB) só é carregado quando a pessoa toca em "Ver montagem em 3D".
+let visorAtual = null;
+function fecharVisor() {
+  if (visorAtual) { visorAtual.fechar(); visorAtual = null; }
+}
+
+function ligarVisor3d(el, mod) {
+  const tela = el.querySelector("#visor3d");
+  const botao = el.querySelector("#abrir3d");
+  botao.onclick = async () => {
+    botao.disabled = true;
+    botao.textContent = "Carregando peças…";
+    try {
+      const { abrirVisor } = await import("./visor3d.js");
+      tela.innerHTML = "";
+      const num = el.querySelector("#num3d"), leg = el.querySelector("#leg3d");
+      visorAtual = await abrirVisor(tela, mod.mpd, {
+        aoMudarPasso: (p, t) => {
+          num.textContent = `Passo ${p} de ${t}`;
+          leg.textContent = mod.passos[p - 1] || "";
+        }
+      });
+      visorAtual.irPara(1);
+      el.querySelector("#controles3d").hidden = false;
+      el.querySelector("#extras3d").hidden = false;
+      el.querySelector("#ant3d").onclick = () => visorAtual.anterior();
+      el.querySelector("#prox3d").onclick = () => visorAtual.proximo();
+      el.querySelector("#pronto3d").onclick = () => visorAtual.irPara(visorAtual.total);
+      let girando = false;
+      el.querySelector("#girar3d").onclick = (e) => {
+        girando = !girando;
+        visorAtual.girar(girando);
+        e.target.textContent = girando ? "Parar de girar" : "Girar sozinho";
+      };
+    } catch (erro) {
+      tela.innerHTML = `<div class="aviso">Não foi possível abrir o 3D neste aparelho. (${esc(erro.message)})</div>`;
+    }
+  };
 }
 
 function abaDesafio(el, amb) {
@@ -395,6 +543,7 @@ function rotear() {
   const params = new URLSearchParams(query || "");
   const aba = params.get("aba") || "pecas";
   window.scrollTo(0, 0);
+  fecharVisor();
   if (partes[0] === "kit") {
     const extras = (partes[2] || "").split(",").filter((e) => KITS[e] && e !== partes[1]);
     return telaKit(partes[1], extras, aba, params.get("ideia"));

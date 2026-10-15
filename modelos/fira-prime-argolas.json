@@ -1,0 +1,129 @@
+{
+ "passos": [
+  "Base: quadro 11x15 deitado.",
+  "Motores médios embaixo do quadro, na frente, presos com 2 pinos cada (portas A e B).",
+  "Rodas grandes: eixo de 5 na saída de cada motor.",
+  "Atrás, embaixo: viga de 3, 2 pinos longos e o rodízio com a bola. Sensor de cor ao lado (porta D).",
+  "Duas vigas de 11 atravessadas em cima do quadro.",
+  "Hub em cima das vigas, preso com 8 pinos.",
+  "Na frente: duas vigas em L 3x5 deitadas, saindo para frente do quadro (2 pinos cada).",
+  "Torre: dois quadros 5x7 em pé em cima das vigas em L, presos por baixo com 2 pinos cada.",
+  "Motor grande (porta C) de pé ao lado da torre. Eixo de 7 com a engrenagem de 12 dentes entre os quadros.",
+  "Carrinho: cremalheira IMPRESSA presa numa viga de 15 (2 pinos). Encaixe entre os quadros, dentes no pinhão. No alto, o pino-eixo é o gancho da argola.",
+  "Sensor de distância (porta E) na lateral da torre, olhando para frente."
+ ],
+ "pecas": [
+  [
+   "18651",
+   0,
+   1
+  ],
+  [
+   "32073",
+   71,
+   2
+  ],
+  [
+   "32270",
+   0,
+   1
+  ],
+  [
+   "32278",
+   0,
+   1
+  ],
+  [
+   "32523",
+   14,
+   1
+  ],
+  [
+   "32525",
+   26,
+   2
+  ],
+  [
+   "32526",
+   322,
+   2
+  ],
+  [
+   "3713",
+   71,
+   1
+  ],
+  [
+   "37308",
+   15,
+   1
+  ],
+  [
+   "37316",
+   15,
+   1
+  ],
+  [
+   "39367pat0001",
+   0,
+   2
+  ],
+  [
+   "39370",
+   322,
+   1
+  ],
+  [
+   "39790",
+   322,
+   1
+  ],
+  [
+   "44294",
+   14,
+   1
+  ],
+  [
+   "45601",
+   14,
+   1
+  ],
+  [
+   "52629",
+   15,
+   1
+  ],
+  [
+   "54675",
+   322,
+   1
+  ],
+  [
+   "54696",
+   322,
+   2
+  ],
+  [
+   "61332",
+   0,
+   32
+  ],
+  [
+   "64179",
+   0,
+   2
+  ],
+  [
+   "6558",
+   1,
+   2
+  ]
+ ],
+ "impressas": [
+  [
+   "64781",
+   25,
+   1
+  ]
+ ]
+}

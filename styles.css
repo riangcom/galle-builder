@@ -172,6 +172,64 @@ h2 small { font-size: 15px; color: var(--suave); font-weight: 600; margin-left: 
 .caixa-desafio { background: var(--kit); color: var(--kit-texto); }
 .caixa-pergunta { border: 2px dashed var(--borda); }
 
+/* Missões FIRA */
+.provas { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 8px; margin-bottom: 6px; }
+.prova { background: var(--cartao); border: 1px solid var(--borda); border-radius: 12px; padding: 8px 12px; font-size: 15px; }
+.prova b { color: var(--destaque); margin-right: 4px; }
+.prova span { display: block; color: var(--suave); font-size: 13px; }
+.aviso-calibrar {
+  background: #fff4d6; color: #5a4300; border: 2px solid #f5b800; border-radius: 12px;
+  padding: 10px 14px; margin: 8px 0 12px; font-size: 15px;
+}
+.selo-prova { background: var(--destaque); color: #fff; border-radius: 6px; padding: 0 6px; }
+.caixa-missao { display: flex; flex-direction: column; gap: 4px; border: 2px solid var(--destaque); border-radius: 14px; padding: 12px 14px; margin: 6px 0 14px; }
+.caixa-missao > b { color: var(--destaque); }
+.sub-impressas { margin: 16px 0 8px; font-size: 16px; }
+.separar.impressa { border-style: dashed; border-color: var(--destaque); }
+.separar small { display: block; color: var(--suave); font-size: 13px; }
+
+/* Blocos de programação (cores parecidas com as categorias do app SPIKE) */
+.portas-lista { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; margin-bottom: 6px; }
+.porta-item { display: inline-flex; align-items: center; gap: 6px; font-size: 15px; }
+.porta {
+  display: inline-grid; place-items: center; min-width: 24px; height: 24px; padding: 0 5px; border-radius: 6px;
+  background: #fff; color: #1d2330; font-weight: 800; font-size: 14px; border: 2px solid #1d2330; margin: 0 2px;
+}
+.estr-desc { margin: 4px 0 12px; }
+.blocos { display: flex; flex-direction: column; gap: 4px; }
+.bloco-grupo { display: flex; flex-direction: column; gap: 4px; }
+.bloco {
+  align-self: flex-start; max-width: 100%; padding: 10px 14px; border-radius: 10px; font-weight: 600;
+  font-size: 16px; line-height: 1.3; color: #fff; box-shadow: inset 0 -3px 0 rgba(0,0,0,.15);
+}
+.bloco-dentro { margin-left: 22px; padding-left: 12px; border-left: 6px solid; display: flex; flex-direction: column; gap: 4px; }
+.bloco-senao { padding: 4px 14px; font-size: 14px; }
+.b-evento { background: #f5b800; color: #1d2330; border-radius: 18px 18px 10px 10px; }
+.b-controle { background: #f08c00; }
+.b-movimento { background: #e0399e; }
+.b-motor { background: #0a7fd6; }
+.b-sensor { background: #1597b8; }
+.b-luz { background: #7c4dde; }
+.b-som { background: #b544b5; }
+.b-operador { background: #3f9e3f; }
+.b-variavel { background: #e2610a; }
+.b-borda-controle { border-color: #f08c00; }
+.b-borda-evento { border-color: #f5b800; }
+.ajustes { margin-top: 14px; background: var(--fundo); border-radius: 12px; padding: 10px 14px; }
+.ajustes ul { margin: 6px 0 0; padding-left: 20px; }
+
+/* Visor 3D */
+.visor3d-tela {
+  height: min(62vh, 560px); border-radius: var(--raio); overflow: hidden; background: #f2f4f7;
+  display: grid; place-items: center; touch-action: none; border: 1px solid var(--borda);
+}
+.visor3d-tela canvas { display: block; width: 100% !important; height: 100% !important; }
+.visor3d-controles { display: grid; grid-template-columns: auto 1fr auto; gap: 12px; align-items: center; margin-top: 12px; }
+.visor3d-controles .btn { min-width: 64px; font-size: 22px; }
+.visor3d-passo { display: flex; flex-direction: column; gap: 2px; text-align: center; }
+.visor3d-passo b { font-size: 15px; color: var(--suave); }
+.visor3d-passo span { font-size: 17px; line-height: 1.3; }
+
 /* Desafio */
 .desafio { background: var(--cartao); border-radius: var(--raio); border: 1px solid var(--borda); padding: 24px; border-left: 10px solid var(--kit); }
 .desafio .tema { font-size: 28px; font-weight: 800; margin: 0 0 14px; }
