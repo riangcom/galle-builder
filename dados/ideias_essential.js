@@ -7,11 +7,60 @@ window.IDEIAS = (window.IDEIAS || []).concat([
   "titulo": "Carrinho de corrida",
   "nivel": 1,
   "tempo": 50,
-  "tags": ["veículo", "velocidade"],
+  "tags": [
+    "veículo",
+    "velocidade"
+  ],
   "resumo": "Um carrinho com dois motores, um em cada roda, que corre e faz curvas.",
   "aprende": "Para virar, uma roda gira mais rápido que a outra.",
-  "pecas": [["Placa Technic 2x8", 2], ["Placa Technic 2x6", 2], ["Tijolo Technic 1x8", 2], ["Roda 43 x 14 com pneu", 2], ["Rodinha de skate", 1], ["Pino com atrito", 8], ["Tijolo 2x2", 2], ["Placa lisa 2x4", 4]],
-  "eletronica": [["Hub pequeno SPIKE (2 portas)", 1], ["Motor pequeno SPIKE", 2]],
+  "pecas": [
+    [
+      "Placa Technic 2x8",
+      2
+    ],
+    [
+      "Placa Technic 2x6",
+      2
+    ],
+    [
+      "Tijolo Technic 1x8",
+      2
+    ],
+    [
+      "Roda 43 x 14 com pneu",
+      2
+    ],
+    [
+      "Rodinha de skate",
+      1
+    ],
+    [
+      "Pino com atrito",
+      8
+    ],
+    [
+      "Tijolo 2x2",
+      2
+    ],
+    [
+      "Placa lisa 2x4",
+      4
+    ]
+  ],
+  "eletronica": [
+    [
+      "Hub pequeno SPIKE (2 portas)",
+      1
+    ],
+    [
+      "Bateria recarregável SPIKE (hub pequeno)",
+      1
+    ],
+    [
+      "Motor pequeno SPIKE",
+      2
+    ]
+  ],
   "passos": [
     "Monte a base com as placas Technic 2x8 e 2x6.",
     "Prenda um motor pequeno de cada lado, com o eixo para fora, e encaixe uma roda grande em cada.",
@@ -37,11 +86,77 @@ window.IDEIAS = (window.IDEIAS || []).concat([
   "titulo": "Carrossel com luzes",
   "nivel": 1,
   "tempo": 50,
-  "tags": ["parque", "luz", "giro"],
+  "tags": [
+    "parque",
+    "luz",
+    "giro"
+  ],
   "resumo": "Um carrossel que gira com bichinhos e acende luzes coloridas.",
   "aprende": "Motor girando um eixo central e luzes avisando o que está acontecendo.",
-  "pecas": [["Placa 16x16", 1], ["Placa 8x8", 1], ["Tijolo Technic 1x4", 4], ["Eixo 6", 1], ["Bucha", 2], ["Assento", 4], ["Sapo", 2], ["Cachorro", 1], ["Caranguejo", 1], ["Cone", 4], ["Tijolo redondo", 4]],
-  "eletronica": [["Hub pequeno SPIKE (2 portas)", 1], ["Motor pequeno SPIKE", 1], ["Matriz de luz 3x3 SPIKE", 1]],
+  "pecas": [
+    [
+      "Placa 16x16",
+      1
+    ],
+    [
+      "Placa 8x8",
+      1
+    ],
+    [
+      "Tijolo Technic 1x4",
+      4
+    ],
+    [
+      "Eixo 6",
+      1
+    ],
+    [
+      "Bucha",
+      2
+    ],
+    [
+      "Assento",
+      4
+    ],
+    [
+      "Sapo",
+      2
+    ],
+    [
+      "Cachorro",
+      1
+    ],
+    [
+      "Caranguejo",
+      1
+    ],
+    [
+      "Cone",
+      4
+    ],
+    [
+      "Tijolo redondo",
+      4
+    ]
+  ],
+  "eletronica": [
+    [
+      "Hub pequeno SPIKE (2 portas)",
+      1
+    ],
+    [
+      "Bateria recarregável SPIKE (hub pequeno)",
+      1
+    ],
+    [
+      "Motor pequeno SPIKE",
+      1
+    ],
+    [
+      "Matriz de luz 3x3 SPIKE",
+      1
+    ]
+  ],
   "passos": [
     "Use a placa 16x16 como chão do parque.",
     "Prenda o motor em pé no meio, com o eixo para cima.",
@@ -69,11 +184,61 @@ window.IDEIAS = (window.IDEIAS || []).concat([
   "titulo": "Semáforo com cancela",
   "nivel": 1,
   "tempo": 50,
-  "tags": ["trânsito", "luz", "sequência"],
+  "tags": [
+    "trânsito",
+    "luz",
+    "sequência"
+  ],
   "resumo": "Um semáforo que troca de cor e uma cancela que só abre no verde.",
   "aprende": "Sequência e tempo: cada passo do programa acontece na ordem certa.",
-  "pecas": [["Placa 8x16", 1], ["Tijolo Technic 1x8", 2], ["Tijolo 1x4", 2], ["Tijolo Technic 1x12", 1], ["Pino com atrito", 4], ["Placa lisa 1x8", 2], ["Torre treliça", 1]],
-  "eletronica": [["Hub pequeno SPIKE (2 portas)", 1], ["Matriz de luz 3x3 SPIKE", 1], ["Motor pequeno SPIKE", 1]],
+  "pecas": [
+    [
+      "Placa 8x16",
+      1
+    ],
+    [
+      "Tijolo Technic 1x8",
+      2
+    ],
+    [
+      "Tijolo 1x4",
+      2
+    ],
+    [
+      "Tijolo Technic 1x12",
+      1
+    ],
+    [
+      "Pino com atrito",
+      4
+    ],
+    [
+      "Placa lisa 1x8",
+      2
+    ],
+    [
+      "Torre treliça",
+      1
+    ]
+  ],
+  "eletronica": [
+    [
+      "Hub pequeno SPIKE (2 portas)",
+      1
+    ],
+    [
+      "Bateria recarregável SPIKE (hub pequeno)",
+      1
+    ],
+    [
+      "Matriz de luz 3x3 SPIKE",
+      1
+    ],
+    [
+      "Motor pequeno SPIKE",
+      1
+    ]
+  ],
   "passos": [
     "Monte um poste com a torre treliça e prenda a matriz de luz no alto.",
     "Na base (placa 8x16), prenda o motor deitado ao lado da rua.",
@@ -99,11 +264,61 @@ window.IDEIAS = (window.IDEIAS || []).concat([
   "titulo": "Portão que abre com cartão",
   "nivel": 2,
   "tempo": 50,
-  "tags": ["educação financeira", "sensor de cor", "segurança"],
+  "tags": [
+    "educação financeira",
+    "sensor de cor",
+    "segurança"
+  ],
   "resumo": "Um portão que só abre com o cartão da cor certa, como um cartão de acesso ou de pagamento.",
   "aprende": "Usar o sensor de cor para conferir uma 'senha' de cor.",
-  "pecas": [["Placa 8x16", 1], ["Tijolo Technic 1x8", 2], ["Tijolo Technic 1x16", 1], ["Tijolo 1x4", 4], ["Tijolo 1x2", 4], ["Placa lisa 2x4", 4], ["Pino com atrito", 6]],
-  "eletronica": [["Hub pequeno SPIKE (2 portas)", 1], ["Sensor de cor SPIKE", 1], ["Motor pequeno SPIKE", 1]],
+  "pecas": [
+    [
+      "Placa 8x16",
+      1
+    ],
+    [
+      "Tijolo Technic 1x8",
+      2
+    ],
+    [
+      "Tijolo Technic 1x16",
+      1
+    ],
+    [
+      "Tijolo 1x4",
+      4
+    ],
+    [
+      "Tijolo 1x2",
+      4
+    ],
+    [
+      "Placa lisa 2x4",
+      4
+    ],
+    [
+      "Pino com atrito",
+      6
+    ]
+  ],
+  "eletronica": [
+    [
+      "Hub pequeno SPIKE (2 portas)",
+      1
+    ],
+    [
+      "Bateria recarregável SPIKE (hub pequeno)",
+      1
+    ],
+    [
+      "Sensor de cor SPIKE",
+      1
+    ],
+    [
+      "Motor pequeno SPIKE",
+      1
+    ]
+  ],
   "passos": [
     "Monte um muro com tijolos dos dois lados do portão.",
     "O portão é o tijolo Technic 1x16 preso no eixo do motor.",
@@ -129,11 +344,69 @@ window.IDEIAS = (window.IDEIAS || []).concat([
   "titulo": "Ventilador com polia",
   "nivel": 1,
   "tempo": 50,
-  "tags": ["polia", "elástico", "ventilador"],
+  "tags": [
+    "polia",
+    "elástico",
+    "ventilador"
+  ],
   "resumo": "O motor fica embaixo e um elástico leva o movimento até a hélice lá em cima.",
   "aprende": "Polia e elástico passam o giro de um eixo para outro, longe dele.",
-  "pecas": [["Tijolo Technic 1x12", 2], ["Tijolo Technic 1x4", 2], ["Placa 8x8", 1], ["Polia", 2], ["Elástico 33 mm", 1], ["Eixo 7", 1], ["Eixo 4", 1], ["Bucha", 2], ["Viga 11 furos", 2], ["Conector de eixo (emenda)", 1]],
-  "eletronica": [["Hub pequeno SPIKE (2 portas)", 1], ["Motor pequeno SPIKE", 1]],
+  "pecas": [
+    [
+      "Tijolo Technic 1x12",
+      2
+    ],
+    [
+      "Tijolo Technic 1x4",
+      2
+    ],
+    [
+      "Placa 8x8",
+      1
+    ],
+    [
+      "Polia",
+      2
+    ],
+    [
+      "Elástico 33 mm",
+      1
+    ],
+    [
+      "Eixo 7",
+      1
+    ],
+    [
+      "Eixo 4",
+      1
+    ],
+    [
+      "Bucha",
+      2
+    ],
+    [
+      "Viga 11 furos",
+      2
+    ],
+    [
+      "Conector de eixo (emenda)",
+      1
+    ]
+  ],
+  "eletronica": [
+    [
+      "Hub pequeno SPIKE (2 portas)",
+      1
+    ],
+    [
+      "Bateria recarregável SPIKE (hub pequeno)",
+      1
+    ],
+    [
+      "Motor pequeno SPIKE",
+      1
+    ]
+  ],
   "passos": [
     "Monte uma torre com dois tijolos Technic 1x12 em pé sobre a placa 8x8.",
     "Prenda o motor na base com uma polia no eixo.",
@@ -159,11 +432,57 @@ window.IDEIAS = (window.IDEIAS || []).concat([
   "titulo": "Sapo que pula",
   "nivel": 2,
   "tempo": 50,
-  "tags": ["animal robô", "alavanca", "movimento"],
+  "tags": [
+    "animal robô",
+    "alavanca",
+    "movimento"
+  ],
   "resumo": "Um sapo que levanta o corpo e dá um pulinho para frente.",
   "aprende": "O motor girando uma alavanca pode empurrar o corpo para cima.",
-  "pecas": [["Placa Technic 2x8", 2], ["Viga 7 furos", 2], ["Viga dobrada 9 furos", 2], ["Pino com atrito", 8], ["Tijolo curvo", 6], ["Placa lisa redonda com desenho (olho)", 2], ["Sapo", 1]],
-  "eletronica": [["Hub pequeno SPIKE (2 portas)", 1], ["Motor pequeno SPIKE", 2]],
+  "pecas": [
+    [
+      "Placa Technic 2x8",
+      2
+    ],
+    [
+      "Viga 7 furos",
+      2
+    ],
+    [
+      "Viga dobrada 9 furos",
+      2
+    ],
+    [
+      "Pino com atrito",
+      8
+    ],
+    [
+      "Tijolo curvo",
+      6
+    ],
+    [
+      "Placa lisa redonda com desenho (olho)",
+      2
+    ],
+    [
+      "Sapo",
+      1
+    ]
+  ],
+  "eletronica": [
+    [
+      "Hub pequeno SPIKE (2 portas)",
+      1
+    ],
+    [
+      "Bateria recarregável SPIKE (hub pequeno)",
+      1
+    ],
+    [
+      "Motor pequeno SPIKE",
+      2
+    ]
+  ],
   "passos": [
     "O corpo do sapo é o hub, preso entre as placas Technic.",
     "Prenda um motor de cada lado, atrás, com uma viga de 7 furos: são as pernas que empurram o chão.",
@@ -189,11 +508,61 @@ window.IDEIAS = (window.IDEIAS || []).concat([
   "titulo": "Cofrinho que conta moedas",
   "nivel": 2,
   "tempo": 50,
-  "tags": ["educação financeira", "sensor de cor", "contagem"],
+  "tags": [
+    "educação financeira",
+    "sensor de cor",
+    "contagem"
+  ],
   "resumo": "Cada peça colorida é uma moeda. O cofrinho lê a cor, soma o valor e mostra na luz se chegou na meta.",
   "aprende": "Somar valores com variável e acompanhar uma meta de poupança.",
-  "pecas": [["Placa 8x8", 1], ["Tijolo 2x2", 4], ["Tijolo 1x4", 4], ["Tijolo 1x2", 4], ["Placa lisa 2x4", 4], ["Telhado (tijolo inclinado)", 4], ["Tijolo redondo", 6]],
-  "eletronica": [["Hub pequeno SPIKE (2 portas)", 1], ["Sensor de cor SPIKE", 1], ["Matriz de luz 3x3 SPIKE", 1]],
+  "pecas": [
+    [
+      "Placa 8x8",
+      1
+    ],
+    [
+      "Tijolo 2x2",
+      4
+    ],
+    [
+      "Tijolo 1x4",
+      4
+    ],
+    [
+      "Tijolo 1x2",
+      4
+    ],
+    [
+      "Placa lisa 2x4",
+      4
+    ],
+    [
+      "Telhado (tijolo inclinado)",
+      4
+    ],
+    [
+      "Tijolo redondo",
+      6
+    ]
+  ],
+  "eletronica": [
+    [
+      "Hub pequeno SPIKE (2 portas)",
+      1
+    ],
+    [
+      "Bateria recarregável SPIKE (hub pequeno)",
+      1
+    ],
+    [
+      "Sensor de cor SPIKE",
+      1
+    ],
+    [
+      "Matriz de luz 3x3 SPIKE",
+      1
+    ]
+  ],
   "passos": [
     "Monte uma caixa (o cofrinho) com tijolos sobre a placa 8x8 e o telhado em cima.",
     "Deixe uma abertura no topo e prenda o sensor de cor logo abaixo dela, olhando para cima.",
@@ -220,11 +589,65 @@ window.IDEIAS = (window.IDEIAS || []).concat([
   "titulo": "Guindaste de obra",
   "nivel": 2,
   "tempo": 50,
-  "tags": ["guindaste", "torre", "giro"],
+  "tags": [
+    "guindaste",
+    "torre",
+    "giro"
+  ],
   "resumo": "Uma torre alta com braço que gira e levanta uma carga leve.",
   "aprende": "Estrutura firme (treliça) e contrapeso para a torre não cair.",
-  "pecas": [["Placa 16x16", 1], ["Torre treliça", 3], ["Tijolo Technic 1x16", 1], ["Tijolo Technic 1x8", 2], ["Tijolo 2x2", 4], ["Eixo 4", 1], ["Pino com atrito", 8], ["Pino longo sem atrito + eixo 2", 2], ["Bola / esfera", 1]],
-  "eletronica": [["Hub pequeno SPIKE (2 portas)", 1], ["Motor pequeno SPIKE", 2]],
+  "pecas": [
+    [
+      "Placa 16x16",
+      1
+    ],
+    [
+      "Torre treliça",
+      3
+    ],
+    [
+      "Tijolo Technic 1x16",
+      1
+    ],
+    [
+      "Tijolo Technic 1x8",
+      2
+    ],
+    [
+      "Tijolo 2x2",
+      4
+    ],
+    [
+      "Eixo 4",
+      1
+    ],
+    [
+      "Pino com atrito",
+      8
+    ],
+    [
+      "Pino longo sem atrito + eixo 2",
+      2
+    ],
+    [
+      "Bola / esfera",
+      1
+    ]
+  ],
+  "eletronica": [
+    [
+      "Hub pequeno SPIKE (2 portas)",
+      1
+    ],
+    [
+      "Bateria recarregável SPIKE (hub pequeno)",
+      1
+    ],
+    [
+      "Motor pequeno SPIKE",
+      2
+    ]
+  ],
   "passos": [
     "Empilhe as torres treliça sobre a placa 16x16.",
     "No alto, prenda um motor em pé: ele gira o braço.",
@@ -251,11 +674,57 @@ window.IDEIAS = (window.IDEIAS || []).concat([
   "titulo": "Limpador de para-brisa",
   "nivel": 1,
   "tempo": 50,
-  "tags": ["carro", "vai e vem", "posição"],
+  "tags": [
+    "carro",
+    "vai e vem",
+    "posição"
+  ],
   "resumo": "Uma palheta que vai e volta, limpando a 'chuva' do vidro.",
   "aprende": "O motor sabe em que ângulo está: dá para mandar ele ir até uma posição e voltar.",
-  "pecas": [["Placa 8x16", 1], ["Tijolo Technic 1x8", 2], ["Viga 7 furos", 1], ["Tijolo 1x4", 4], ["Placa lisa 1x8", 2], ["Pino com atrito", 4]],
-  "eletronica": [["Hub pequeno SPIKE (2 portas)", 1], ["Motor pequeno SPIKE", 1], ["Sensor de cor SPIKE", 1]],
+  "pecas": [
+    [
+      "Placa 8x16",
+      1
+    ],
+    [
+      "Tijolo Technic 1x8",
+      2
+    ],
+    [
+      "Viga 7 furos",
+      1
+    ],
+    [
+      "Tijolo 1x4",
+      4
+    ],
+    [
+      "Placa lisa 1x8",
+      2
+    ],
+    [
+      "Pino com atrito",
+      4
+    ]
+  ],
+  "eletronica": [
+    [
+      "Hub pequeno SPIKE (2 portas)",
+      1
+    ],
+    [
+      "Bateria recarregável SPIKE (hub pequeno)",
+      1
+    ],
+    [
+      "Motor pequeno SPIKE",
+      1
+    ],
+    [
+      "Sensor de cor SPIKE",
+      1
+    ]
+  ],
   "passos": [
     "Monte um 'vidro' em pé com os tijolos e a placa 8x16.",
     "Prenda o motor embaixo, no meio, com o eixo virado para o vidro.",
@@ -280,11 +749,77 @@ window.IDEIAS = (window.IDEIAS || []).concat([
   "titulo": "Carro que respeita a faixa",
   "nivel": 3,
   "tempo": 100,
-  "tags": ["veículo", "sensor de cor", "trânsito"],
+  "tags": [
+    "veículo",
+    "sensor de cor",
+    "trânsito"
+  ],
   "resumo": "Um carro com um motor só que anda pela rua e para sozinho na faixa vermelha.",
   "aprende": "Um motor movendo duas rodas pelo mesmo eixo e o sensor de cor lendo o chão.",
-  "pecas": [["Placa Technic 2x8", 2], ["Tijolo Technic 1x8", 2], ["Tijolo Technic 1x2 com furo de eixo e pino", 2], ["Eixo 8", 1], ["Eixo 6", 1], ["Roda 43 x 14 com pneu", 2], ["Roda de cadeira de rodas", 2], ["Bucha", 4], ["Polia", 2], ["Elástico 33 mm", 1], ["Pino com atrito", 8]],
-  "eletronica": [["Hub pequeno SPIKE (2 portas)", 1], ["Motor pequeno SPIKE", 1], ["Sensor de cor SPIKE", 1]],
+  "pecas": [
+    [
+      "Placa Technic 2x8",
+      2
+    ],
+    [
+      "Tijolo Technic 1x8",
+      2
+    ],
+    [
+      "Tijolo Technic 1x2 com furo de eixo e pino",
+      2
+    ],
+    [
+      "Eixo 8",
+      1
+    ],
+    [
+      "Eixo 6",
+      1
+    ],
+    [
+      "Roda 43 x 14 com pneu",
+      2
+    ],
+    [
+      "Roda de cadeira de rodas",
+      2
+    ],
+    [
+      "Bucha",
+      4
+    ],
+    [
+      "Polia",
+      2
+    ],
+    [
+      "Elástico 33 mm",
+      1
+    ],
+    [
+      "Pino com atrito",
+      8
+    ]
+  ],
+  "eletronica": [
+    [
+      "Hub pequeno SPIKE (2 portas)",
+      1
+    ],
+    [
+      "Bateria recarregável SPIKE (hub pequeno)",
+      1
+    ],
+    [
+      "Motor pequeno SPIKE",
+      1
+    ],
+    [
+      "Sensor de cor SPIKE",
+      1
+    ]
+  ],
   "passos": [
     "Monte o chassi com as placas Technic e os tijolos Technic 1x8.",
     "Passe o eixo 8 por trás, com uma roda grande em cada ponta e uma polia no meio.",

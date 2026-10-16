@@ -74,6 +74,10 @@ window.IDEIAS = (window.IDEIAS || []).concat([
       1
     ],
     [
+      "Bateria recarregável SPIKE (hub grande)",
+      1
+    ],
+    [
       "Motor médio SPIKE",
       2
     ],
@@ -333,6 +337,10 @@ window.IDEIAS = (window.IDEIAS || []).concat([
       1
     ],
     [
+      "Bateria recarregável SPIKE (hub grande)",
+      1
+    ],
+    [
       "Motor médio SPIKE",
       2
     ],
@@ -575,6 +583,10 @@ window.IDEIAS = (window.IDEIAS || []).concat([
   "eletronica": [
     [
       "Hub grande SPIKE (6 portas)",
+      1
+    ],
+    [
+      "Bateria recarregável SPIKE (hub grande)",
       1
     ],
     [
@@ -837,6 +849,10 @@ window.IDEIAS = (window.IDEIAS || []).concat([
       1
     ],
     [
+      "Bateria recarregável SPIKE (hub grande)",
+      1
+    ],
+    [
       "Motor médio SPIKE",
       2
     ],
@@ -1075,6 +1091,10 @@ window.IDEIAS = (window.IDEIAS || []).concat([
       1
     ],
     [
+      "Bateria recarregável SPIKE (hub pequeno)",
+      1
+    ],
+    [
       "Motor pequeno SPIKE",
       2
     ]
@@ -1269,6 +1289,10 @@ window.IDEIAS = (window.IDEIAS || []).concat([
   "eletronica": [
     [
       "Hub grande SPIKE (6 portas)",
+      1
+    ],
+    [
+      "Bateria recarregável SPIKE (hub grande)",
       1
     ],
     [
@@ -1490,6 +1514,10 @@ window.IDEIAS = (window.IDEIAS || []).concat([
       1
     ],
     [
+      "Bateria recarregável SPIKE (hub pequeno)",
+      1
+    ],
+    [
       "Motor pequeno SPIKE",
       2
     ]
@@ -1612,35 +1640,43 @@ window.IDEIAS = (window.IDEIAS || []).concat([
     "pontos": "Não pontua sozinho: deixa os outros programas certos"
   },
   "medidas_cm": [
-    20,
-    14.8,
-    14
+    18.3,
+    14.6,
+    17.2
   ],
-  "resumo": "Base EV3 compacta com cor, ultrassônico, giroscópio e um botão. Mede os números da arena para todas as missões.",
+  "resumo": "Robô simples com todos os sensores, para medir na arena: quantos cm anda por rotação, quanto girar para 90° e se o sensor de cor lê a linha. Cabe em todas as provas (18,3 x 14,6 cm). Tem montagem em 3D passo a passo.",
   "aprende": "Comparar giro por rotação da roda com giro medido pelo giroscópio.",
   "pecas": [
     [
+      "Pino com atrito",
+      24
+    ],
+    [
+      "Viga em L 2x4",
+      2
+    ],
+    [
       "Viga 15 furos",
       2
+    ],
+    [
+      "Viga 3 furos",
+      2
+    ],
+    [
+      "Viga 7 furos",
+      1
     ],
     [
       "Viga 11 furos",
       2
     ],
     [
-      "Viga em L 3x5",
+      "Eixo 6",
       2
     ],
     [
-      "Pino com atrito",
-      24
-    ],
-    [
-      "Pino longo com atrito",
-      6
-    ],
-    [
-      "Eixo 5",
+      "Eixo 12",
       2
     ],
     [
@@ -1648,25 +1684,41 @@ window.IDEIAS = (window.IDEIAS || []).concat([
       2
     ],
     [
-      "Roda 43,2 x 26",
-      2
+      "Viga 9 furos",
+      4
     ],
     [
       "Pneu 56 x 28",
       2
     ],
     [
-      "Bola de aço 18 mm (rodízio)",
+      "Eixo 8 com batente",
       1
     ],
     [
+      "Roda 43,2 x 26",
+      2
+    ],
+    [
+      "Pino longo com atrito",
+      8
+    ],
+    [
       "Junta esférica de direção (encaixe)",
+      1
+    ],
+    [
+      "Bola de aço 18 mm (rodízio)",
       1
     ]
   ],
   "eletronica": [
     [
       "Brick EV3",
+      1
+    ],
+    [
+      "Bateria recarregável EV3",
       1
     ],
     [
@@ -1707,10 +1759,12 @@ window.IDEIAS = (window.IDEIAS || []).concat([
     "4": "Sensor ultrassônico EV3"
   },
   "passos": [
-    "Base com motores grandes B e C bem juntos (cabe em meia A4: largura até 14,8 cm).",
-    "Giroscópio (2) deitado e firme no meio.",
-    "Sensor de cor (3) embaixo na frente; ultrassônico (4) olhando para frente.",
-    "Sensor de toque (1) em cima: botão de começar."
+    "Base: os dois motores grandes (B e C) lado a lado, o Brick em cima e o rodízio de bola atrás.",
+    "Rodas: eixo de 6 e roda encostada no motor. Assim o robô fica com 14,6 cm de largura (meia A4).",
+    "Na frente do Brick: uma viga de 15 em pé de cada lado.",
+    "Em cima: o ultrassônico (porta 4) num eixo de 12, olhando para frente.",
+    "Embaixo: sensor de cor (porta 3) e giroscópio (porta 2) num eixo de 12, olhando para o chão. O giroscópio fica deitado e firme.",
+    "Atrás: o sensor de toque (porta 1) com o botão para cima. É o botão de começar."
   ],
   "programa": [
     "Teste 1: distância e giro (rodas x giroscópio).",

@@ -6,11 +6,84 @@ window.IDEIAS = (window.IDEIAS || []).concat([
   "titulo": "Explorador que desvia de obstáculos",
   "nivel": 1,
   "tempo": 50,
-  "tags": ["veículo", "sensor ultrassônico"],
+  "tags": [
+    "veículo",
+    "sensor ultrassônico"
+  ],
   "resumo": "Um robô que anda pela sala e desvia sozinho de paredes e cadeiras.",
   "aprende": "Usar um sensor para decidir: SE estiver perto, ENTÃO vire.",
-  "pecas": [["Viga 15 furos", 2], ["Viga 11 furos", 2], ["Viga em L 3x5", 4], ["Pino com atrito", 20], ["Pino longo com atrito", 6], ["Eixo 5", 2], ["Roda 43,2 x 26", 2], ["Pneu 56 x 28", 2], ["Bucha", 2], ["Bola de aço 18 mm (rodízio)", 1], ["Junta esférica de direção (encaixe)", 1]],
-  "eletronica": [["Brick EV3", 1], ["Motor grande EV3", 2], ["Sensor ultrassônico EV3", 1], ["Cabo 25 cm EV3", 2], ["Cabo 35 cm EV3", 1]],
+  "pecas": [
+    [
+      "Viga 15 furos",
+      2
+    ],
+    [
+      "Viga 11 furos",
+      2
+    ],
+    [
+      "Viga em L 3x5",
+      4
+    ],
+    [
+      "Pino com atrito",
+      20
+    ],
+    [
+      "Pino longo com atrito",
+      6
+    ],
+    [
+      "Eixo 5",
+      2
+    ],
+    [
+      "Roda 43,2 x 26",
+      2
+    ],
+    [
+      "Pneu 56 x 28",
+      2
+    ],
+    [
+      "Bucha",
+      2
+    ],
+    [
+      "Bola de aço 18 mm (rodízio)",
+      1
+    ],
+    [
+      "Junta esférica de direção (encaixe)",
+      1
+    ]
+  ],
+  "eletronica": [
+    [
+      "Brick EV3",
+      1
+    ],
+    [
+      "Bateria recarregável EV3",
+      1
+    ],
+    [
+      "Motor grande EV3",
+      2
+    ],
+    [
+      "Sensor ultrassônico EV3",
+      1
+    ],
+    [
+      "Cabo 25 cm EV3",
+      2
+    ],
+    [
+      "Cabo 35 cm EV3",
+      1
+    ]
+  ],
   "passos": [
     "Prenda os dois motores grandes embaixo do Brick com vigas de 15 e 11 furos.",
     "Coloque uma roda (aro + pneu) em cada motor.",
@@ -37,11 +110,101 @@ window.IDEIAS = (window.IDEIAS || []).concat([
   "titulo": "Guindaste com rosca sem-fim",
   "nivel": 2,
   "tempo": 100,
-  "tags": ["guindaste", "rosca sem-fim", "redução"],
+  "tags": [
+    "guindaste",
+    "rosca sem-fim",
+    "redução"
+  ],
   "resumo": "Uma torre que gira bem devagar e com precisão, e um braço que sobe e desce.",
   "aprende": "Rosca sem-fim: cada volta dela empurra só um dente da engrenagem. Gira devagar, com muita força, e trava sozinha.",
-  "pecas": [["Mesa giratória pequena (base)", 1], ["Mesa giratória pequena (topo)", 1], ["Rosca sem-fim", 1], ["Engrenagem 8 dentes", 1], ["Engrenagem 40 dentes", 1], ["Viga 15 furos", 4], ["Viga 13 furos", 2], ["Quadro 5x7", 2], ["Eixo 7", 2], ["Eixo 5", 2], ["Bucha", 6], ["Pino com atrito", 30], ["Pino longo com atrito", 8], ["Dente 1x3", 2]],
-  "eletronica": [["Brick EV3", 1], ["Motor grande EV3", 1], ["Motor médio EV3", 1], ["Sensor de toque EV3", 1], ["Cabo 25 cm EV3", 2], ["Cabo 35 cm EV3", 1]],
+  "pecas": [
+    [
+      "Mesa giratória pequena (base)",
+      1
+    ],
+    [
+      "Mesa giratória pequena (topo)",
+      1
+    ],
+    [
+      "Rosca sem-fim",
+      1
+    ],
+    [
+      "Engrenagem 8 dentes",
+      1
+    ],
+    [
+      "Engrenagem 40 dentes",
+      1
+    ],
+    [
+      "Viga 15 furos",
+      4
+    ],
+    [
+      "Viga 13 furos",
+      2
+    ],
+    [
+      "Quadro 5x7",
+      2
+    ],
+    [
+      "Eixo 7",
+      2
+    ],
+    [
+      "Eixo 5",
+      2
+    ],
+    [
+      "Bucha",
+      6
+    ],
+    [
+      "Pino com atrito",
+      30
+    ],
+    [
+      "Pino longo com atrito",
+      8
+    ],
+    [
+      "Dente 1x3",
+      2
+    ]
+  ],
+  "eletronica": [
+    [
+      "Brick EV3",
+      1
+    ],
+    [
+      "Bateria recarregável EV3",
+      1
+    ],
+    [
+      "Motor grande EV3",
+      1
+    ],
+    [
+      "Motor médio EV3",
+      1
+    ],
+    [
+      "Sensor de toque EV3",
+      1
+    ],
+    [
+      "Cabo 25 cm EV3",
+      2
+    ],
+    [
+      "Cabo 35 cm EV3",
+      1
+    ]
+  ],
   "passos": [
     "Use o Brick na base como contrapeso.",
     "Prenda a mesa giratória pequena em cima da base. O motor grande gira a rosca sem-fim, que encaixa nos dentes da mesa.",
@@ -70,11 +233,77 @@ window.IDEIAS = (window.IDEIAS || []).concat([
   "titulo": "Tanque de esteiras que gira certinho",
   "nivel": 2,
   "tempo": 100,
-  "tags": ["esteira", "giroscópio", "veículo"],
+  "tags": [
+    "esteira",
+    "giroscópio",
+    "veículo"
+  ],
   "resumo": "Um veículo com esteiras que passa por cima de obstáculos e faz curvas exatas de 90 graus.",
   "aprende": "Esteira espalha o peso e segura melhor. O giroscópio mede o giro de verdade, mesmo se a esteira escorregar.",
-  "pecas": [["Elo de esteira", 54], ["Roda dentada de esteira", 4], ["Viga 15 furos", 4], ["Viga 13 furos", 2], ["Eixo 5", 2], ["Eixo 7", 2], ["Bucha", 4], ["Pino com atrito", 24], ["Pino longo com atrito", 8]],
-  "eletronica": [["Brick EV3", 1], ["Motor grande EV3", 2], ["Sensor giroscópio EV3", 1], ["Cabo 25 cm EV3", 2], ["Cabo 35 cm EV3", 1]],
+  "pecas": [
+    [
+      "Elo de esteira",
+      54
+    ],
+    [
+      "Roda dentada de esteira",
+      4
+    ],
+    [
+      "Viga 15 furos",
+      4
+    ],
+    [
+      "Viga 13 furos",
+      2
+    ],
+    [
+      "Eixo 5",
+      2
+    ],
+    [
+      "Eixo 7",
+      2
+    ],
+    [
+      "Bucha",
+      4
+    ],
+    [
+      "Pino com atrito",
+      24
+    ],
+    [
+      "Pino longo com atrito",
+      8
+    ]
+  ],
+  "eletronica": [
+    [
+      "Brick EV3",
+      1
+    ],
+    [
+      "Bateria recarregável EV3",
+      1
+    ],
+    [
+      "Motor grande EV3",
+      2
+    ],
+    [
+      "Sensor giroscópio EV3",
+      1
+    ],
+    [
+      "Cabo 25 cm EV3",
+      2
+    ],
+    [
+      "Cabo 35 cm EV3",
+      1
+    ]
+  ],
   "passos": [
     "Monte duas laterais com vigas de 15 furos, uma de cada lado do Brick.",
     "Em cada lateral, coloque duas rodas dentadas: a de trás no motor grande, a da frente solta num eixo.",
@@ -101,11 +330,109 @@ window.IDEIAS = (window.IDEIAS || []).concat([
   "titulo": "Veículo com garra",
   "nivel": 3,
   "tempo": 100,
-  "tags": ["veículo", "garra", "missão"],
+  "tags": [
+    "veículo",
+    "garra",
+    "missão"
+  ],
   "resumo": "Um robô que encontra um objeto, agarra, leva até a base e solta.",
   "aprende": "Dividir uma missão em etapas e usar dois sensores juntos.",
-  "pecas": [["Viga 15 furos", 2], ["Viga 11 furos", 2], ["Viga dobrada 9 furos", 2], ["Engrenagem 24 dentes", 2], ["Engrenagem 12 dentes dupla cônica", 1], ["Engrenagem 20 dentes dupla cônica", 1], ["Eixo 5", 3], ["Eixo 7", 2], ["Bucha", 6], ["Pino com atrito", 30], ["Pino longo com atrito", 8], ["Roda 43,2 x 26", 2], ["Pneu 56 x 28", 2], ["Bola de aço 18 mm (rodízio)", 1], ["Junta esférica de direção (encaixe)", 1]],
-  "eletronica": [["Brick EV3", 1], ["Motor grande EV3", 2], ["Motor médio EV3", 1], ["Sensor ultrassônico EV3", 1], ["Sensor de cor EV3", 1], ["Cabo 25 cm EV3", 3], ["Cabo 35 cm EV3", 2]],
+  "pecas": [
+    [
+      "Viga 15 furos",
+      2
+    ],
+    [
+      "Viga 11 furos",
+      2
+    ],
+    [
+      "Viga dobrada 9 furos",
+      2
+    ],
+    [
+      "Engrenagem 24 dentes",
+      2
+    ],
+    [
+      "Engrenagem 12 dentes dupla cônica",
+      1
+    ],
+    [
+      "Engrenagem 20 dentes dupla cônica",
+      1
+    ],
+    [
+      "Eixo 5",
+      3
+    ],
+    [
+      "Eixo 7",
+      2
+    ],
+    [
+      "Bucha",
+      6
+    ],
+    [
+      "Pino com atrito",
+      30
+    ],
+    [
+      "Pino longo com atrito",
+      8
+    ],
+    [
+      "Roda 43,2 x 26",
+      2
+    ],
+    [
+      "Pneu 56 x 28",
+      2
+    ],
+    [
+      "Bola de aço 18 mm (rodízio)",
+      1
+    ],
+    [
+      "Junta esférica de direção (encaixe)",
+      1
+    ]
+  ],
+  "eletronica": [
+    [
+      "Brick EV3",
+      1
+    ],
+    [
+      "Bateria recarregável EV3",
+      1
+    ],
+    [
+      "Motor grande EV3",
+      2
+    ],
+    [
+      "Motor médio EV3",
+      1
+    ],
+    [
+      "Sensor ultrassônico EV3",
+      1
+    ],
+    [
+      "Sensor de cor EV3",
+      1
+    ],
+    [
+      "Cabo 25 cm EV3",
+      3
+    ],
+    [
+      "Cabo 35 cm EV3",
+      2
+    ]
+  ],
   "passos": [
     "Monte a base de tração (2 motores grandes, rodas e rodízio).",
     "Na frente, monte a garra: duas vigas dobradas, cada uma presa a uma engrenagem de 24 dentes. As engrenagens se tocam e giram em sentidos opostos.",
@@ -133,14 +460,98 @@ window.IDEIAS = (window.IDEIAS || []).concat([
   "titulo": "Seguidor de linha",
   "nivel": 2,
   "tempo": 50,
-  "tags": ["veículo", "sensor de cor", "linha"],
+  "tags": [
+    "veículo",
+    "sensor de cor",
+    "linha"
+  ],
   "resumo": "Um robô que segue uma fita preta no chão.",
   "aprende": "Corrigir o caminho o tempo todo com a luz refletida.",
-  "pecas": [["Viga 15 furos", 2], ["Viga 11 furos", 2], ["Viga em L 3x5", 2], ["Pino com atrito", 20], ["Eixo 5", 2], ["Roda 43,2 x 26", 2], ["Pneu 56 x 28", 2], ["Bucha", 2], ["Bola de aço 18 mm (rodízio)", 1], ["Junta esférica de direção (encaixe)", 1]],
-  "eletronica": [["Brick EV3", 1], ["Motor grande EV3", 2], ["Sensor de cor EV3", 1], ["Cabo 25 cm EV3", 3]],
+  "pecas": [
+    [
+      "Pino com atrito",
+      22
+    ],
+    [
+      "Viga em L 2x4",
+      2
+    ],
+    [
+      "Viga 15 furos",
+      2
+    ],
+    [
+      "Viga 3 furos",
+      2
+    ],
+    [
+      "Viga 11 furos",
+      2
+    ],
+    [
+      "Eixo 6",
+      2
+    ],
+    [
+      "Eixo 12",
+      1
+    ],
+    [
+      "Bucha",
+      2
+    ],
+    [
+      "Viga 9 furos",
+      4
+    ],
+    [
+      "Pneu 56 x 28",
+      2
+    ],
+    [
+      "Roda 43,2 x 26",
+      2
+    ],
+    [
+      "Pino longo com atrito",
+      8
+    ],
+    [
+      "Junta esférica de direção (encaixe)",
+      1
+    ],
+    [
+      "Bola de aço 18 mm (rodízio)",
+      1
+    ]
+  ],
+  "eletronica": [
+    [
+      "Brick EV3",
+      1
+    ],
+    [
+      "Bateria recarregável EV3",
+      1
+    ],
+    [
+      "Motor grande EV3",
+      2
+    ],
+    [
+      "Sensor de cor EV3",
+      1
+    ],
+    [
+      "Cabo 25 cm EV3",
+      3
+    ]
+  ],
   "passos": [
-    "Monte a base de tração com os dois motores grandes e o rodízio.",
-    "Prenda o sensor de cor na frente, apontado para o chão, a cerca de 1 cm.",
+    "Base: os dois motores grandes (B e C) lado a lado, o Brick em cima e o rodízio de bola atrás.",
+    "Rodas: eixo de 6 e roda encostada no motor.",
+    "Na frente do Brick: uma viga de 15 em pé de cada lado.",
+    "Embaixo: eixo de 12 com o sensor de cor (porta 3) olhando para o chão, a 0,8 cm. Duas buchas seguram o sensor no meio.",
     "Faça a pista com fita isolante preta em papel ou piso claro."
   ],
   "programa": [
@@ -163,11 +574,89 @@ window.IDEIAS = (window.IDEIAS || []).concat([
   "titulo": "Separador de moedas com esteira",
   "nivel": 3,
   "tempo": 100,
-  "tags": ["educação financeira", "esteira", "sensor de cor"],
+  "tags": [
+    "educação financeira",
+    "esteira",
+    "sensor de cor"
+  ],
   "resumo": "Uma esteira leva peças coloridas (as moedas), o sensor lê a cor e um braço empurra cada uma para o lado certo. A tela mostra o total.",
   "aprende": "Automação de fábrica: transportar, identificar e separar. E somar o valor com variáveis.",
-  "pecas": [["Elo de esteira", 40], ["Roda dentada de esteira", 2], ["Viga 15 furos", 4], ["Viga 9 furos", 2], ["Viga 7 furos", 2], ["Eixo 7", 2], ["Bucha", 4], ["Pino com atrito", 30], ["Viga em L 3x5", 2], ["Eixo 3", 2]],
-  "eletronica": [["Brick EV3", 1], ["Motor grande EV3", 1], ["Motor médio EV3", 1], ["Sensor de cor EV3", 1], ["Sensor de toque EV3", 1], ["Cabo 25 cm EV3", 2], ["Cabo 35 cm EV3", 2]],
+  "pecas": [
+    [
+      "Elo de esteira",
+      40
+    ],
+    [
+      "Roda dentada de esteira",
+      2
+    ],
+    [
+      "Viga 15 furos",
+      4
+    ],
+    [
+      "Viga 9 furos",
+      2
+    ],
+    [
+      "Viga 7 furos",
+      2
+    ],
+    [
+      "Eixo 7",
+      2
+    ],
+    [
+      "Bucha",
+      4
+    ],
+    [
+      "Pino com atrito",
+      30
+    ],
+    [
+      "Viga em L 3x5",
+      2
+    ],
+    [
+      "Eixo 3",
+      2
+    ]
+  ],
+  "eletronica": [
+    [
+      "Brick EV3",
+      1
+    ],
+    [
+      "Bateria recarregável EV3",
+      1
+    ],
+    [
+      "Motor grande EV3",
+      1
+    ],
+    [
+      "Motor médio EV3",
+      1
+    ],
+    [
+      "Sensor de cor EV3",
+      1
+    ],
+    [
+      "Sensor de toque EV3",
+      1
+    ],
+    [
+      "Cabo 25 cm EV3",
+      2
+    ],
+    [
+      "Cabo 35 cm EV3",
+      2
+    ]
+  ],
   "passos": [
     "Monte uma estrutura comprida com as vigas de 15 furos.",
     "Coloque uma roda dentada em cada ponta e passe a esteira de elos em volta.",
@@ -197,11 +686,77 @@ window.IDEIAS = (window.IDEIAS || []).concat([
   "titulo": "Catapulta com redução",
   "nivel": 1,
   "tempo": 50,
-  "tags": ["catapulta", "engrenagens", "alavanca"],
+  "tags": [
+    "catapulta",
+    "engrenagens",
+    "alavanca"
+  ],
   "resumo": "Uma catapulta que usa engrenagens para ter força e um botão de disparo.",
   "aprende": "Engrenagem de 8 dentes girando a de 40 dá 5 vezes mais força.",
-  "pecas": [["Viga 15 furos", 1], ["Viga 9 furos", 2], ["Viga em T 3x3", 2], ["Engrenagem 8 dentes", 1], ["Engrenagem 40 dentes", 1], ["Eixo 7", 2], ["Bucha", 4], ["Pino com atrito", 16], ["Viga triângulo", 2]],
-  "eletronica": [["Brick EV3", 1], ["Motor grande EV3", 1], ["Sensor de toque EV3", 1], ["Cabo 25 cm EV3", 1], ["Cabo 35 cm EV3", 1]],
+  "pecas": [
+    [
+      "Viga 15 furos",
+      1
+    ],
+    [
+      "Viga 9 furos",
+      2
+    ],
+    [
+      "Viga em T 3x3",
+      2
+    ],
+    [
+      "Engrenagem 8 dentes",
+      1
+    ],
+    [
+      "Engrenagem 40 dentes",
+      1
+    ],
+    [
+      "Eixo 7",
+      2
+    ],
+    [
+      "Bucha",
+      4
+    ],
+    [
+      "Pino com atrito",
+      16
+    ],
+    [
+      "Viga triângulo",
+      2
+    ]
+  ],
+  "eletronica": [
+    [
+      "Brick EV3",
+      1
+    ],
+    [
+      "Bateria recarregável EV3",
+      1
+    ],
+    [
+      "Motor grande EV3",
+      1
+    ],
+    [
+      "Sensor de toque EV3",
+      1
+    ],
+    [
+      "Cabo 25 cm EV3",
+      1
+    ],
+    [
+      "Cabo 35 cm EV3",
+      1
+    ]
+  ],
   "passos": [
     "O Brick fica deitado como base pesada.",
     "Monte dois apoios com vigas de 9 furos e vigas em T.",
@@ -228,11 +783,89 @@ window.IDEIAS = (window.IDEIAS || []).concat([
   "titulo": "Ponte levadiça",
   "nivel": 2,
   "tempo": 50,
-  "tags": ["ponte", "rosca sem-fim", "sensor ultrassônico"],
+  "tags": [
+    "ponte",
+    "rosca sem-fim",
+    "sensor ultrassônico"
+  ],
   "resumo": "Uma ponte que levanta sozinha quando um barco chega e abaixa depois que ele passa.",
   "aprende": "Rosca sem-fim segura a ponte levantada sem gastar energia. Sensor de toque como fim de curso.",
-  "pecas": [["Viga 15 furos", 4], ["Viga 13 furos", 2], ["Quadro 5x7", 2], ["Rosca sem-fim", 1], ["Engrenagem 24 dentes", 1], ["Eixo 7", 2], ["Eixo 5", 1], ["Bucha", 4], ["Pino com atrito", 24], ["Conector perpendicular 3 furos", 4]],
-  "eletronica": [["Brick EV3", 1], ["Motor grande EV3", 1], ["Sensor ultrassônico EV3", 1], ["Sensor de toque EV3", 1], ["Cabo 25 cm EV3", 1], ["Cabo 35 cm EV3", 1], ["Cabo 50 cm EV3", 1]],
+  "pecas": [
+    [
+      "Viga 15 furos",
+      4
+    ],
+    [
+      "Viga 13 furos",
+      2
+    ],
+    [
+      "Quadro 5x7",
+      2
+    ],
+    [
+      "Rosca sem-fim",
+      1
+    ],
+    [
+      "Engrenagem 24 dentes",
+      1
+    ],
+    [
+      "Eixo 7",
+      2
+    ],
+    [
+      "Eixo 5",
+      1
+    ],
+    [
+      "Bucha",
+      4
+    ],
+    [
+      "Pino com atrito",
+      24
+    ],
+    [
+      "Conector perpendicular 3 furos",
+      4
+    ]
+  ],
+  "eletronica": [
+    [
+      "Brick EV3",
+      1
+    ],
+    [
+      "Bateria recarregável EV3",
+      1
+    ],
+    [
+      "Motor grande EV3",
+      1
+    ],
+    [
+      "Sensor ultrassônico EV3",
+      1
+    ],
+    [
+      "Sensor de toque EV3",
+      1
+    ],
+    [
+      "Cabo 25 cm EV3",
+      1
+    ],
+    [
+      "Cabo 35 cm EV3",
+      1
+    ],
+    [
+      "Cabo 50 cm EV3",
+      1
+    ]
+  ],
   "passos": [
     "Monte duas torres com os quadros 5x7.",
     "O tabuleiro da ponte são as vigas de 15 furos, presas num eixo que gira numa das torres.",
@@ -260,14 +893,115 @@ window.IDEIAS = (window.IDEIAS || []).concat([
   "titulo": "Robô que mede a sala",
   "nivel": 2,
   "tempo": 50,
-  "tags": ["matemática", "medida", "rotações"],
+  "tags": [
+    "matemática",
+    "medida",
+    "rotações"
+  ],
   "resumo": "O robô anda até a parede, conta as voltas da roda e calcula a distância em centímetros.",
   "aprende": "Perímetro do círculo: cada volta da roda anda cerca de 17,6 cm (roda de 5,6 cm x 3,14).",
-  "pecas": [["Viga 15 furos", 2], ["Viga 11 furos", 2], ["Viga em L 3x5", 2], ["Pino com atrito", 20], ["Eixo 5", 2], ["Roda 43,2 x 26", 2], ["Pneu 56 x 28", 2], ["Bucha", 2], ["Bola de aço 18 mm (rodízio)", 1], ["Junta esférica de direção (encaixe)", 1]],
-  "eletronica": [["Brick EV3", 1], ["Motor grande EV3", 2], ["Sensor ultrassônico EV3", 1], ["Sensor de toque EV3", 1], ["Cabo 25 cm EV3", 3], ["Cabo 35 cm EV3", 1]],
+  "pecas": [
+    [
+      "Pino com atrito",
+      24
+    ],
+    [
+      "Viga em L 2x4",
+      2
+    ],
+    [
+      "Viga 15 furos",
+      2
+    ],
+    [
+      "Viga 3 furos",
+      2
+    ],
+    [
+      "Viga 7 furos",
+      1
+    ],
+    [
+      "Viga 11 furos",
+      2
+    ],
+    [
+      "Eixo 6",
+      2
+    ],
+    [
+      "Eixo 12",
+      1
+    ],
+    [
+      "Bucha",
+      2
+    ],
+    [
+      "Viga 9 furos",
+      4
+    ],
+    [
+      "Pneu 56 x 28",
+      2
+    ],
+    [
+      "Eixo 8 com batente",
+      1
+    ],
+    [
+      "Roda 43,2 x 26",
+      2
+    ],
+    [
+      "Pino longo com atrito",
+      8
+    ],
+    [
+      "Junta esférica de direção (encaixe)",
+      1
+    ],
+    [
+      "Bola de aço 18 mm (rodízio)",
+      1
+    ]
+  ],
+  "eletronica": [
+    [
+      "Brick EV3",
+      1
+    ],
+    [
+      "Bateria recarregável EV3",
+      1
+    ],
+    [
+      "Motor grande EV3",
+      2
+    ],
+    [
+      "Sensor ultrassônico EV3",
+      1
+    ],
+    [
+      "Sensor de toque EV3",
+      1
+    ],
+    [
+      "Cabo 25 cm EV3",
+      3
+    ],
+    [
+      "Cabo 35 cm EV3",
+      1
+    ]
+  ],
   "passos": [
-    "Monte a base de tração com os dois motores grandes e o rodízio.",
-    "Prenda o ultrassônico na frente e o sensor de toque como botão de início."
+    "Base: os dois motores grandes (B e C) lado a lado, o Brick em cima e o rodízio de bola atrás.",
+    "Rodas: eixo de 6 e roda encostada no motor.",
+    "Na frente do Brick: uma viga de 15 em pé de cada lado.",
+    "No alto: o ultrassônico (porta 4) num eixo de 12, olhando para frente.",
+    "Atrás: o sensor de toque (porta 1) com o botão para cima. É o botão de início."
   ],
   "programa": [
     "Quando o toque for apertado: zere o contador de rotações do motor B.",
@@ -289,11 +1023,73 @@ window.IDEIAS = (window.IDEIAS || []).concat([
   "titulo": "Cofre com senha",
   "nivel": 1,
   "tempo": 50,
-  "tags": ["educação financeira", "senha", "sensor de toque"],
+  "tags": [
+    "educação financeira",
+    "senha",
+    "sensor de toque"
+  ],
   "resumo": "Um cofre que só destrava quando os dois botões são apertados na sequência certa.",
   "aprende": "Senha é uma sequência. O programa guarda o que foi apertado e compara.",
-  "pecas": [["Viga 15 furos", 4], ["Viga 11 furos", 4], ["Quadro 5x7", 3], ["Viga 7 furos", 1], ["Eixo 3", 1], ["Pino com atrito", 30], ["Pino longo com atrito", 6], ["Painel curvo (carenagem)", 4]],
-  "eletronica": [["Brick EV3", 1], ["Motor médio EV3", 1], ["Sensor de toque EV3", 2], ["Cabo 25 cm EV3", 2], ["Cabo 35 cm EV3", 1]],
+  "pecas": [
+    [
+      "Viga 15 furos",
+      4
+    ],
+    [
+      "Viga 11 furos",
+      4
+    ],
+    [
+      "Quadro 5x7",
+      3
+    ],
+    [
+      "Viga 7 furos",
+      1
+    ],
+    [
+      "Eixo 3",
+      1
+    ],
+    [
+      "Pino com atrito",
+      30
+    ],
+    [
+      "Pino longo com atrito",
+      6
+    ],
+    [
+      "Painel curvo (carenagem)",
+      4
+    ]
+  ],
+  "eletronica": [
+    [
+      "Brick EV3",
+      1
+    ],
+    [
+      "Bateria recarregável EV3",
+      1
+    ],
+    [
+      "Motor médio EV3",
+      1
+    ],
+    [
+      "Sensor de toque EV3",
+      2
+    ],
+    [
+      "Cabo 25 cm EV3",
+      2
+    ],
+    [
+      "Cabo 35 cm EV3",
+      1
+    ]
+  ],
   "passos": [
     "Monte uma caixa com os quadros 5x7 e as vigas.",
     "A tampa é presa com pinos sem atrito para abrir como porta.",

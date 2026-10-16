@@ -5,7 +5,7 @@
   "Rodas grandes: eixo de 5 na saída de cada motor.",
   "Atrás, embaixo: sensor de cor (porta D) no meio, olhando o chão.",
   "Duas vigas de 11 atravessadas em cima do quadro (uma no meio, uma atrás).",
-  "Hub em cima das vigas, mais para trás, preso com 8 pinos.",
+  "Hub (com a bateria encaixada embaixo) em cima das vigas, mais para trás, preso com 8 pinos.",
   "Atrás: duas vigas conectoras 3x3 em pé na face de trás do quadro (2 pinos cada).",
   "Suportes das rodas de trás: vigas em L 3x5 em pé, presas por fora das vigas conectoras (2 pinos cada).",
   "Rodas de trás (livres): bucha, eixo de 5 pelo furo de baixo da viga em L e a roda grande.",
@@ -79,6 +79,11 @@
    "54696",
    322,
    2
+  ],
+  [
+   "55422",
+   14,
+   1
   ],
   [
    "61332",

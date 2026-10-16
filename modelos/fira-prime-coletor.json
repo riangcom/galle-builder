@@ -5,7 +5,7 @@
   "Rodas grandes: eixo de 5 na saída de cada motor.",
   "Atrás, embaixo: viga de 3 + 2 pinos longos + rodízio com a bola. Sensor de cor ao lado (porta D), olhando o chão.",
   "Duas vigas de 11 atravessadas em cima do quadro (uma no meio, uma atrás).",
-  "Hub em cima das vigas, mais para trás, preso com 8 pinos.",
+  "Hub (com a bateria encaixada embaixo) em cima das vigas, mais para trás, preso com 8 pinos.",
   "Na frente: duas vigas conectoras 3x3 em pé, presas na face da frente do quadro (2 pinos cada).",
   "Paredes da gaiola: vigas em L 3x5 em pé nas laterais. Na esquerda, use pinos longos (o sensor vai por fora).",
   "Motor grande (porta C) de pé, por fora da parede direita, preso com 1 pino.",
@@ -98,6 +98,11 @@
    "54696",
    322,
    2
+  ],
+  [
+   "55422",
+   14,
+   1
   ],
   [
    "61332",

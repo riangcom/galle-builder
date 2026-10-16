@@ -1,0 +1,158 @@
+{
+ "passos": [
+  "Coloque os dois motores grandes lado a lado, com a parte larga para trás.",
+  "Una os motores por trás: pinos nos furos de trás e duas vigas de 11.",
+  "Encaixe as duas vigas em L vermelhas nos pinos azuis.",
+  "Monte o rodízio: bola de aço no encaixe, preso com 2 pinos nas vigas em L.",
+  "Coloque um pino longo em cada furo da aleta de cima dos motores e uma viga de 3 por fora.",
+  "Encaixe as vigas de 9 em pé nos pinos longos, duas de cada lado.",
+  "Coloque pinos nas laterais do Brick (com a bateria recarregável) e encaixe o Brick nas vigas de 9.",
+  "Rodas: eixo de 6 na saída de cada motor e a roda com pneu, encostada no motor.",
+  "Na frente do Brick: 2 pinos em cada lateral e uma viga de 15 em pé de cada lado.",
+  "Ultrassônico (porta 4) no alto, olhando para frente: eixo de 12, 2 buchas e o sensor.",
+  "Embaixo: eixo de 12, 2 buchas e o giroscópio (porta 2) deitado, firme, olhando para o chão.",
+  "Motor médio (porta A) por fora da viga de 15 da direita, preso com 2 pinos, saída para a frente.",
+  "Braço: eixo de 5 na saída do motor e a viga dobrada (furo de eixo no motor), reta para o meio e a dobra para baixo.",
+  "Gancho: eixo de 3 na ponta do braço, para a frente. A argola fica pendurada nele.",
+  "Atrás, à esquerda: 2 pinos e uma viga de 7 em pé. Eixo de 8 com batente e o sensor de toque (porta 1) com o botão para cima."
+ ],
+ "pecas": [
+  [
+   "2780",
+   0,
+   26
+  ],
+  [
+   "32073",
+   71,
+   1
+  ],
+  [
+   "32140",
+   4,
+   2
+  ],
+  [
+   "32278",
+   15,
+   2
+  ],
+  [
+   "32523",
+   1,
+   2
+  ],
+  [
+   "32524",
+   71,
+   1
+  ],
+  [
+   "32525",
+   71,
+   2
+  ],
+  [
+   "3706",
+   0,
+   2
+  ],
+  [
+   "3708",
+   0,
+   2
+  ],
+  [
+   "3713",
+   71,
+   5
+  ],
+  [
+   "40490",
+   71,
+   4
+  ],
+  [
+   "41897",
+   0,
+   2
+  ],
+  [
+   "4519",
+   71,
+   1
+  ],
+  [
+   "55013",
+   72,
+   1
+  ],
+  [
+   "56908",
+   71,
+   2
+  ],
+  [
+   "6558",
+   1,
+   8
+  ],
+  [
+   "6629",
+   0,
+   1
+  ],
+  [
+   "92911",
+   72,
+   1
+  ],
+  [
+   "95646c01",
+   15,
+   1
+  ],
+  [
+   "95648",
+   71,
+   1
+  ],
+  [
+   "95652",
+   71,
+   1
+  ],
+  [
+   "95656",
+   71,
+   1
+  ],
+  [
+   "95658",
+   71,
+   2
+  ],
+  [
+   "99380",
+   71,
+   1
+  ],
+  [
+   "99455",
+   71,
+   1
+  ],
+  [
+   "99948",
+   383,
+   1
+  ]
+ ],
+ "impressas": [],
+ "extras": [],
+ "caixa_cm": [
+  19.5,
+  14.6,
+  17.6
+ ]
+}

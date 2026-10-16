@@ -58,6 +58,10 @@ window.IDEIAS = (window.IDEIAS || []).concat([
       1
     ],
     [
+      "Bateria recarregável SPIKE (hub pequeno)",
+      1
+    ],
+    [
       "Motor pequeno SPIKE",
       2
     ]
@@ -272,6 +276,10 @@ window.IDEIAS = (window.IDEIAS || []).concat([
       1
     ],
     [
+      "Bateria recarregável SPIKE (hub pequeno)",
+      1
+    ],
+    [
       "Motor pequeno SPIKE",
       2
     ]
@@ -454,6 +462,10 @@ window.IDEIAS = (window.IDEIAS || []).concat([
   "eletronica": [
     [
       "Hub pequeno SPIKE (2 portas)",
+      1
+    ],
+    [
+      "Bateria recarregável SPIKE (hub pequeno)",
       1
     ],
     [

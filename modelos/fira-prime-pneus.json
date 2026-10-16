@@ -5,7 +5,7 @@
   "Rodas grandes: eixo de 5 na saída de cada motor.",
   "Atrás, embaixo: viga de 3 + 2 pinos longos + rodízio com a bola. Sensor de cor ao lado (porta D), olhando o chão.",
   "Duas vigas de 11 atravessadas em cima do quadro (uma no meio, uma atrás).",
-  "Hub em cima das vigas, mais para trás, preso com 8 pinos.",
+  "Hub (com a bateria encaixada embaixo) em cima das vigas, mais para trás, preso com 8 pinos.",
   "Na frente: duas vigas em L 3x5 deitadas, saindo para frente do quadro (2 pinos cada).",
   "Torre: dois quadros 5x7 em pé em cima das vigas em L, presos por baixo com 2 pinos cada.",
   "Motor grande (porta C) de pé ao lado da torre, preso numa viga de 5 (espaçador). Eixo de 7 com a engrenagem de 12 dentes entre os quadros.",
@@ -103,6 +103,11 @@
    "54696",
    322,
    2
+  ],
+  [
+   "55422",
+   14,
+   1
   ],
   [
    "60484",

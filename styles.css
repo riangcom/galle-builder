@@ -294,3 +294,32 @@ textarea { min-height: 220px; font-size: 15px; }
 .passos-texto { margin-top: 12px; }
 .passos-texto summary { cursor: pointer; font-weight: 700; min-height: 44px; display: flex; align-items: center; }
 .aviso-3d { padding: 16px; text-align: center; }
+
+/* ---------- ficha impressa (A4, preto e branco) ---------- */
+#ficha { display: none; }
+@media print {
+  @page { size: A4; margin: 8mm; }
+  body > *:not(#ficha) { display: none !important; }
+  body { background: #fff; color: #000; display: block; min-height: 0; font: 8.5pt/1.22 -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
+  #ficha { display: block; color: #000; }
+  #ficha p { margin: 2px 0; }
+  #ficha h4 { margin: 5px 0 2px; font-size: 11pt; border-bottom: 1px solid #000; }
+  .fi-topo { display: flex; justify-content: space-between; gap: 12px; border: 2px solid #000; padding: 5px 8px; margin-bottom: 4px; }
+  .fi-titulo { font-size: 14pt; }
+  .fi-nome { text-align: right; white-space: nowrap; }
+  .fi-pecas { columns: 4; column-gap: 10px; font-size: 8pt; }
+  .fi-pecas span { display: block; break-inside: avoid; }
+  .fi-passos { margin: 0; padding-left: 18px; columns: 2; column-gap: 18px; }
+  .fi-passos li { break-inside: avoid; }
+  .fi-passos li { margin: 1px 0; }
+  .fi-programa:not(.fi-dois) > div { columns: 2; column-gap: 14px; }
+  .fi-programa.fi-dois { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .fi-bloco { border: 1px solid #000; border-radius: 4px; padding: 0 4px; margin: 1px 0; break-inside: avoid; }
+  .fi-tipo { font-weight: 700; font-size: 8pt; text-transform: uppercase; }
+  .fi-dentro { margin-left: 14px; padding-left: 6px; border-left: 3px solid #000; }
+  .fi-obs { font-size: 8.5pt; font-style: italic; }
+  .fi-tabela { width: 100%; border-collapse: collapse; font-size: 8.5pt; }
+  .fi-tabela th, .fi-tabela td { border: 1px solid #000; padding: 2px 4px; text-align: left; }
+  .fi-tabela td { height: 6.5mm; }
+  .fi-tabela th:first-child, .fi-tabela td:first-child { width: 6mm; text-align: center; }
+}

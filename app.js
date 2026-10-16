@@ -238,6 +238,7 @@ function abaIdeias(el, amb, idIdeia, caminho, fira) {
       ${Object.entries(NIVEIS).map(([n, r]) => `<button class="filtro" data-n="${n}" aria-pressed="false">${"★".repeat(n)} ${r}</button>`).join("")}
       <button class="filtro" id="so3d" aria-pressed="false">Só com 3D (${ideias.filter(tem3d).length})</button>
     </div>
+    <p class="dica cobertura">${ideias.filter(tem3d).length} de ${ideias.length} ideias ${fira ? "FIRA " : ""}deste kit têm montagem 3D. As outras têm passos em texto.</p>
     <div class="grade-ideias" id="lista-ideias"></div>`;
   const lista = el.querySelector("#lista-ideias");
   function desenhar() {
@@ -347,6 +348,7 @@ function ligarEstrategias(el, i) {
   let atual = 0;
   const mostrar = (k) => {
     atual = k;
+    el.dataset.estr = k;   // a ficha impressa usa a estratégia escolhida
     const s = i.blocos[k];
     const prova = s.prova || (i.missao && i.missao.prova);
     const modo = !!(chk && chk.checked);
@@ -376,11 +378,14 @@ function detalheIdeia(el, i, caminho, aba = "ideias") {
     <label class="separar"><input type="checkbox"><span><b>${q}×</b> ${esc(nome)}</span></label>`).join("");
   const itens = (lista) => lista.map((t) => `<li>${esc(t)}</li>`).join("");
   const listaPecas = mod
-    ? `<p class="dica">Lista exata do modelo 3D. Marque cada peça quando tirar da maleta.</p>
+    ? `<p class="dica">Lista exata do modelo 3D (com a bateria no hub). Os cabos não estão na lista nem no 3D: use os do kit e ligue nas portas indicadas. Marque cada peça quando tirar da maleta.</p>
        <div class="lista-separar">${separar(pecasDoModelo(mod, i.kit))}${(mod.extras || []).map(([nome, q, motivo]) => `
          <label class="separar"><input type="checkbox"><span><b>${q}×</b> ${esc(nome)}<small>Não aparece no 3D: ${esc(motivo)}</small></span></label>`).join("")}</div>`
     : `<p class="dica">Marque cada peça quando tirar da maleta. São as principais: pode precisar de mais pinos e buchas.</p>
        <div class="lista-separar">${separar(i.eletronica)}${separar(i.pecas)}</div>`;
+  const robo2Pecas = i.robo2
+    ? `<h4 class="sub-impressas">${esc(i.robo2.titulo)}</h4>
+       <div class="lista-separar">${separar(i.robo2.eletronica)}${separar(i.robo2.pecas)}</div>` : "";
   const impressas = (i.pecas_impressas || []).length
     ? `<h4 class="sub-impressas">Peças impressas em 3D (fora da maleta)</h4>
        <div class="lista-separar">${i.pecas_impressas.map(([nome, q, obs]) => `
@@ -408,9 +413,11 @@ function detalheIdeia(el, i, caminho, aba = "ideias") {
            <button class="btn secundario" id="girar3d">Girar sozinho</button>
          </div>
          <p class="dica">Gire com um dedo, aproxime com dois. Cabos não aparecem no modelo.</p>
-         <details class="passos-texto" id="passos-texto">
+         ${i.robo2 ? `<div class="aviso">O 3D mostra só o ${esc(i.robo1_titulo || "robô 1")}. ${esc(i.robo2.titulo)}: siga os passos em texto (abertos abaixo).</div>` : ""}
+         <details class="passos-texto" id="passos-texto"${i.robo2 ? " open" : ""}>
            <summary>Ver os passos em texto</summary>
            <ol>${itens(mod.passos)}</ol>
+           ${i.robo2 || mod.passos.length === 0 ? `<h4>Passos da ideia (os dois robôs)</h4><ol>${itens(i.passos)}</ol>` : ""}
          </details>
        </div>`
     : `<ol>${itens(i.passos)}</ol>`;
@@ -420,6 +427,7 @@ function detalheIdeia(el, i, caminho, aba = "ideias") {
       <span class="nivel">${"★".repeat(i.nivel)}${"☆".repeat(3 - i.nivel)} ${NIVEIS[i.nivel]} · ${i.tempo} min${mod ? " · <b>3D</b>" : ""}</span>
       <h2 class="titulo-ideia">${esc(i.titulo)}</h2>
       ${missao}
+      ${i.missao ? `<div class="acoes nao-imprime"><button class="btn secundario" id="imprimir">🖨 Imprimir ficha (A4)</button></div>` : ""}
       <p>${esc(i.resumo)}</p>
       <p class="aprende"><b>O que vamos aprender:</b> ${esc(i.aprende)}</p>
 
@@ -429,6 +437,7 @@ function detalheIdeia(el, i, caminho, aba = "ideias") {
         <button class="btn secundario" id="prog-limpar">Desmarcar tudo</button>
       </div>
       ${listaPecas}
+      ${robo2Pecas}
       ${impressas}
 
       <h3>2. Monte</h3>
@@ -444,8 +453,61 @@ function detalheIdeia(el, i, caminho, aba = "ideias") {
       <div class="caixa-pergunta"><b>Para conversar:</b> ${esc(i.pergunta)}</div>
     </article>`;
   ligarSeparar(el, i.id);
+  const bImp = el.querySelector("#imprimir");
+  if (bImp) bImp.onclick = () => imprimirFicha(i, mod, Number(el.dataset.estr || 0));
   if (mod) ligarVisor3d(el, mod);
   if (i.blocos) ligarEstrategias(el, i);
+}
+
+// ---------- ficha impressa (1 página A4, preto e branco) ----------
+const ROTULO_TIPO = { evento: "Evento", controle: "Controle", movimento: "Movimento", motor: "Motor",
+  sensor: "Sensor", luz: "Luz", som: "Som", operador: "Operador", variavel: "Variável" };
+
+function blocosImpressos(lista) {
+  return lista.map((b) => `
+    <div class="fi-bloco"><span class="fi-tipo">${ROTULO_TIPO[b.t] || ""}</span> ${esc(b.txt).replace(/\{(\w)\}/g, "[$1]")}</div>
+    ${b.filhos ? `<div class="fi-dentro">${blocosImpressos(b.filhos)}</div>` : ""}
+    ${b.senao ? `<div class="fi-bloco"><span class="fi-tipo">senão</span></div><div class="fi-dentro">${blocosImpressos(b.senao)}</div>` : ""}`).join("");
+}
+
+function imprimirFicha(i, mod, k) {
+  const s = i.blocos ? i.blocos[k] || i.blocos[0] : null;
+  const provas = provasDe(i);
+  const pecas = mod ? pecasDoModelo(mod, i.kit).concat((mod.extras || []).map(([n, q]) => [n, q])) : i.eletronica.concat(i.pecas);
+  const impressas = (i.pecas_impressas || []).map(([n, q]) => [n + " (impressa 3D)", q]);
+  const robo2 = i.robo2 ? i.robo2.eletronica.concat(i.robo2.pecas).map(([n, q]) => [n + " (robô 2)", q]) : [];
+  const passos = mod ? mod.passos : i.passos;
+  const portas = (titulo, pt) => `<p><b>${titulo}</b> ${Object.entries(pt || {}).map(([p, d]) => `[${p}] ${esc(curto(d))}`).join(" · ")}</p>`;
+  const linhas = Array.from({ length: 5 }, (_, n) => `<tr><td>${n + 1}</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>`).join("");
+  let ficha = document.getElementById("ficha");
+  if (!ficha) { ficha = document.createElement("section"); ficha.id = "ficha"; document.body.appendChild(ficha); }
+  ficha.innerHTML = `
+    <header class="fi-topo">
+      <div><b class="fi-titulo">${esc(i.titulo)}</b><br>${esc(KITS[i.kit] ? KITS[i.kit].nome : i.kit)} · ${i.missao.prova === "todas" ? "Robô de treino (todas as provas)"
+        : "Prova " + provas.join(" + ") + " · " + esc(provas.map((p) => (PROVAS_FIRA[p] || {}).nome || "").join(" / "))}</div>
+      <div class="fi-nome">Equipe: ____________________<br>Data: ____/____</div>
+    </header>
+    <p><b>Missão:</b> ${esc(i.missao.parte)}</p>
+    <p><b>Pontos:</b> ${esc(i.missao.pontos)}</p>
+    <p><b>Limite de tamanho:</b> ${esc(provas.map((p) => (PROVAS_FIRA[p] || {}).limite || "").join("; "))}${provas.map((p) => TEMPO_PROVA[p]).some(Boolean) ? " · <b>Tempo:</b> " + provas.filter((p) => TEMPO_PROVA[p]).map((p) => fmtTempo(TEMPO_PROVA[p])).join(" / ") : ""}
+      ${i.medidas_cm ? ` · <b>Nosso robô:</b> ${i.medidas_cm.map((n) => String(n).replace(".", ",")).join(" x ")} cm` : ""}</p>
+    <h4>1. Peças</h4>
+    <div class="fi-pecas">${pecas.concat(impressas, robo2).map(([n, q]) => `<span>☐ ${q}× ${esc(n)}</span>`).join("")}</div>
+    <h4>2. Montagem</h4>
+    <ol class="fi-passos">${passos.map((p) => `<li>${esc(p)}</li>`).join("")}</ol>
+    ${s ? `<h4>3. Programa: ${esc(s.estrategia)}</h4>
+      ${i.robo2 ? portas((i.robo1_titulo || "Robô 1") + ":", i.portas) + portas(i.robo2.titulo + ":", i.robo2.portas) : portas("Ligue assim:", i.portas)}
+      <div class="fi-programa${i.robo2 ? " fi-dois" : ""}">
+        <div>${i.robo2 ? `<b>${esc(i.robo1_titulo || "Robô 1")}</b>` : ""}${blocosImpressos(s.lista)}</div>
+        ${i.robo2 ? `<div><b>${esc(i.robo2.titulo)}</b>${blocosImpressos(s.lista2 || [])}</div>` : ""}
+      </div>
+      <p class="fi-obs">Os números são exemplos: calibre na arena. Ajuste: ${esc(s.ajustes.join(" "))}</p>` : ""}
+    <h4>4. Calibração na arena</h4>
+    <table class="fi-tabela">
+      <thead><tr><th>#</th><th>cm por rotação</th><th>giro de 90° (graus ou rotações)</th><th>velocidade (%)</th><th>tempo da tentativa (s)</th><th>pontos</th><th>o que mudamos</th></tr></thead>
+      <tbody>${linhas}</tbody>
+    </table>`;
+  window.print();
 }
 
 // WebGL existe? (sem ele, o 3D não abre: mostra os passos em texto)

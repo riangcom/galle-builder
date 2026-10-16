@@ -6,11 +6,64 @@ window.IDEIAS = (window.IDEIAS || []).concat([
   "titulo": "Explorador que desvia de obstáculos",
   "nivel": 1,
   "tempo": 50,
-  "tags": ["veículo", "sensor de distância"],
+  "tags": [
+    "veículo",
+    "sensor de distância"
+  ],
   "resumo": "Um carrinho que anda sozinho e muda de caminho quando encontra uma parede ou uma caixa.",
   "aprende": "Usar um sensor para tomar decisões: SE estiver perto, ENTÃO vire.",
-  "pecas": [["Quadro 7x11", 1], ["Viga 15 furos", 2], ["Viga 7 furos", 2], ["Pino com atrito", 20], ["Roda 57 x 14 com pneu", 2], ["Viga 3x5 com bola giratória", 1], ["Bola 19 mm", 1], ["Viga em L 3x5", 2]],
-  "eletronica": [["Hub grande SPIKE (6 portas)", 1], ["Motor médio SPIKE", 2], ["Sensor de distância SPIKE", 1]],
+  "pecas": [
+    [
+      "Quadro 7x11",
+      1
+    ],
+    [
+      "Viga 15 furos",
+      2
+    ],
+    [
+      "Viga 7 furos",
+      2
+    ],
+    [
+      "Pino com atrito",
+      20
+    ],
+    [
+      "Roda 57 x 14 com pneu",
+      2
+    ],
+    [
+      "Viga 3x5 com bola giratória",
+      1
+    ],
+    [
+      "Bola 19 mm",
+      1
+    ],
+    [
+      "Viga em L 3x5",
+      2
+    ]
+  ],
+  "eletronica": [
+    [
+      "Hub grande SPIKE (6 portas)",
+      1
+    ],
+    [
+      "Bateria recarregável SPIKE (hub grande)",
+      1
+    ],
+    [
+      "Motor médio SPIKE",
+      2
+    ],
+    [
+      "Sensor de distância SPIKE",
+      1
+    ]
+  ],
   "passos": [
     "Prenda os dois motores médios lado a lado no quadro 7x11, com os eixos virados para fora.",
     "Encaixe uma roda grande em cada motor.",
@@ -38,11 +91,89 @@ window.IDEIAS = (window.IDEIAS || []).concat([
   "titulo": "Guindaste com braço que sobe e desce",
   "nivel": 2,
   "tempo": 50,
-  "tags": ["guindaste", "engrenagens", "redução"],
+  "tags": [
+    "guindaste",
+    "engrenagens",
+    "redução"
+  ],
   "resumo": "Uma torre que gira e um braço que levanta peças leves usando engrenagens para ganhar força.",
   "aprende": "Redução: engrenagem pequena (12 dentes) girando a grande (36 dentes) deixa o movimento 3 vezes mais lento e mais forte.",
-  "pecas": [["Quadro 11x15", 1], ["Viga 15 furos", 4], ["Viga 11 furos", 2], ["Viga 9 furos", 2], ["Engrenagem 12 dentes dupla cônica", 2], ["Engrenagem 36 dentes dupla cônica", 2], ["Eixo 5", 2], ["Eixo 7", 2], ["Bucha", 4], ["Pino com atrito", 30], ["Pino longo com atrito", 6], ["Dente 1x3", 2], ["Viga em T 3x3", 2]],
-  "eletronica": [["Hub grande SPIKE (6 portas)", 1], ["Motor grande SPIKE", 1], ["Motor médio SPIKE", 1], ["Sensor de força SPIKE", 1]],
+  "pecas": [
+    [
+      "Quadro 11x15",
+      1
+    ],
+    [
+      "Viga 15 furos",
+      4
+    ],
+    [
+      "Viga 11 furos",
+      2
+    ],
+    [
+      "Viga 9 furos",
+      2
+    ],
+    [
+      "Engrenagem 12 dentes dupla cônica",
+      2
+    ],
+    [
+      "Engrenagem 36 dentes dupla cônica",
+      2
+    ],
+    [
+      "Eixo 5",
+      2
+    ],
+    [
+      "Eixo 7",
+      2
+    ],
+    [
+      "Bucha",
+      4
+    ],
+    [
+      "Pino com atrito",
+      30
+    ],
+    [
+      "Pino longo com atrito",
+      6
+    ],
+    [
+      "Dente 1x3",
+      2
+    ],
+    [
+      "Viga em T 3x3",
+      2
+    ]
+  ],
+  "eletronica": [
+    [
+      "Hub grande SPIKE (6 portas)",
+      1
+    ],
+    [
+      "Bateria recarregável SPIKE (hub grande)",
+      1
+    ],
+    [
+      "Motor grande SPIKE",
+      1
+    ],
+    [
+      "Motor médio SPIKE",
+      1
+    ],
+    [
+      "Sensor de força SPIKE",
+      1
+    ]
+  ],
   "passos": [
     "Use o quadro 11x15 como base pesada. O hub pode ficar nela para servir de contrapeso.",
     "Monte uma torre com duas vigas de 15 furos em pé, travadas com vigas em T.",
@@ -71,11 +202,93 @@ window.IDEIAS = (window.IDEIAS || []).concat([
   "titulo": "Veículo com garra que busca objetos",
   "nivel": 3,
   "tempo": 100,
-  "tags": ["veículo", "garra", "sensor de cor"],
+  "tags": [
+    "veículo",
+    "garra",
+    "sensor de cor"
+  ],
   "resumo": "Um carro que encontra um objeto, fecha a garra, leva até a base e solta.",
   "aprende": "Dividir um problema grande em partes: andar, achar, pegar, voltar.",
-  "pecas": [["Quadro 7x11", 1], ["Quadro 5x7", 1], ["Viga 15 furos", 2], ["Viga 9 furos", 2], ["Viga dobrada 9 furos", 2], ["Engrenagem 20 dentes dupla cônica", 2], ["Eixo 5", 2], ["Pino com atrito", 30], ["Pino-eixo sem atrito", 4], ["Roda 57 x 14 com pneu", 2], ["Viga 3x5 com bola giratória", 1], ["Bola 19 mm", 1], ["Bucha", 4]],
-  "eletronica": [["Hub grande SPIKE (6 portas)", 1], ["Motor médio SPIKE", 2], ["Motor grande SPIKE", 1], ["Sensor de distância SPIKE", 1], ["Sensor de cor SPIKE", 1]],
+  "pecas": [
+    [
+      "Quadro 7x11",
+      1
+    ],
+    [
+      "Quadro 5x7",
+      1
+    ],
+    [
+      "Viga 15 furos",
+      2
+    ],
+    [
+      "Viga 9 furos",
+      2
+    ],
+    [
+      "Viga dobrada 9 furos",
+      2
+    ],
+    [
+      "Engrenagem 20 dentes dupla cônica",
+      2
+    ],
+    [
+      "Eixo 5",
+      2
+    ],
+    [
+      "Pino com atrito",
+      30
+    ],
+    [
+      "Pino-eixo sem atrito",
+      4
+    ],
+    [
+      "Roda 57 x 14 com pneu",
+      2
+    ],
+    [
+      "Viga 3x5 com bola giratória",
+      1
+    ],
+    [
+      "Bola 19 mm",
+      1
+    ],
+    [
+      "Bucha",
+      4
+    ]
+  ],
+  "eletronica": [
+    [
+      "Hub grande SPIKE (6 portas)",
+      1
+    ],
+    [
+      "Bateria recarregável SPIKE (hub grande)",
+      1
+    ],
+    [
+      "Motor médio SPIKE",
+      2
+    ],
+    [
+      "Motor grande SPIKE",
+      1
+    ],
+    [
+      "Sensor de distância SPIKE",
+      1
+    ],
+    [
+      "Sensor de cor SPIKE",
+      1
+    ]
+  ],
   "passos": [
     "Monte a base de tração: dois motores médios com rodas grandes e rodízio atrás.",
     "Na frente, prenda o quadro 5x7 em pé: ele segura a garra.",
@@ -104,11 +317,61 @@ window.IDEIAS = (window.IDEIAS || []).concat([
   "titulo": "Robô seguidor de linha",
   "nivel": 2,
   "tempo": 50,
-  "tags": ["veículo", "sensor de cor", "linha"],
+  "tags": [
+    "veículo",
+    "sensor de cor",
+    "linha"
+  ],
   "resumo": "Um robô que segue uma fita preta no chão, como os carrinhos de fábrica.",
   "aprende": "Corrigir o caminho o tempo todo: se saiu da linha, volta.",
-  "pecas": [["Quadro 7x11", 1], ["Viga 11 furos", 2], ["Viga em L 3x5", 2], ["Pino com atrito", 16], ["Roda 57 x 14 com pneu", 2], ["Viga 3x5 com bola giratória", 1], ["Bola 19 mm", 1]],
-  "eletronica": [["Hub grande SPIKE (6 portas)", 1], ["Motor médio SPIKE", 2], ["Sensor de cor SPIKE", 1]],
+  "pecas": [
+    [
+      "Quadro 7x11",
+      1
+    ],
+    [
+      "Viga 11 furos",
+      2
+    ],
+    [
+      "Viga em L 3x5",
+      2
+    ],
+    [
+      "Pino com atrito",
+      16
+    ],
+    [
+      "Roda 57 x 14 com pneu",
+      2
+    ],
+    [
+      "Viga 3x5 com bola giratória",
+      1
+    ],
+    [
+      "Bola 19 mm",
+      1
+    ]
+  ],
+  "eletronica": [
+    [
+      "Hub grande SPIKE (6 portas)",
+      1
+    ],
+    [
+      "Bateria recarregável SPIKE (hub grande)",
+      1
+    ],
+    [
+      "Motor médio SPIKE",
+      2
+    ],
+    [
+      "Sensor de cor SPIKE",
+      1
+    ]
+  ],
   "passos": [
     "Monte a base com os dois motores médios, rodas grandes e rodízio.",
     "Prenda o sensor de cor na frente, apontando para o chão, a cerca de 1 cm de altura.",
@@ -134,11 +397,69 @@ window.IDEIAS = (window.IDEIAS || []).concat([
   "titulo": "Cofrinho que separa e conta moedas",
   "nivel": 2,
   "tempo": 50,
-  "tags": ["educação financeira", "sensor de cor", "contagem"],
+  "tags": [
+    "educação financeira",
+    "sensor de cor",
+    "contagem"
+  ],
   "resumo": "Peças coloridas fazem o papel de moedas. O robô lê a cor, separa para o lado certo e soma o valor guardado.",
   "aprende": "Classificar com sensor e usar variáveis para somar dinheiro.",
-  "pecas": [["Quadro 11x15", 1], ["Viga 13 furos", 2], ["Viga 9 furos", 2], ["Painel 3x11", 2], ["Viga em L 2x4", 2], ["Pino com atrito", 20], ["Eixo 5", 1], ["Bucha", 2], ["Placa redonda", 6]],
-  "eletronica": [["Hub grande SPIKE (6 portas)", 1], ["Motor médio SPIKE", 1], ["Sensor de cor SPIKE", 1]],
+  "pecas": [
+    [
+      "Quadro 11x15",
+      1
+    ],
+    [
+      "Viga 13 furos",
+      2
+    ],
+    [
+      "Viga 9 furos",
+      2
+    ],
+    [
+      "Painel 3x11",
+      2
+    ],
+    [
+      "Viga em L 2x4",
+      2
+    ],
+    [
+      "Pino com atrito",
+      20
+    ],
+    [
+      "Eixo 5",
+      1
+    ],
+    [
+      "Bucha",
+      2
+    ],
+    [
+      "Placa redonda",
+      6
+    ]
+  ],
+  "eletronica": [
+    [
+      "Hub grande SPIKE (6 portas)",
+      1
+    ],
+    [
+      "Bateria recarregável SPIKE (hub grande)",
+      1
+    ],
+    [
+      "Motor médio SPIKE",
+      1
+    ],
+    [
+      "Sensor de cor SPIKE",
+      1
+    ]
+  ],
   "passos": [
     "Monte uma rampa com os painéis 3x11 inclinados sobre o quadro 11x15.",
     "No meio da rampa, prenda o sensor de cor olhando para baixo, onde a 'moeda' passa.",
@@ -167,11 +488,77 @@ window.IDEIAS = (window.IDEIAS || []).concat([
   "titulo": "Catapulta com gatilho",
   "nivel": 1,
   "tempo": 50,
-  "tags": ["catapulta", "alavanca", "sensor de força"],
+  "tags": [
+    "catapulta",
+    "alavanca",
+    "sensor de força"
+  ],
   "resumo": "Um braço que lança uma bolinha quando o botão de força é apertado.",
   "aprende": "Alavanca: quanto mais longo o braço, mais longe vai a bolinha.",
-  "pecas": [["Quadro 11x15", 1], ["Viga 15 furos", 1], ["Viga 7 furos", 2], ["Viga em T 3x3", 2], ["Engrenagem 12 dentes dupla cônica", 1], ["Engrenagem 36 dentes dupla cônica", 1], ["Eixo 7", 2], ["Bucha", 4], ["Pino com atrito", 16], ["Prato (antena)", 1], ["Bola 19 mm", 1]],
-  "eletronica": [["Hub grande SPIKE (6 portas)", 1], ["Motor grande SPIKE", 1], ["Sensor de força SPIKE", 1]],
+  "pecas": [
+    [
+      "Quadro 11x15",
+      1
+    ],
+    [
+      "Viga 15 furos",
+      1
+    ],
+    [
+      "Viga 7 furos",
+      2
+    ],
+    [
+      "Viga em T 3x3",
+      2
+    ],
+    [
+      "Engrenagem 12 dentes dupla cônica",
+      1
+    ],
+    [
+      "Engrenagem 36 dentes dupla cônica",
+      1
+    ],
+    [
+      "Eixo 7",
+      2
+    ],
+    [
+      "Bucha",
+      4
+    ],
+    [
+      "Pino com atrito",
+      16
+    ],
+    [
+      "Prato (antena)",
+      1
+    ],
+    [
+      "Bola 19 mm",
+      1
+    ]
+  ],
+  "eletronica": [
+    [
+      "Hub grande SPIKE (6 portas)",
+      1
+    ],
+    [
+      "Bateria recarregável SPIKE (hub grande)",
+      1
+    ],
+    [
+      "Motor grande SPIKE",
+      1
+    ],
+    [
+      "Sensor de força SPIKE",
+      1
+    ]
+  ],
   "passos": [
     "Fixe o motor grande na base (quadro 11x15).",
     "Monte dois apoios com vigas de 7 furos e vigas em T.",
@@ -198,11 +585,69 @@ window.IDEIAS = (window.IDEIAS || []).concat([
   "titulo": "Ventilador que liga sozinho",
   "nivel": 1,
   "tempo": 50,
-  "tags": ["ventilador", "engrenagens", "velocidade"],
+  "tags": [
+    "ventilador",
+    "engrenagens",
+    "velocidade"
+  ],
   "resumo": "Um ventilador que liga quando alguém chega perto e desliga quando a pessoa sai.",
   "aprende": "Multiplicação de velocidade: a engrenagem grande girando a pequena faz a hélice girar 3 vezes mais rápido.",
-  "pecas": [["Quadro 5x7", 1], ["Viga 9 furos", 2], ["Viga 15 furos", 2], ["Engrenagem 36 dentes dupla cônica", 1], ["Engrenagem 12 dentes dupla cônica", 1], ["Eixo 5", 2], ["Conector com 4 pinos", 1], ["Bucha", 4], ["Pino com atrito", 12]],
-  "eletronica": [["Hub grande SPIKE (6 portas)", 1], ["Motor médio SPIKE", 1], ["Sensor de distância SPIKE", 1]],
+  "pecas": [
+    [
+      "Quadro 5x7",
+      1
+    ],
+    [
+      "Viga 9 furos",
+      2
+    ],
+    [
+      "Viga 15 furos",
+      2
+    ],
+    [
+      "Engrenagem 36 dentes dupla cônica",
+      1
+    ],
+    [
+      "Engrenagem 12 dentes dupla cônica",
+      1
+    ],
+    [
+      "Eixo 5",
+      2
+    ],
+    [
+      "Conector com 4 pinos",
+      1
+    ],
+    [
+      "Bucha",
+      4
+    ],
+    [
+      "Pino com atrito",
+      12
+    ]
+  ],
+  "eletronica": [
+    [
+      "Hub grande SPIKE (6 portas)",
+      1
+    ],
+    [
+      "Bateria recarregável SPIKE (hub grande)",
+      1
+    ],
+    [
+      "Motor médio SPIKE",
+      1
+    ],
+    [
+      "Sensor de distância SPIKE",
+      1
+    ]
+  ],
   "passos": [
     "Monte uma torre com o quadro 5x7 e as vigas de 9 furos.",
     "O motor médio gira a engrenagem de 36 dentes, que gira a de 12 no eixo da hélice.",
@@ -228,11 +673,57 @@ window.IDEIAS = (window.IDEIAS || []).concat([
   "titulo": "Cancela de estacionamento",
   "nivel": 1,
   "tempo": 50,
-  "tags": ["educação financeira", "cancela", "sensor de distância"],
+  "tags": [
+    "educação financeira",
+    "cancela",
+    "sensor de distância"
+  ],
   "resumo": "A cancela abre quando um carro chega e cobra o estacionamento pelo tempo que ele ficou.",
   "aprende": "Medir tempo com o cronômetro do hub e transformar tempo em preço.",
-  "pecas": [["Quadro 7x11", 1], ["Viga 15 furos", 1], ["Viga 7 furos", 2], ["Viga em L 3x5", 2], ["Pino com atrito", 12], ["Eixo 3", 1]],
-  "eletronica": [["Hub grande SPIKE (6 portas)", 1], ["Motor médio SPIKE", 1], ["Sensor de distância SPIKE", 1]],
+  "pecas": [
+    [
+      "Quadro 7x11",
+      1
+    ],
+    [
+      "Viga 15 furos",
+      1
+    ],
+    [
+      "Viga 7 furos",
+      2
+    ],
+    [
+      "Viga em L 3x5",
+      2
+    ],
+    [
+      "Pino com atrito",
+      12
+    ],
+    [
+      "Eixo 3",
+      1
+    ]
+  ],
+  "eletronica": [
+    [
+      "Hub grande SPIKE (6 portas)",
+      1
+    ],
+    [
+      "Bateria recarregável SPIKE (hub grande)",
+      1
+    ],
+    [
+      "Motor médio SPIKE",
+      1
+    ],
+    [
+      "Sensor de distância SPIKE",
+      1
+    ]
+  ],
   "passos": [
     "Fixe o motor médio em pé na base (quadro 7x11).",
     "Prenda a viga de 15 furos no motor: ela é a cancela.",
@@ -258,11 +749,69 @@ window.IDEIAS = (window.IDEIAS || []).concat([
   "titulo": "Inseto que anda com pernas",
   "nivel": 3,
   "tempo": 100,
-  "tags": ["animal robô", "manivela", "mecanismo"],
+  "tags": [
+    "animal robô",
+    "manivela",
+    "mecanismo"
+  ],
   "resumo": "Um robô sem rodas que anda com pernas movidas por manivelas.",
   "aprende": "Manivela: transformar o giro do motor em um movimento de passo.",
-  "pecas": [["Quadro 11x15", 1], ["Viga 11 furos", 4], ["Viga em L 3x5", 4], ["Haste de ligação 6", 2], ["Viga 5 furos", 4], ["Pino com atrito", 30], ["Pino-eixo sem atrito", 8], ["Pino longo com atrito", 6], ["Placa lisa redonda com desenho (olho)", 2]],
-  "eletronica": [["Hub grande SPIKE (6 portas)", 1], ["Motor médio SPIKE", 2], ["Sensor de distância SPIKE", 1]],
+  "pecas": [
+    [
+      "Quadro 11x15",
+      1
+    ],
+    [
+      "Viga 11 furos",
+      4
+    ],
+    [
+      "Viga em L 3x5",
+      4
+    ],
+    [
+      "Haste de ligação 6",
+      2
+    ],
+    [
+      "Viga 5 furos",
+      4
+    ],
+    [
+      "Pino com atrito",
+      30
+    ],
+    [
+      "Pino-eixo sem atrito",
+      8
+    ],
+    [
+      "Pino longo com atrito",
+      6
+    ],
+    [
+      "Placa lisa redonda com desenho (olho)",
+      2
+    ]
+  ],
+  "eletronica": [
+    [
+      "Hub grande SPIKE (6 portas)",
+      1
+    ],
+    [
+      "Bateria recarregável SPIKE (hub grande)",
+      1
+    ],
+    [
+      "Motor médio SPIKE",
+      2
+    ],
+    [
+      "Sensor de distância SPIKE",
+      1
+    ]
+  ],
   "passos": [
     "Use o quadro 11x15 como corpo e prenda um motor médio de cada lado.",
     "Em cada motor, prenda uma viga em L como manivela (ela gira em círculo).",
@@ -289,11 +838,61 @@ window.IDEIAS = (window.IDEIAS || []).concat([
   "titulo": "Balança de mercadinho",
   "nivel": 2,
   "tempo": 50,
-  "tags": ["educação financeira", "sensor de força", "medida"],
+  "tags": [
+    "educação financeira",
+    "sensor de força",
+    "medida"
+  ],
   "resumo": "Uma balança que mede o quanto um produto aperta o sensor e calcula o preço.",
   "aprende": "Medir força, calibrar e transformar medida em dinheiro.",
-  "pecas": [["Quadro 11x15", 1], ["Quadro 5x7", 1], ["Viga 9 furos", 2], ["Viga 15 furos", 1], ["Pino com atrito", 16], ["Pino-eixo sem atrito", 2], ["Eixo 3", 1]],
-  "eletronica": [["Hub grande SPIKE (6 portas)", 1], ["Sensor de força SPIKE", 1], ["Motor médio SPIKE", 1]],
+  "pecas": [
+    [
+      "Quadro 11x15",
+      1
+    ],
+    [
+      "Quadro 5x7",
+      1
+    ],
+    [
+      "Viga 9 furos",
+      2
+    ],
+    [
+      "Viga 15 furos",
+      1
+    ],
+    [
+      "Pino com atrito",
+      16
+    ],
+    [
+      "Pino-eixo sem atrito",
+      2
+    ],
+    [
+      "Eixo 3",
+      1
+    ]
+  ],
+  "eletronica": [
+    [
+      "Hub grande SPIKE (6 portas)",
+      1
+    ],
+    [
+      "Bateria recarregável SPIKE (hub grande)",
+      1
+    ],
+    [
+      "Sensor de força SPIKE",
+      1
+    ],
+    [
+      "Motor médio SPIKE",
+      1
+    ]
+  ],
   "passos": [
     "Prenda o sensor de força em pé na base, com o botão para cima.",
     "Faça um prato com o quadro 5x7 apoiado em uma alavanca (viga de 9 furos) que pressiona o botão.",

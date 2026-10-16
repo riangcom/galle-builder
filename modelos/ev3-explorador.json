@@ -6,7 +6,7 @@
   "Monte o rodízio: bola de aço no encaixe, preso com 2 pinos nas vigas em L.",
   "Coloque um pino longo em cada furo da aleta de cima dos motores e uma viga de 3 por fora.",
   "Encaixe as vigas de 9 em pé nos pinos longos, duas de cada lado.",
-  "Coloque pinos nas laterais do Brick e encaixe o Brick nas vigas de 9.",
+  "Coloque pinos nas laterais do Brick (com a bateria recarregável) e encaixe o Brick nas vigas de 9.",
   "Na frente, por baixo do Brick: pinos (2 longos), viga de 7 deitada e a viga em L 3x5.",
   "Prenda o sensor ultrassônico deitado embaixo da viga em L, com 2 pinos.",
   "Rodas: eixo de 8 na saída de cada motor, bucha, roda e pneu."
@@ -84,6 +84,11 @@
   ],
   [
    "95652",
+   71,
+   1
+  ],
+  [
+   "95656",
    71,
    1
   ],
