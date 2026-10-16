@@ -1,0 +1,74 @@
+{
+ "passos": [
+  "O chassi: dois tijolos Technic 1x16 deitados, lado a lado (a 100 de distância, ficam 80 livres no meio).",
+  "Atrás, entre os trilhos: o motor pequeno (porta A), com a saída para a direita, preso ao trilho direito com 2 pinos.",
+  "Eixo de 4 na saída do motor, atravessando o trilho direito, e a roda grande. Do outro lado: eixo de 4, bucha e a outra roda grande, solta, no trilho esquerdo.",
+  "Na frente: duas vigas em L 3x5 por dentro dos trilhos (2 pinos cada), com a perna curta para baixo. Elas deslizam no chão como apoio (a ponta fica 2 mm acima do chão).",
+  "O sensor de cor (porta B) no meio do chassi, olhando para o chão, com 1 pino em cada trilho.",
+  "O hub: dois tijolos Technic 1x8 empilhados na frente e dois atrás, atravessados nos trilhos. O hub (com a bateria) fica entre eles, preso com 4 pinos nas pontas."
+ ],
+ "pecas": [
+  [
+   "32526",
+   10,
+   2
+  ],
+  [
+   "3702",
+   321,
+   4
+  ],
+  [
+   "3703",
+   10,
+   2
+  ],
+  [
+   "3705",
+   0,
+   2
+  ],
+  [
+   "3713",
+   4,
+   1
+  ],
+  [
+   "37308",
+   15,
+   1
+  ],
+  [
+   "61332",
+   0,
+   12
+  ],
+  [
+   "65834pat0002",
+   15,
+   2
+  ],
+  [
+   "66757",
+   14,
+   1
+  ],
+  [
+   "67351",
+   14,
+   1
+  ],
+  [
+   "68488",
+   15,
+   1
+  ]
+ ],
+ "impressas": [],
+ "extras": [],
+ "caixa_cm": [
+  13.2,
+  8.6,
+  6.1
+ ]
+}

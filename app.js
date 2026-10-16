@@ -229,7 +229,9 @@ function abaIdeias(el, amb, idIdeia, caminho, fira) {
     return;
   }
   let nivel = 0, so3d = false;
+  const nFira = (window.IDEIAS || []).filter((i) => i.kit === amb.base && i.missao).length;
   el.innerHTML = `
+    ${!fira && nFira ? `<a class="btn ir-fira" href="${caminho}?aba=fira">🏁 Missões FIRA deste kit (${nFira} robôs com montagem 3D) →</a>` : ""}
     ${fira ? `<div class="provas">${Object.entries(PROVAS_FIRA).filter(([k]) => k !== "todas").map(([k, p]) =>
       `<div class="prova"><b>${k}</b> ${esc(p.nome)}<span>${esc(p.limite)} · ${esc(p.tempo)}</span></div>`).join("")}</div>
       <div class="aviso-calibrar">⚠ Distâncias, ângulos e cores dos programas são exemplos: <b>calibre na arena real</b> antes da prova. Comece pelo robô de treino.</div>` : ""}
@@ -244,6 +246,7 @@ function abaIdeias(el, amb, idIdeia, caminho, fira) {
   function desenhar() {
     lista.innerHTML = ideias.filter((i) => (!nivel || i.nivel === nivel) && (!so3d || tem3d(i))).map((i) => `
       <a class="card-ideia" href="${caminho}?aba=${aba}&ideia=${i.id}">
+        ${tem3d(i) ? `<img class="foto-robo" src="miniaturas/${modelosDe(i)[0].id}.jpg" alt="Robô ${esc(i.titulo)} montado" loading="lazy" onerror="this.remove()">` : ""}
         <span class="nivel">${i.missao ? `<b class="selo-prova">${i.missao.prova === "todas" ? "Treino" : provasDe(i).join(" + ")}</b> ` : ""}${"★".repeat(i.nivel)}${"☆".repeat(3 - i.nivel)} ${NIVEIS[i.nivel]} · ${i.tempo} min
           ${tem3d(i) ? `<b class="selo-3d" title="Montagem 3D passo a passo">3D</b>` : `<span class="selo-texto" title="Montagem com passos em texto">texto</span>`}</span>
         <strong>${esc(i.titulo)}</strong>
@@ -668,7 +671,7 @@ function telaProfessor() {
       </select></label>
 
     <h2>Usar sem internet</h2>
-    <p class="sub">Baixa de uma vez o visor 3D e todas as montagens para este iPad (cerca de 10 MB). Faça uma vez em cada iPad, com Wi-Fi, e de novo quando o app avisar versão nova.</p>
+    <p class="sub">Baixa de uma vez o visor 3D e todas as montagens para este iPad (cerca de 34 MB). Faça uma vez em cada iPad, com Wi-Fi, e de novo quando o app avisar versão nova.</p>
     <div class="acoes"><button class="btn" id="offline">Preparar este iPad para usar sem internet</button></div>
     <p class="dica" id="offline-st" aria-live="polite"></p>`;
 
@@ -682,7 +685,8 @@ function telaProfessor() {
     // pede ao iPad para não apagar o que foi guardado (o Safari pode ignorar)
     try { await navigator.storage?.persist?.(); } catch { /* sem suporte */ }
     const lista = ["visor3d.js", "vendor/three/three.module.js", "vendor/three/LDrawLoader.js", "vendor/three/OrbitControls.js",
-      ...Object.values(window.MODELOS3D || {}).map((m) => m.mpd)];
+      ...Object.values(window.MODELOS3D || {}).map((m) => m.mpd),
+      ...Object.keys(window.MODELOS3D || {}).map((id) => `miniaturas/${id}.jpg`)];
     let ok = 0, falhas = 0;
     for (const url of lista) {
       try { (await fetch(url)).ok ? ok++ : falhas++; } catch { falhas++; }

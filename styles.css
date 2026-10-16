@@ -323,3 +323,8 @@ textarea { min-height: 220px; font-size: 15px; }
   .fi-tabela td { height: 6.5mm; }
   .fi-tabela th:first-child, .fi-tabela td:first-child { width: 6mm; text-align: center; }
 }
+
+/* Foto do robô montado no topo de cada cartão de ideia (gerada do 3D) */
+.foto-robo { display: block; width: calc(100% + 36px); margin: -18px -18px 4px; aspect-ratio: 4 / 3; object-fit: contain;
+  background: #f2f4f7; border-radius: var(--raio) var(--raio) 0 0; }
+.ir-fira { display: flex; justify-content: center; margin: 0 0 16px; text-decoration: none; }

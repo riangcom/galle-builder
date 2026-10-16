@@ -807,48 +807,32 @@ window.IDEIAS = (window.IDEIAS || []).concat([
   "aprende": "Um motor movendo duas rodas pelo mesmo eixo e o sensor de cor lendo o chão.",
   "pecas": [
     [
-      "Placa Technic 2x8",
+      "Viga em L 3x5",
       2
     ],
     [
       "Tijolo Technic 1x8",
+      4
+    ],
+    [
+      "Tijolo Technic 1x16",
       2
     ],
     [
-      "Tijolo Technic 1x2 com furo de eixo e pino",
-      2
-    ],
-    [
-      "Eixo 8",
-      1
-    ],
-    [
-      "Eixo 6",
-      1
-    ],
-    [
-      "Roda 43 x 14 com pneu",
-      2
-    ],
-    [
-      "Roda de cadeira de rodas",
+      "Eixo 4",
       2
     ],
     [
       "Bucha",
-      4
-    ],
-    [
-      "Polia",
-      2
-    ],
-    [
-      "Elástico 33 mm",
       1
     ],
     [
       "Pino com atrito",
-      8
+      12
+    ],
+    [
+      "Roda 43 x 14 com pneu",
+      2
     ]
   ],
   "eletronica": [
@@ -870,11 +854,12 @@ window.IDEIAS = (window.IDEIAS || []).concat([
     ]
   ],
   "passos": [
-    "Monte o chassi com as placas Technic e os tijolos Technic 1x8.",
-    "Passe o eixo 8 por trás, com uma roda grande em cada ponta e uma polia no meio.",
-    "Prenda o motor no chassi com outra polia e ligue as duas com o elástico.",
-    "Na frente, o eixo 6 com as rodas de cadeira de rodas, soltas para girar.",
-    "Prenda o sensor de cor embaixo, olhando para o chão."
+    "Deite dois tijolos Technic 1x16 lado a lado, com 80 de espaço no meio: são os trilhos do chassi.",
+    "Atrás, entre os trilhos, prenda o motor pequeno com a saída para a direita, usando 2 pinos no trilho direito.",
+    "Passe o eixo de 4 pela saída do motor e pelo trilho direito e ponha a roda grande. Do lado esquerdo, passe o outro eixo de 4 pelo trilho, ponha a bucha e a outra roda grande (ela gira solta).",
+    "Na frente, por dentro dos trilhos, prenda as duas vigas em L (2 pinos cada) com a perna curta para baixo: elas deslizam no chão como apoio.",
+    "No meio do chassi prenda o sensor de cor olhando para o chão, com 1 pino em cada trilho.",
+    "Em cima, atravesse dois tijolos Technic 1x8 empilhados na frente e dois atrás e prenda o hub entre eles com 4 pinos (a bateria vai embaixo do hub). O carro anda só com o motor de trás; o sensor fica a 2 mm do chão."
   ],
   "programa": [
     "Ande para frente.",
