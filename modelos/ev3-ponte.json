@@ -1,0 +1,103 @@
+{
+ "passos": [
+  "Torre: dois quadros 5x7 em pé, paralelos, com 7 furos de espaço entre eles.",
+  "Atrás: 2 pinos e uma viga de 11 deitada, unindo os dois quadros embaixo.",
+  "Ultrassônico (porta 4) embaixo, entre os quadros, olhando para a frente (o rio): eixo de 12 e 2 buchas por fora.",
+  "Tabuleiro: 2 vigas de 15 deitadas para a frente, por dentro dos quadros, e 2 blocos cruzados por dentro delas.",
+  "Eixo de 7 no 4º furo das vigas, passando pelos blocos: o tabuleiro fica firme.",
+  "Eixo de 12 no alto: bucha, quadro, viga, bloco, bloco, viga, quadro e a engrenagem de 40 por fora, à direita.",
+  "Motor grande (porta A) deitado atrás da torre, preso na viga de 11 com 2 pinos, a saída à direita, para a frente.",
+  "Eixo de 10 da saída do motor para a frente, passando pela viga de 11, e a rosca sem-fim embaixo da engrenagem de 40.",
+  "Sensor de toque (porta 1) por fora do quadro da esquerda, 2 pinos, botão para a frente: é o botão manual.",
+  "Brick (com a bateria recarregável) deitado na mesa, ao lado. Cabos: motor na porta A, toque na 1, ultrassônico na 4."
+ ],
+ "pecas": [
+  [
+   "2780",
+   0,
+   6
+  ],
+  [
+   "32184",
+   0,
+   2
+  ],
+  [
+   "32278",
+   15,
+   2
+  ],
+  [
+   "32525",
+   71,
+   1
+  ],
+  [
+   "3649",
+   71,
+   1
+  ],
+  [
+   "3708",
+   0,
+   2
+  ],
+  [
+   "3713",
+   71,
+   3
+  ],
+  [
+   "3737",
+   0,
+   1
+  ],
+  [
+   "44294",
+   71,
+   1
+  ],
+  [
+   "4716",
+   71,
+   1
+  ],
+  [
+   "64179",
+   71,
+   2
+  ],
+  [
+   "95646c01",
+   15,
+   1
+  ],
+  [
+   "95648",
+   71,
+   1
+  ],
+  [
+   "95652",
+   71,
+   1
+  ],
+  [
+   "95656",
+   71,
+   1
+  ],
+  [
+   "95658",
+   71,
+   1
+  ]
+ ],
+ "impressas": [],
+ "extras": [],
+ "caixa_cm": [
+  18.4,
+  19.6,
+  5.7
+ ]
+}

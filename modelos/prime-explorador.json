@@ -1,0 +1,91 @@
+{
+ "passos": [
+  "Base: quadro 11x15 deitado.",
+  "Motores médios embaixo do quadro, na frente, presos com 2 pinos cada (portas A e B).",
+  "Rodas grandes: eixo de 5 na saída de cada motor.",
+  "Atrás, embaixo: viga de 3 + 2 pinos longos + rodízio com a bola.",
+  "Duas vigas de 11 atravessadas em cima do quadro (uma no meio, uma atrás).",
+  "Hub (com a bateria encaixada embaixo) em cima das vigas, mais para trás, preso com 8 pinos.",
+  "Na frente: duas vigas conectoras 3x3 em pé, presas na face da frente do quadro (2 pinos cada).",
+  "Sensor de distância olhando para a frente, com 2 pinos no furo do meio de cada viga conectora."
+ ],
+ "pecas": [
+  [
+   "32073",
+   71,
+   2
+  ],
+  [
+   "32523",
+   14,
+   1
+  ],
+  [
+   "32525",
+   26,
+   2
+  ],
+  [
+   "37316",
+   15,
+   1
+  ],
+  [
+   "39367pat0001",
+   0,
+   2
+  ],
+  [
+   "39370",
+   322,
+   1
+  ],
+  [
+   "39790",
+   322,
+   1
+  ],
+  [
+   "39793",
+   26,
+   2
+  ],
+  [
+   "45601",
+   14,
+   1
+  ],
+  [
+   "52629",
+   15,
+   1
+  ],
+  [
+   "54696",
+   322,
+   2
+  ],
+  [
+   "55422",
+   14,
+   1
+  ],
+  [
+   "61332",
+   0,
+   22
+  ],
+  [
+   "6558",
+   1,
+   2
+  ]
+ ],
+ "impressas": [],
+ "extras": [],
+ "caixa_cm": [
+  16.7,
+  12.8,
+  8.8
+ ]
+}

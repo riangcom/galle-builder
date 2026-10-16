@@ -1,0 +1,114 @@
+{
+ "passos": [
+  "Pernas: dois quadros 5x7 em pé, um de cada lado: o da esquerda mais para a frente e o da direita mais para trás.",
+  "Laterais: uma viga de 15 deitada por dentro de cada quadro, no alto, presa com pinos.",
+  "Rodas dentadas: na frente, eixo de 9 com a roda dentada no meio e uma bucha à direita; atrás, eixo de 12 com a outra roda dentada.",
+  "Esteira: 25 elos fechados em volta das duas rodas dentadas.",
+  "Motor grande (porta A): viga de 15 em pé por fora do quadro da direita, atrás; o motor em pé por fora dela, com o eixo de 12 entrando na saída.",
+  "À esquerda: 2 vigas de 13 em pé por fora do quadro, presas com 2 pinos cada.",
+  "Sensor de cor (porta 3) em cima da esteira, olhando para baixo: eixo de 7 pela viga de trás, bucha e o sensor.",
+  "Motor médio (porta B) pendurado na viga da frente, sobre a borda da esteira, com a saída para baixo.",
+  "Braço: eixo de 3 na saída do motor médio e a viga dobrada 4x6 deitada, logo acima da esteira, apontando para a frente.",
+  "Sensor de toque (porta 1) por fora do quadro da direita, com 2 pinos: liga e desliga a máquina.",
+  "Brick (com a bateria recarregável) deitado na mesa, à esquerda. Cabos: A motor grande, B motor médio, 1 toque, 3 cor."
+ ],
+ "pecas": [
+  [
+   "2780",
+   0,
+   14
+  ],
+  [
+   "32278",
+   15,
+   3
+  ],
+  [
+   "3708",
+   0,
+   1
+  ],
+  [
+   "3713",
+   71,
+   2
+  ],
+  [
+   "41239",
+   71,
+   2
+  ],
+  [
+   "44294",
+   71,
+   1
+  ],
+  [
+   "4519",
+   71,
+   1
+  ],
+  [
+   "57519",
+   0,
+   2
+  ],
+  [
+   "60485",
+   71,
+   1
+  ],
+  [
+   "64179",
+   71,
+   2
+  ],
+  [
+   "6629",
+   0,
+   1
+  ],
+  [
+   "88323",
+   0,
+   25
+  ],
+  [
+   "95646c01",
+   15,
+   1
+  ],
+  [
+   "95648",
+   71,
+   1
+  ],
+  [
+   "95650",
+   71,
+   1
+  ],
+  [
+   "95656",
+   71,
+   1
+  ],
+  [
+   "95658",
+   71,
+   1
+  ],
+  [
+   "99455",
+   71,
+   1
+  ]
+ ],
+ "impressas": [],
+ "extras": [],
+ "caixa_cm": [
+  18.2,
+  22.4,
+  14.4
+ ]
+}

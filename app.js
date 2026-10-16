@@ -264,7 +264,10 @@ function abaIdeias(el, amb, idIdeia, caminho, fira) {
 }
 
 // A ideia tem montagem 3D? (pode usar o modelo de outra ideia: campo modelo3d)
-const tem3d = (i) => !!(window.MODELOS3D || {})[i.modelo3d || i.id];
+// Montagens 3D de uma ideia: uma (modelo3d ou o próprio id) ou várias (modelos3d: [{id, rotulo}], ex.: ferramentas trocáveis)
+const modelosDe = (i) => (i.modelos3d || [{ id: i.modelo3d || i.id, rotulo: "" }])
+  .map((x) => ({ ...x, mod: (window.MODELOS3D || {})[x.id] })).filter((x) => x.mod);
+const tem3d = (i) => modelosDe(i).length > 0;
 
 // Lista exata de peças de um modelo 3D: [código, cor LDraw, qtd] -> [nome, qtd]
 function pecasDoModelo(mod, kit) {
@@ -372,14 +375,19 @@ function ligarEstrategias(el, i) {
   mostrar(0);
 }
 
-function detalheIdeia(el, i, caminho, aba = "ideias") {
-  const mod = (window.MODELOS3D || {})[i.modelo3d || i.id];
+function detalheIdeia(el, i, caminho, aba = "ideias", ferr = 0) {
+  const lista3d = modelosDe(i);
+  const mod = lista3d.length ? lista3d[Math.min(ferr, lista3d.length - 1)].mod : null;
   const separar = (lista) => lista.map(([nome, q]) => `
     <label class="separar"><input type="checkbox"><span><b>${q}×</b> ${esc(nome)}</span></label>`).join("");
   const itens = (lista) => lista.map((t) => `<li>${esc(t)}</li>`).join("");
   const listaPecas = mod
     ? `<p class="dica">Lista exata do modelo 3D (com a bateria no hub). Os cabos não estão na lista nem no 3D: use os do kit e ligue nas portas indicadas. Marque cada peça quando tirar da maleta.</p>
-       <div class="lista-separar">${separar(pecasDoModelo(mod, i.kit))}${(mod.extras || []).map(([nome, q, motivo]) => `
+       <div class="lista-separar">${separar(pecasDoModelo(mod, i.kit))}${lista3d.length > 1 ? lista3d.filter((x) => x.mod !== mod).map((x) =>
+         separar(pecasDoModelo({ pecas: x.mod.pecas.map(([pid, cid, q]) => {
+           const aqui = (mod.pecas.find(([p2, c2]) => p2 === pid && c2 === cid) || [0, 0, 0])[2];
+           return [pid, cid, q - aqui];
+         }).filter(([, , q]) => q > 0) }, i.kit).map(([n, q]) => [n + " (só " + x.rotulo.split(":")[0].toLowerCase() + ")", q]))).join("") : ""}${(mod.extras || []).map(([nome, q, motivo]) => `
          <label class="separar"><input type="checkbox"><span><b>${q}×</b> ${esc(nome)}<small>Não aparece no 3D: ${esc(motivo)}</small></span></label>`).join("")}</div>`
     : `<p class="dica">Marque cada peça quando tirar da maleta. São as principais: pode precisar de mais pinos e buchas.</p>
        <div class="lista-separar">${separar(i.eletronica)}${separar(i.pecas)}</div>`;
@@ -401,7 +409,9 @@ function detalheIdeia(el, i, caminho, aba = "ideias") {
        </div>`
     : "";
   const montar = mod
-    ? `<div class="visor3d">
+    ? `${lista3d.length > 1 ? `<div class="filtros" id="ferr3d">${lista3d.map((x, k) =>
+        `<button class="filtro" data-ferr="${k}" aria-pressed="${k === ferr}">${esc(x.rotulo)}</button>`).join("")}</div>` : ""}
+       <div class="visor3d">
          <div class="visor3d-tela" id="visor3d"><button class="btn" id="abrir3d">▶ Ver montagem em 3D</button></div>
          <div class="visor3d-controles" hidden id="controles3d">
            <button class="btn secundario" id="ant3d" aria-label="Passo anterior">◀</button>
@@ -452,10 +462,13 @@ function detalheIdeia(el, i, caminho, aba = "ideias") {
       <div class="caixa-desafio"><b>Desafio extra:</b> ${esc(i.desafio)}</div>
       <div class="caixa-pergunta"><b>Para conversar:</b> ${esc(i.pergunta)}</div>
     </article>`;
-  ligarSeparar(el, i.id);
+  ligarSeparar(el, i.id + (lista3d.length > 1 ? ":" + ferr : ""));
   const bImp = el.querySelector("#imprimir");
   if (bImp) bImp.onclick = () => imprimirFicha(i, mod, Number(el.dataset.estr || 0));
   if (mod) ligarVisor3d(el, mod);
+  el.querySelectorAll("[data-ferr]").forEach((b) => {
+    b.onclick = () => { fecharVisor(); detalheIdeia(el, i, caminho, aba, Number(b.dataset.ferr)); el.querySelector("#ferr3d").scrollIntoView({ block: "center" }); };
+  });
   if (i.blocos) ligarEstrategias(el, i);
 }
 

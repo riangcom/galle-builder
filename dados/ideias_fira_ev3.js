@@ -151,14 +151,16 @@ window.IDEIAS = (window.IDEIAS || []).concat([
     "1": "Sensor de toque EV3"
   },
   "passos": [
-    "Base: os 2 motores grandes (B e C) juntos, o Brick em cima e o rodízio atrás. Assim cabe em 20 x 20 cm.",
-    "Na frente do Brick: uma viga de 15 em pé de cada lado.",
-    "No alto, o ultrassônico (porta 4) num eixo de 12, olhando para frente.",
-    "Embaixo, o giroscópio (porta 2) deitado e firme num eixo de 12. Se ele balançar, a leitura erra.",
-    "Motor médio (porta A) por fora da viga de 15 da direita, com a saída para frente.",
-    "Braço: eixo de 5 no motor médio e a viga dobrada, com a dobra para baixo.",
-    "Gancho: eixo de 3 na ponta do braço, para frente, com uma bucha. Pendure a argola nele.",
-    "Atrás, o sensor de toque (porta 1) com o botão para cima: é o botão de largada."
+    "Junte os 2 motores grandes (B e C).",
+    "Ponha o Brick em cima deles e o rodízio atrás. Assim o robô cabe em 20 x 20 cm.",
+    "Na frente do Brick, prenda uma viga de 15 em pé de cada lado.",
+    "No alto, prenda o sensor ultrassônico (porta 4) num eixo de 12, olhando para a frente.",
+    "Embaixo, prenda o giroscópio (porta 2) deitado num eixo de 12. Ele precisa ficar firme: se balançar, a leitura erra.",
+    "Prenda o motor médio (porta A) por fora da viga de 15 da direita, com a saída para a frente.",
+    "Monte o braço: ponha um eixo de 5 no motor médio e prenda a viga dobrada, com a dobra para baixo.",
+    "Monte o gancho: prenda na ponta do braço um eixo de 3, para a frente, com uma bucha.",
+    "Pendure a argola no gancho.",
+    "Atrás, ponha o sensor de toque (porta 1) com o botão para cima. Ele é o botão de largada."
   ],
   "programa": [
     "Estratégia 1: anda reto corrigindo pelo giroscópio e para pelo ultrassônico.",
@@ -415,13 +417,14 @@ window.IDEIAS = (window.IDEIAS || []).concat([
     "4": "Sensor ultrassônico EV3"
   },
   "passos": [
-    "Base: motores grandes B e C juntos, o Brick em cima e o rodízio atrás.",
-    "Na frente do Brick: uma viga de 15 em pé de cada lado, descendo até perto do chão.",
-    "No alto, o ultrassônico (porta 4) num eixo de 12, olhando para frente.",
-    "Paredes da caçamba: uma viga em L 3x5 por dentro de cada viga de 15, com a perna comprida rente ao chão.",
+    "Junte os motores grandes B e C.",
+    "Ponha o Brick em cima deles e o rodízio atrás.",
+    "Na frente do Brick, prenda uma viga de 15 em pé de cada lado, descendo até perto do chão.",
+    "No alto, prenda o sensor ultrassônico (porta 4) num eixo de 12, olhando para a frente.",
+    "Faça as paredes da caçamba: prenda uma viga em L 3x5 por dentro de cada viga de 15, com a perna comprida rente ao chão.",
     "O fundo da caçamba é a frente dos motores. Cabe um cubo ou uma esfera de 4 a 5,4 cm.",
-    "Sensor de cor (porta 3) por fora da viga da direita, olhando o chão: acha o quadrado vermelho.",
-    "Sem motor médio: para depositar, o robô dá ré."
+    "Prenda o sensor de cor (porta 3) por fora da viga da direita, olhando para o chão. Ele acha o quadrado vermelho.",
+    "Este robô não tem motor médio. Para depositar, ele dá ré."
   ],
   "programa": [
     "Estratégia 1: caminho decorado até os itens e depósito de ré.",

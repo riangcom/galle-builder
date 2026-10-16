@@ -183,10 +183,13 @@ window.IDEIAS = (window.IDEIAS || []).concat([
     }
   },
   "passos": [
-    "Robô 1: monte a 'Gaiola caçadora' (veja a montagem 3D abaixo). A porta é feita de vigas em L 2x4 AMARELAS: elas são o sinal.",
-    "Robô 2: chassi do Essential com o motor A no eixo de trás (anda reto) e o sensor de cor (B) virado para o LADO, na altura da porta do Prime levantada.",
-    "Na arena, marque o ponto de encontro: o Essential para ali, de lado para o caminho do Prime.",
-    "Teste o sinal antes: levante a porta do Prime a 1 ou 2 cm do sensor do Essential e veja se ele lê 'amarelo'."
+    "Robô 1: monte a 'Gaiola caçadora' (veja a montagem 3D abaixo).",
+    "Faça a porta com vigas em L 2x4 AMARELAS. A cor amarela é o sinal para o Robô 2.",
+    "Robô 2: monte o chassi do Essential com o motor A no eixo de trás. Assim ele anda reto.",
+    "Prenda o sensor de cor (porta B) virado para o LADO, na altura da porta do Prime levantada.",
+    "Na arena, marque o ponto de encontro. O Essential para ali, de lado para o caminho do Prime.",
+    "Teste o sinal: levante a porta do Prime a 1 ou 2 cm do sensor do Essential.",
+    "Veja se o sensor lê 'amarelo'. Se não ler, aproxime a porta."
   ],
   "programa": [
     "Estratégia 1: sinal por cor (Prime → Essential) e por distância (Essential → Prime).",

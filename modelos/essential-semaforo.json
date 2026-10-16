@@ -1,0 +1,79 @@
+{
+ "passos": [
+  "Base: placa 8x16.",
+  "Poste do semáforo: torre treliça no canto de trás à esquerda, com dois tijolos Technic 1x4 empilhados em cima.",
+  "Hub na frente, preso no lado direito a um tijolo Technic 1x4 (em cima de um tijolo 1x4), com 2 pinos (a bateria vai embaixo do hub).",
+  "A luz: matriz de luz presa no tijolo do alto do poste com 2 pinos, olhando para a frente.",
+  "O pilar da cancela: dois tijolos Technic 1x4 empilhados à direita. Atrás dele, o motor pequeno em pé (porta A), com a saída encostada no pilar, preso com 2 pinos.",
+  "Eixo de 4 no motor, atravessando o pilar. Na frente: tijolo Technic 1x2 com furo de eixo no eixo e, por cima, a cancela (tijolo Technic 1x12) deitada sobre a rua."
+ ],
+ "pecas": [
+  [
+   "3010",
+   25,
+   1
+  ],
+  [
+   "32064a",
+   14,
+   1
+  ],
+  [
+   "3701",
+   26,
+   5
+  ],
+  [
+   "3705",
+   0,
+   1
+  ],
+  [
+   "3895",
+   191,
+   1
+  ],
+  [
+   "47592",
+   322,
+   1
+  ],
+  [
+   "61332",
+   0,
+   6
+  ],
+  [
+   "66757",
+   14,
+   1
+  ],
+  [
+   "67351",
+   14,
+   1
+  ],
+  [
+   "68488",
+   15,
+   1
+  ],
+  [
+   "92438",
+   15,
+   1
+  ],
+  [
+   "95347",
+   14,
+   1
+  ]
+ ],
+ "impressas": [],
+ "extras": [],
+ "caixa_cm": [
+  9.2,
+  13.6,
+  12.6
+ ]
+}

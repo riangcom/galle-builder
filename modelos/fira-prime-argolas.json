@@ -3,7 +3,7 @@
   "Base: quadro 11x15 deitado.",
   "Motores médios embaixo do quadro, na frente, presos com 2 pinos cada (portas A e B).",
   "Rodas grandes: eixo de 5 na saída de cada motor.",
-  "Atrás, embaixo: viga de 3, 2 pinos longos e o rodízio com a bola. Sensor de cor ao lado (porta D).",
+  "Atrás, embaixo: viga de 3, 2 pinos longos e o rodízio com a bola. Sensor de cor ao lado (porta D), embaixo de outra viga de 3.",
   "Duas vigas de 11 atravessadas em cima do quadro.",
   "Hub (com a bateria encaixada embaixo) em cima das vigas, preso com 8 pinos.",
   "Na frente: duas vigas em L 3x5 deitadas, saindo para frente do quadro (2 pinos cada).",
@@ -41,7 +41,7 @@
   [
    "32523",
    14,
-   1
+   2
   ],
   [
    "32525",
@@ -116,7 +116,7 @@
   [
    "61332",
    0,
-   34
+   32
   ],
   [
    "64179",
@@ -126,7 +126,7 @@
   [
    "6558",
    1,
-   2
+   4
   ]
  ],
  "impressas": [

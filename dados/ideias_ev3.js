@@ -115,64 +115,60 @@ window.IDEIAS = (window.IDEIAS || []).concat([
     "rosca sem-fim",
     "redução"
   ],
-  "resumo": "Uma torre que gira bem devagar e com precisão, e um braço que sobe e desce.",
-  "aprende": "Rosca sem-fim: cada volta dela empurra só um dente da engrenagem. Gira devagar, com muita força, e trava sozinha.",
+  "resumo": "Um guindaste: a torre gira em cima do motor grande e o braço sobe e desce com uma rosca sem-fim, devagar e com precisão.",
+  "aprende": "Rosca sem-fim: cada volta dela empurra só um dente da engrenagem (24 voltas do motor = 1 volta da engrenagem de 24). Gira devagar, com muita força, e trava sozinha: o braço não cai quando o motor para.",
   "pecas": [
     [
-      "Mesa giratória pequena (base)",
+      "Pino com atrito",
+      2
+    ],
+    [
+      "Eixo 5",
       1
     ],
     [
-      "Mesa giratória pequena (topo)",
-      1
-    ],
-    [
-      "Rosca sem-fim",
-      1
-    ],
-    [
-      "Engrenagem 8 dentes",
-      1
-    ],
-    [
-      "Engrenagem 40 dentes",
-      1
-    ],
-    [
-      "Viga 15 furos",
+      "Conector perpendicular 3 furos",
       4
     ],
     [
-      "Viga 13 furos",
+      "Viga 3 furos",
+      1
+    ],
+    [
+      "Engrenagem 24 dentes",
+      1
+    ],
+    [
+      "Eixo 12",
+      1
+    ],
+    [
+      "Bucha",
       2
     ],
     [
-      "Quadro 5x7",
-      2
+      "Eixo 10",
+      1
+    ],
+    [
+      "Viga 13 furos",
+      4
     ],
     [
       "Eixo 7",
       2
     ],
     [
-      "Eixo 5",
-      2
+      "Rosca sem-fim",
+      1
     ],
     [
-      "Bucha",
-      6
-    ],
-    [
-      "Pino com atrito",
-      30
+      "Eixo 9",
+      1
     ],
     [
       "Pino longo com atrito",
-      8
-    ],
-    [
-      "Dente 1x3",
-      2
+      4
     ]
   ],
   "eletronica": [
@@ -206,18 +202,18 @@ window.IDEIAS = (window.IDEIAS || []).concat([
     ]
   ],
   "passos": [
-    "Use o Brick na base como contrapeso.",
-    "Prenda a mesa giratória pequena em cima da base. O motor grande gira a rosca sem-fim, que encaixa nos dentes da mesa.",
-    "Monte a torre (vigas de 15 furos e quadros 5x7) em cima da mesa.",
-    "No alto, o motor médio gira a engrenagem de 8 dentes, que gira a de 40 no eixo do braço (5 vezes mais força).",
-    "O braço são as vigas de 13 furos, com os dentes 1x3 na ponta como gancho.",
-    "O sensor de toque na base é o botão de comando."
+    "Deite o motor grande de lado na mesa, com a saída (laranja) para cima: ele é a base e gira a torre.",
+    "Torre: um eixo de 12 em pé na saída do motor e um eixo de 10 atrás, unidos por 2 blocos cruzados. Prenda 2 vigas de 13 em pé nos blocos com pinos longos.",
+    "Braço: 2 vigas de 13 deitadas para a frente, presas no eixo de 9 do alto da torre por 2 blocos cruzados e um eixo de 7. Na ponta, outro eixo de 7 é o gancho.",
+    "No eixo de 9, à direita, vai a engrenagem de 24. O motor médio fica em pé atrás da torre, com a saída para cima e a rosca sem-fim encostada na engrenagem de 24.",
+    "O Brick fica deitado ao lado, com o sensor de toque na lateral: é o botão de comando.",
+    "Por que não a mesa giratória? A rosca só encaixa nos dentes dela a 2,25 furos do centro, fora da grade das peças."
   ],
   "programa": [
-    "Quando o sensor de toque for apertado: o motor médio levanta o braço.",
-    "O motor grande gira a torre (muitas voltas da rosca = um pouco de giro da torre).",
-    "O braço abaixa e a torre volta.",
-    "Experimente: quantas voltas do motor grande fazem a torre dar 1 volta?"
+    "Quando o sensor de toque for apertado: o motor médio levanta o braço 5 voltas (24 voltas = 1 volta da engrenagem, então 5 voltas sobem uns 75 graus).",
+    "O motor grande gira a torre devagar (velocidade 15%) 90 graus.",
+    "O braço abaixa (motor médio -5 voltas) e a torre volta (-90 graus).",
+    "Experimente: quantas voltas do motor médio fazem o braço subir 45 graus? (Dica: 24 voltas = 360 graus.)"
   ],
   "variacoes": [
     "Use o segundo sensor de toque como fim de curso: a torre para quando encosta nele.",
@@ -242,40 +238,52 @@ window.IDEIAS = (window.IDEIAS || []).concat([
   "aprende": "Esteira espalha o peso e segura melhor. O giroscópio mede o giro de verdade, mesmo se a esteira escorregar.",
   "pecas": [
     [
-      "Elo de esteira",
-      54
-    ],
-    [
-      "Roda dentada de esteira",
-      4
-    ],
-    [
-      "Viga 15 furos",
-      4
-    ],
-    [
-      "Viga 13 furos",
-      2
+      "Pino com atrito",
+      24
     ],
     [
       "Eixo 5",
       2
     ],
     [
-      "Eixo 7",
+      "Viga 15 furos",
+      4
+    ],
+    [
+      "Viga 3 furos",
       2
+    ],
+    [
+      "Viga 11 furos",
+      2
+    ],
+    [
+      "Eixo 8",
+      2
+    ],
+    [
+      "Eixo 12",
+      1
     ],
     [
       "Bucha",
       4
     ],
     [
-      "Pino com atrito",
-      24
+      "Viga 9 furos",
+      4
+    ],
+    [
+      "Roda dentada de esteira",
+      4
     ],
     [
       "Pino longo com atrito",
-      8
+      4
+    ],
+    [
+      "Elo de esteira",
+      52
     ]
   ],
   "eletronica": [
@@ -305,10 +313,11 @@ window.IDEIAS = (window.IDEIAS || []).concat([
     ]
   ],
   "passos": [
-    "Monte duas laterais com vigas de 15 furos, uma de cada lado do Brick.",
-    "Em cada lateral, coloque duas rodas dentadas: a de trás no motor grande, a da frente solta num eixo.",
-    "Monte cada esteira com metade dos elos (cerca de 27) e passe em volta das rodas dentadas.",
-    "Prenda o giroscópio deitado e firme no meio do robô."
+    "Monte a base do Explorador (2 motores grandes lado a lado, vigas de 11 atrás e o Brick em cima), mas sem o rodízio e sem as rodas.",
+    "Em cada lado, prenda uma viga de 15 deitada por fora do motor, indo para trás.",
+    "Rodas dentadas: a da frente vai no eixo de 8 do motor (ela puxa a esteira); a de trás fica solta, num eixo de 5 no último furo da viga de 15.",
+    "Monte cada esteira com 26 elos e passe em volta das duas rodas dentadas do mesmo lado.",
+    "Prenda o giroscópio deitado e firme embaixo da frente do Brick, num eixo de 12 entre duas vigas de 15 em pé."
   ],
   "programa": [
     "Zere o giroscópio.",
@@ -339,7 +348,27 @@ window.IDEIAS = (window.IDEIAS || []).concat([
   "aprende": "Dividir uma missão em etapas e usar dois sensores juntos.",
   "pecas": [
     [
+      "Pino com atrito",
+      30
+    ],
+    [
+      "Viga dobrada 11,5 furos",
+      1
+    ],
+    [
+      "Eixo 5",
+      1
+    ],
+    [
+      "Viga em L 2x4",
+      2
+    ],
+    [
       "Viga 15 furos",
+      2
+    ],
+    [
+      "Viga 3 furos",
       2
     ],
     [
@@ -347,55 +376,47 @@ window.IDEIAS = (window.IDEIAS || []).concat([
       2
     ],
     [
-      "Viga dobrada 9 furos",
-      2
-    ],
-    [
-      "Engrenagem 24 dentes",
-      2
-    ],
-    [
-      "Engrenagem 12 dentes dupla cônica",
-      1
-    ],
-    [
-      "Engrenagem 20 dentes dupla cônica",
-      1
-    ],
-    [
-      "Eixo 5",
+      "Viga em L 3x5",
       3
     ],
     [
-      "Eixo 7",
+      "Eixo 6",
       2
+    ],
+    [
+      "Eixo 12",
+      1
     ],
     [
       "Bucha",
-      6
+      3
     ],
     [
-      "Pino com atrito",
-      30
-    ],
-    [
-      "Pino longo com atrito",
-      8
-    ],
-    [
-      "Roda 43,2 x 26",
-      2
+      "Viga 9 furos",
+      4
     ],
     [
       "Pneu 56 x 28",
       2
     ],
     [
-      "Bola de aço 18 mm (rodízio)",
+      "Eixo 7",
       1
     ],
     [
+      "Roda 43,2 x 26",
+      2
+    ],
+    [
+      "Pino longo com atrito",
+      8
+    ],
+    [
       "Junta esférica de direção (encaixe)",
+      1
+    ],
+    [
+      "Bola de aço 18 mm (rodízio)",
       1
     ]
   ],
@@ -434,17 +455,19 @@ window.IDEIAS = (window.IDEIAS || []).concat([
     ]
   ],
   "passos": [
-    "Monte a base de tração (2 motores grandes, rodas e rodízio).",
-    "Na frente, monte a garra: duas vigas dobradas, cada uma presa a uma engrenagem de 24 dentes. As engrenagens se tocam e giram em sentidos opostos.",
-    "O motor médio gira uma das engrenagens de 24 usando as engrenagens cônicas (12 e 20) para mudar a direção em 90 graus.",
-    "O ultrassônico fica entre os dedos da garra. O sensor de cor fica embaixo, olhando o chão."
+    "Monte a base de tração (2 motores grandes, rodas e rodízio) e, na frente do Brick, uma viga de 15 em pé de cada lado.",
+    "Por dentro das vigas de 15, prenda duas vigas em L com a perna comprida rente ao chão: são as paredes da gaiola.",
+    "O ultrassônico fica baixo, entre as vigas de 15, olhando para a frente. O sensor de cor fica por fora da viga da direita, olhando o chão.",
+    "O motor médio fica por fora da viga da direita, com a saída para a frente. Nela vai a porta: uma viga dobrada dupla com uma viga em L embaixo (a travessa).",
+    "Porta fechada: a travessa fica na frente da gaiola e o objeto não sai. Porta aberta: ela gira para cima e para a direita.",
+    "Por que não uma pinça de 2 dedos? O ultrassônico tem 5,5 cm de largura e só cabe no meio; dedos em volta dele precisariam de 5 engrenagens de 24 em fila, e o kit tem 4. Desafio: monte uma pinça de 2 dedos com 2 engrenagens de 24 e coloque o ultrassônico em outro lugar."
   ],
   "programa": [
-    "Abra a garra.",
-    "Ande até o ultrassônico medir menos de 5 cm.",
-    "Feche a garra com o motor médio (potência baixa).",
+    "Abra a porta (motor médio -110 graus).",
+    "Ande até o ultrassônico medir menos de 5 cm e ande mais 4 cm: o objeto entra na gaiola.",
+    "Feche a porta (motor médio +110 graus, potência baixa).",
     "Gire 180 graus e ande até o sensor de cor ver a base (fita azul).",
-    "Abra a garra, dê ré e mostre 'Missão cumprida' na tela do Brick."
+    "Abra a porta, dê ré e mostre 'Missão cumprida' na tela do Brick."
   ],
   "variacoes": [
     "Separe objetos: vermelhos para uma base, azuis para outra.",
@@ -583,44 +606,52 @@ window.IDEIAS = (window.IDEIAS || []).concat([
   "aprende": "Automação de fábrica: transportar, identificar e separar. E somar o valor com variáveis.",
   "pecas": [
     [
-      "Elo de esteira",
-      40
+      "Pino com atrito",
+      14
+    ],
+    [
+      "Viga 15 furos",
+      3
+    ],
+    [
+      "Eixo 12",
+      1
+    ],
+    [
+      "Bucha",
+      2
+    ],
+    [
+      "Viga 13 furos",
+      2
+    ],
+    [
+      "Eixo 7",
+      1
+    ],
+    [
+      "Eixo 3",
+      1
     ],
     [
       "Roda dentada de esteira",
       2
     ],
     [
-      "Viga 15 furos",
-      4
+      "Eixo 9",
+      1
     ],
     [
-      "Viga 9 furos",
+      "Quadro 5x7",
       2
     ],
     [
-      "Viga 7 furos",
-      2
+      "Viga dobrada 9 furos",
+      1
     ],
     [
-      "Eixo 7",
-      2
-    ],
-    [
-      "Bucha",
-      4
-    ],
-    [
-      "Pino com atrito",
-      30
-    ],
-    [
-      "Viga em L 3x5",
-      2
-    ],
-    [
-      "Eixo 3",
-      2
+      "Elo de esteira",
+      25
     ]
   ],
   "eletronica": [
@@ -658,18 +689,18 @@ window.IDEIAS = (window.IDEIAS || []).concat([
     ]
   ],
   "passos": [
-    "Monte uma estrutura comprida com as vigas de 15 furos.",
-    "Coloque uma roda dentada em cada ponta e passe a esteira de elos em volta.",
-    "O motor grande gira uma das rodas dentadas: a esteira anda.",
-    "No meio do caminho, prenda o sensor de cor olhando para baixo.",
-    "Depois do sensor, o motor médio gira um braço (viga de 7 furos) que empurra a moeda para fora.",
-    "O sensor de toque liga e desliga a máquina."
+    "Pernas: dois quadros 5x7 em pé, um de cada lado. Por cima deles, uma viga de 15 deitada de cada lado: são as laterais da esteira.",
+    "Coloque uma roda dentada em cada ponta (12 furos uma da outra) e passe a esteira de 25 elos em volta.",
+    "O motor grande fica em pé atrás, à direita, preso numa viga de 15 em pé: ele gira a roda dentada de trás e a esteira anda.",
+    "No meio do caminho, o sensor de cor fica em cima da esteira, olhando para baixo, preso numa viga de 13 em pé.",
+    "Depois do sensor, o motor médio fica pendurado sobre a borda, com a saída para baixo. Nele vai o braço (uma viga dobrada deitada): girado, ele atravessa a esteira e a moeda escorrega para fora.",
+    "O sensor de toque, do lado do quadro da direita, liga e desliga a máquina."
   ],
   "programa": [
     "Crie a variável 'total' = 0.",
-    "Ligue a esteira devagar.",
-    "Quando o sensor ver vermelho: some 5, espere a peça chegar no braço e empurre.",
-    "Quando ver amarelo: some 1 e deixe passar até o fim.",
+    "Quando o sensor de toque for apertado: ligue a esteira devagar (motor grande 20%).",
+    "Quando o sensor de cor ver vermelho: some 5 e gire o braço -45 graus (motor médio). Espere a peça cair e volte o braço.",
+    "Quando ver amarelo: some 1 e deixe passar até o fim da esteira.",
     "Mostre o total na tela do Brick."
   ],
   "variacoes": [
@@ -695,19 +726,23 @@ window.IDEIAS = (window.IDEIAS || []).concat([
   "aprende": "Engrenagem de 8 dentes girando a de 40 dá 5 vezes mais força.",
   "pecas": [
     [
-      "Viga 15 furos",
+      "Engrenagem 8 dentes",
       1
     ],
     [
-      "Viga 9 furos",
+      "Pino com atrito",
+      12
+    ],
+    [
+      "Eixo 5",
+      1
+    ],
+    [
+      "Viga 15 furos",
       2
     ],
     [
-      "Viga em T 3x3",
-      2
-    ],
-    [
-      "Engrenagem 8 dentes",
+      "Viga 7 furos",
       1
     ],
     [
@@ -715,16 +750,24 @@ window.IDEIAS = (window.IDEIAS || []).concat([
       1
     ],
     [
-      "Eixo 7",
-      2
+      "Eixo 12",
+      1
     ],
     [
       "Bucha",
-      4
+      1
     ],
     [
-      "Pino com atrito",
-      16
+      "Viga 9 furos",
+      1
+    ],
+    [
+      "Pino-eixo com atrito",
+      1
+    ],
+    [
+      "Eixo 8 com batente",
+      1
     ],
     [
       "Viga triângulo",
@@ -758,16 +801,17 @@ window.IDEIAS = (window.IDEIAS || []).concat([
     ]
   ],
   "passos": [
-    "O Brick fica deitado como base pesada.",
-    "Monte dois apoios com vigas de 9 furos e vigas em T.",
-    "O motor grande gira a engrenagem de 8, que gira a de 40 no eixo do braço.",
-    "O braço é a viga de 15 furos. Na ponta, duas vigas triângulo fazem a 'colher'.",
-    "O sensor de toque é o gatilho."
+    "O Brick fica deitado na mesa: ele é a base pesada.",
+    "Nos dois lados do Brick, atrás, prenda uma viga em pé com 3 pinos: a de 15 furos na direita e a de 9 na esquerda.",
+    "Prenda o motor grande em pé, por fora da viga de 15, com a saída embaixo. Na saída vai um eixo de 5 com a engrenagem de 8 dentes por dentro.",
+    "O braço é a viga de 15 furos, deitado para trás. Ele fica preso na engrenagem de 40 por um pino-eixo e gira num eixo de 12 que atravessa as duas vigas em pé. A de 40 fica 3 furos acima da de 8.",
+    "Na ponta do braço, duas vigas triângulo (uma de cada lado, ponta para cima) fazem a 'colher'.",
+    "O sensor de toque é o gatilho: fica na frente, com o botão para cima."
   ],
   "programa": [
     "Quando o sensor de toque for apertado: conte 3, 2, 1 na tela.",
-    "Gire o motor rápido (100%) por um quarto de volta da engrenagem grande.",
-    "Volte devagar para a posição inicial."
+    "Gire o motor rápido (100%) por um quarto de volta da engrenagem grande: são 450 graus do motor (1 volta e um quarto), porque a de 8 gira 5 vezes mais.",
+    "Volte devagar (20%) os mesmos 450 graus, para a posição inicial."
   ],
   "variacoes": [
     "Sem redução (motor direto no braço): lança mais longe ou mais perto?",
@@ -789,47 +833,51 @@ window.IDEIAS = (window.IDEIAS || []).concat([
     "sensor ultrassônico"
   ],
   "resumo": "Uma ponte que levanta sozinha quando um barco chega e abaixa depois que ele passa.",
-  "aprende": "Rosca sem-fim segura a ponte levantada sem gastar energia. Sensor de toque como fim de curso.",
+  "aprende": "Rosca sem-fim: cada volta dela empurra só um dente da engrenagem de 40 (40 voltas do motor = 1 volta da engrenagem) e ela segura a ponte levantada sem gastar energia.",
   "pecas": [
     [
+      "Pino com atrito",
+      6
+    ],
+    [
+      "Conector perpendicular 3 furos",
+      2
+    ],
+    [
       "Viga 15 furos",
-      4
-    ],
-    [
-      "Viga 13 furos",
       2
     ],
     [
-      "Quadro 5x7",
+      "Viga 11 furos",
+      1
+    ],
+    [
+      "Engrenagem 40 dentes",
+      1
+    ],
+    [
+      "Eixo 12",
       2
+    ],
+    [
+      "Bucha",
+      3
+    ],
+    [
+      "Eixo 10",
+      1
+    ],
+    [
+      "Eixo 7",
+      1
     ],
     [
       "Rosca sem-fim",
       1
     ],
     [
-      "Engrenagem 24 dentes",
-      1
-    ],
-    [
-      "Eixo 7",
+      "Quadro 5x7",
       2
-    ],
-    [
-      "Eixo 5",
-      1
-    ],
-    [
-      "Bucha",
-      4
-    ],
-    [
-      "Pino com atrito",
-      24
-    ],
-    [
-      "Conector perpendicular 3 furos",
-      4
     ]
   ],
   "eletronica": [
@@ -867,17 +915,19 @@ window.IDEIAS = (window.IDEIAS || []).concat([
     ]
   ],
   "passos": [
-    "Monte duas torres com os quadros 5x7.",
-    "O tabuleiro da ponte são as vigas de 15 furos, presas num eixo que gira numa das torres.",
-    "Nesse eixo vai a engrenagem de 24. O motor grande gira a rosca sem-fim, que gira a engrenagem.",
-    "O ultrassônico fica na margem do 'rio', olhando para onde o barco vem.",
-    "O sensor de toque fica embaixo do tabuleiro: ele avisa quando a ponte está abaixada."
+    "Monte a torre com dois quadros 5x7 em pé, unidos atrás por uma viga de 11.",
+    "O tabuleiro são duas vigas de 15 deitadas para a frente. Dois blocos cruzados e um eixo de 7 prendem as vigas no eixo de 12 do alto da torre: o tabuleiro gira junto com esse eixo.",
+    "No eixo de 12, por fora da torre, vai a engrenagem de 40. Embaixo dela fica a rosca sem-fim, num eixo de 10 que vem do motor grande, deitado atrás da torre.",
+    "O ultrassônico fica embaixo do tabuleiro, olhando para o rio (para onde o barco vem).",
+    "O sensor de toque fica do lado da torre: é o botão manual do operador.",
+    "O Brick fica deitado ao lado, ligado pelos cabos."
   ],
   "programa": [
     "Espere o ultrassônico ver um barco a menos de 15 cm.",
-    "Mostre 'ATENÇÃO' na tela e levante a ponte (motor um número fixo de voltas).",
+    "Mostre 'ATENÇÃO' na tela e levante a ponte: motor 8 voltas (a ponte sobe uns 70 graus, porque 40 voltas do motor dão 1 volta da engrenagem).",
     "Espere o barco passar (distância maior que 30 cm).",
-    "Abaixe a ponte até o sensor de toque ser apertado."
+    "Abaixe a ponte: motor -8 voltas (a rosca segura a ponte, então ela volta para o mesmo lugar).",
+    "Botão manual: se o sensor de toque for apertado, levante ou abaixe a ponte do mesmo jeito."
   ],
   "variacoes": [
     "Acenda a luz do Brick em vermelho enquanto a ponte está levantada.",
@@ -1032,19 +1082,31 @@ window.IDEIAS = (window.IDEIAS || []).concat([
   "aprende": "Senha é uma sequência. O programa guarda o que foi apertado e compara.",
   "pecas": [
     [
-      "Viga 15 furos",
+      "Pino com atrito",
+      17
+    ],
+    [
+      "Meia bucha",
+      2
+    ],
+    [
+      "Viga 5 furos",
       4
     ],
     [
-      "Viga 11 furos",
-      4
-    ],
-    [
-      "Quadro 5x7",
-      3
+      "Viga 3 furos",
+      1
     ],
     [
       "Viga 7 furos",
+      3
+    ],
+    [
+      "Eixo 8",
+      1
+    ],
+    [
+      "Bucha",
       1
     ],
     [
@@ -1052,16 +1114,16 @@ window.IDEIAS = (window.IDEIAS || []).concat([
       1
     ],
     [
-      "Pino com atrito",
-      30
+      "Quadro 5x7",
+      3
     ],
     [
       "Pino longo com atrito",
-      6
+      2
     ],
     [
-      "Painel curvo (carenagem)",
-      4
+      "Viga triângulo",
+      1
     ]
   ],
   "eletronica": [
@@ -1091,15 +1153,16 @@ window.IDEIAS = (window.IDEIAS || []).concat([
     ]
   ],
   "passos": [
-    "Monte uma caixa com os quadros 5x7 e as vigas.",
-    "A tampa é presa com pinos sem atrito para abrir como porta.",
-    "O motor médio gira uma trava (viga de 7 furos) que segura a tampa.",
-    "Os dois sensores de toque ficam na frente: botão 1 e botão 2."
+    "Monte a caixa: dois quadros 5x7 em pé (paredes), um quadro 5x7 deitado em cima (teto) e duas vigas de 7 atrás (fundo).",
+    "A porta são 4 vigas de 5 deitadas, uma em cima da outra, presas com pinos. Ela gira num eixo de 8 em pé (a dobradiça), preso no alto numa viga de 7 sobre o teto.",
+    "O motor médio fica por fora da parede direita, com a saída para a frente. Nela vai uma viga triângulo: deitada na frente da porta, ela tranca; girada 90 graus para cima, ela solta.",
+    "Os dois sensores de toque ficam na parede esquerda, um em cima do outro, com os botões para a frente: botão 1 (em cima) e botão 2 (embaixo).",
+    "O Brick fica deitado ao lado do cofre, ligado pelos cabos."
   ],
   "programa": [
     "Senha: 1, 1, 2 (botão 1 duas vezes e depois o botão 2).",
     "Guarde cada botão apertado numa variável e compare com a senha.",
-    "Se acertar: gire a trava, mostre 'ABERTO' e toque um som.",
+    "Se acertar: gire a trava 90 graus para cima com o motor médio, mostre 'ABERTO' e toque um som. Para trancar de novo, gire -90 graus.",
     "Se errar 3 vezes: mostre 'BLOQUEADO' por 30 segundos."
   ],
   "variacoes": [

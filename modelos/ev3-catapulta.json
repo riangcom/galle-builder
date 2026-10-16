@@ -1,0 +1,102 @@
+{
+ "passos": [
+  "O Brick (com a bateria recarregável) fica deitado na mesa: ele é a base pesada da catapulta.",
+  "Lado direito do Brick, atrás: 3 pinos e uma viga de 15 em pé, subindo bem acima do Brick.",
+  "Lado esquerdo, atrás: 3 pinos e uma viga de 9 em pé.",
+  "Motor grande em pé, por fora da viga de 15, com a saída embaixo: 2 pinos no alto da viga.",
+  "Eixo de 5 na saída do motor, passando pela viga, e a engrenagem de 8 dentes por dentro.",
+  "Braço: viga de 15 deitada para trás. Pino-eixo no 1º furo e a engrenagem de 40 encaixada nele, 3 furos acima da de 8 (os dentes se encaixam).",
+  "Eixo de 12 atravessando: viga da esquerda, bucha, braço (2º furo), engrenagem de 40 e viga da direita.",
+  "Colher: na ponta do braço, uma viga triângulo de cada lado, com a ponta para cima, presas com 2 pinos. A bolinha de papel fica no braço, encostada nelas.",
+  "Gatilho: na frente, à esquerda, 2 pinos e uma viga de 7 em pé. Eixo de 8 com batente e o sensor de toque (porta 1) com o botão para cima."
+ ],
+ "pecas": [
+  [
+   "10928",
+   72,
+   1
+  ],
+  [
+   "2780",
+   0,
+   12
+  ],
+  [
+   "32073",
+   71,
+   1
+  ],
+  [
+   "32278",
+   15,
+   2
+  ],
+  [
+   "32524",
+   71,
+   1
+  ],
+  [
+   "3649",
+   71,
+   1
+  ],
+  [
+   "3708",
+   0,
+   1
+  ],
+  [
+   "3713",
+   71,
+   1
+  ],
+  [
+   "40490",
+   71,
+   1
+  ],
+  [
+   "43093",
+   1,
+   1
+  ],
+  [
+   "55013",
+   72,
+   1
+  ],
+  [
+   "95646c01",
+   15,
+   1
+  ],
+  [
+   "95648",
+   71,
+   1
+  ],
+  [
+   "95656",
+   71,
+   1
+  ],
+  [
+   "95658",
+   71,
+   1
+  ],
+  [
+   "99773",
+   71,
+   2
+  ]
+ ],
+ "impressas": [],
+ "extras": [],
+ "caixa_cm": [
+  21.1,
+  13.2,
+  15.5
+ ]
+}

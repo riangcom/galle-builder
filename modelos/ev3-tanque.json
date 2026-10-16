@@ -1,0 +1,103 @@
+{
+ "passos": [
+  "Coloque os dois motores grandes lado a lado, com a parte larga para trás.",
+  "Una os motores por trás: pinos nos furos de trás e duas vigas de 11.",
+  "Coloque um pino longo em cada furo da aleta de cima dos motores e uma viga de 3 por fora.",
+  "Encaixe as vigas de 9 em pé nos pinos longos, duas de cada lado.",
+  "Coloque pinos nas laterais do Brick (com a bateria recarregável) e encaixe o Brick nas vigas de 9.",
+  "Laterais: 2 pinos nos furos de trás de cada motor e uma viga de 15 deitada por fora, indo para trás.",
+  "Rodas dentadas: eixo de 8 na saída de cada motor, passando pela viga, e a roda dentada da frente. Atrás, eixo de 5 no último furo da viga, bucha por dentro e a roda dentada solta.",
+  "Esteiras: 26 elos em cada lado, fechados em volta das duas rodas dentadas.",
+  "Na frente do Brick: 2 pinos em cada lateral e uma viga de 15 em pé de cada lado.",
+  "Embaixo: eixo de 12, 2 buchas e o giroscópio (porta 2) deitado, firme, no meio do robô."
+ ],
+ "pecas": [
+  [
+   "2780",
+   0,
+   24
+  ],
+  [
+   "32073",
+   71,
+   2
+  ],
+  [
+   "32278",
+   15,
+   4
+  ],
+  [
+   "32523",
+   1,
+   2
+  ],
+  [
+   "32525",
+   71,
+   2
+  ],
+  [
+   "3707",
+   0,
+   2
+  ],
+  [
+   "3708",
+   0,
+   1
+  ],
+  [
+   "3713",
+   71,
+   4
+  ],
+  [
+   "40490",
+   71,
+   4
+  ],
+  [
+   "57519",
+   0,
+   4
+  ],
+  [
+   "6558",
+   1,
+   4
+  ],
+  [
+   "88323",
+   0,
+   52
+  ],
+  [
+   "95646c01",
+   15,
+   1
+  ],
+  [
+   "95656",
+   71,
+   1
+  ],
+  [
+   "95658",
+   71,
+   2
+  ],
+  [
+   "99380",
+   71,
+   1
+  ]
+ ],
+ "impressas": [],
+ "extras": [],
+ "caixa_cm": [
+  18.9,
+  18.2,
+  14.9
+ ]
+}

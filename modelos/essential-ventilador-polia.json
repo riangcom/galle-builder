@@ -1,0 +1,90 @@
+{
+ "passos": [
+  "Base: placa 8x16.",
+  "A torre: 6 camadas de tijolos Technic ao fundo da placa (4 de 1x8 e, por cima, 2 de 1x12).",
+  "Hub na frente, preso no lado direito a um tijolo Technic 1x4 (em cima de um tijolo 1x4) com 2 pinos (a bateria vai embaixo do hub).",
+  "Atrás da torre: motor pequeno em pé (porta A), na 2ª camada, preso com 2 pinos. Eixo de 4 pelo furo do meio e a polia de baixo na frente da torre.",
+  "No alto (6ª camada): eixo de 3 pelo furo do meio e a polia de cima. O elástico liga as duas polias.",
+  "A hélice: tijolo Technic 1x2 com furo de eixo no eixo de cima e, por cima dele, um tijolo Technic 1x8."
+ ],
+ "pecas": [
+  [
+   "3010",
+   25,
+   1
+  ],
+  [
+   "32064a",
+   14,
+   1
+  ],
+  [
+   "3701",
+   26,
+   1
+  ],
+  [
+   "3702",
+   321,
+   5
+  ],
+  [
+   "3705",
+   0,
+   1
+  ],
+  [
+   "3895",
+   191,
+   2
+  ],
+  [
+   "4185",
+   15,
+   2
+  ],
+  [
+   "4519",
+   14,
+   1
+  ],
+  [
+   "61332",
+   0,
+   4
+  ],
+  [
+   "66757",
+   14,
+   1
+  ],
+  [
+   "67351",
+   14,
+   1
+  ],
+  [
+   "68488",
+   15,
+   1
+  ],
+  [
+   "92438",
+   15,
+   1
+  ]
+ ],
+ "impressas": [],
+ "extras": [
+  [
+   "Elástico 33 mm",
+   1,
+   "liga as duas polias (não aparece no 3D)"
+  ]
+ ],
+ "caixa_cm": [
+  9.2,
+  12.8,
+  7.2
+ ]
+}

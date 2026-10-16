@@ -1,0 +1,76 @@
+{
+ "passos": [
+  "Base: quadro 11x19 deitado (placa com furos em xadrez).",
+  "Hub no canto de trás à esquerda (bateria encaixada embaixo), preso com 8 pinos.",
+  "Sensor de força em pé (porta D), com o botão para cima, preso no quadro com 2 pinos na ponta de baixo.",
+  "Eixo de 5 no furo de eixo do botão. Ponha a viga de 2 deitada no eixo (o furo de eixo dela segura no eixo).",
+  "Em cima: viga de 5 deitada (o eixo passa pelo furo do meio; um pino prende na viga de 2).",
+  "Prato: quadro 5x7 deitado em cima da viga de 5, preso com 2 pinos. O eixo passa pela abertura do quadro.",
+  "Motor médio (porta B) na lateral direita, com a saída para fora, preso com 4 pinos.",
+  "Ponteiro: viga de 15 em pé na saída do motor, presa com 2 pinos (o furo do meio fica no eixo)."
+ ],
+ "pecas": [
+  [
+   "32073",
+   71,
+   1
+  ],
+  [
+   "32278",
+   0,
+   1
+  ],
+  [
+   "32316",
+   26,
+   1
+  ],
+  [
+   "37312",
+   15,
+   1
+  ],
+  [
+   "39369",
+   14,
+   1
+  ],
+  [
+   "45601",
+   14,
+   1
+  ],
+  [
+   "54696",
+   322,
+   1
+  ],
+  [
+   "55422",
+   14,
+   1
+  ],
+  [
+   "60483",
+   322,
+   1
+  ],
+  [
+   "61332",
+   0,
+   19
+  ],
+  [
+   "64179",
+   0,
+   1
+  ]
+ ],
+ "impressas": [],
+ "extras": [],
+ "caixa_cm": [
+  15.2,
+  9.6,
+  12.8
+ ]
+}

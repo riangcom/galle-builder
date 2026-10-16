@@ -4,7 +4,7 @@ window.IDEIAS = (window.IDEIAS || []).concat([
 {
   "id": "fira-prime-dois-em-um",
   "kit": "prime",
-  "titulo": "Dois em um: argolas e pneus com troca rápida",
+  "titulo": "Dois em um: elevador com ferramenta trocável",
   "nivel": 3,
   "tempo": 120,
   "tags": [
@@ -23,12 +23,12 @@ window.IDEIAS = (window.IDEIAS || []).concat([
     "pontos": "M3: 50 por argola na haste + 100 por voltar à partida. M1: 50 (linha vermelha) + 25 por linha de progressão + 50 a 200 (pneus)"
   },
   "medidas_cm": [
-    19.6,
-    14.4,
-    17
+    18.3,
+    13.2,
+    16
   ],
-  "resumo": "O motor grande fica fixo na frente com um eixo de 5 para fora. Cada ferramenta tem um furo de eixo e entra nesse eixo, presa só por uma bucha: troca em 20 segundos. Ferramenta 1 (M3): braço com gancho que leva a argola pendurada e a solta na haste. Ferramenta 2 (M1): garra-gaiola que desce na frente da pilha de pneus e a leva junto.",
-  "aprende": "Projeto modular: uma base que não muda e ferramentas que se trocam (como numa furadeira). E medir: o robô precisa caber no limite mais apertado das duas provas (20 cm da M3 e 14,8 cm da M1).",
+  "resumo": "A mesma torre com cremalheira sobe e desce um carrinho; na frente dele vai a ferramenta do dia. Na M3, um pino-eixo é o gancho da argola. Na M1, a pá (viga em T + viga de 11) presa por um pino longo: troca em segundos. Tem as duas montagens em 3D.",
+  "aprende": "Projeto modular: uma base que não muda e ferramentas que se trocam. E medir: o robô precisa caber no limite mais apertado das duas provas (20 cm da M3 e 14,8 cm da M1).",
   "eletronica": [
     [
       "Hub grande SPIKE (6 portas)",
@@ -64,15 +64,39 @@ window.IDEIAS = (window.IDEIAS || []).concat([
   },
   "pecas": [
     [
-      "Quadro 11x15",
+      "Pino longo com atrito + eixo 2",
       1
     ],
     [
-      "Viga 3x5 com bola giratória",
+      "Eixo 5",
+      2
+    ],
+    [
+      "Engrenagem 12 dentes dupla cônica",
       1
     ],
     [
-      "Bola 19 mm",
+      "Viga 15 furos",
+      1
+    ],
+    [
+      "Viga 5 furos",
+      1
+    ],
+    [
+      "Viga 3 furos",
+      2
+    ],
+    [
+      "Viga 11 furos",
+      3
+    ],
+    [
+      "Viga em L 3x5",
+      2
+    ],
+    [
+      "Bucha",
       1
     ],
     [
@@ -80,70 +104,56 @@ window.IDEIAS = (window.IDEIAS || []).concat([
       2
     ],
     [
-      "Viga conectora 3x3",
-      4
-    ],
-    [
-      "Viga em L 3x5",
-      4
-    ],
-    [
-      "Viga em T 3x3",
-      2
-    ],
-    [
-      "Viga 7 furos",
-      2
-    ],
-    [
-      "Eixo 5",
-      2
-    ],
-    [
-      "Eixo 3",
-      2
-    ],
-    [
-      "Bucha",
-      4
-    ],
-    [
-      "Pino com atrito",
-      30
-    ],
-    [
-      "Pino longo com atrito",
-      4
-    ],
-    [
-      "Viga 13 furos",
+      "Viga 3x5 com bola giratória",
       1
     ],
     [
-      "Conector angular nº 6 (90°)",
+      "Quadro 11x15",
+      1
+    ],
+    [
+      "Eixo 7",
+      1
+    ],
+    [
+      "Bola 19 mm",
+      1
+    ],
+    [
+      "Pino com atrito",
+      34
+    ],
+    [
+      "Quadro 5x7",
       2
     ],
     [
-      "Viga dobrada 11,5 furos",
-      2
+      "Pino longo com atrito",
+      5
     ],
     [
-      "Viga 11 furos",
-      2
+      "Viga em T 3x3",
+      1
     ]
   ],
   "passos": [
-    "Base: quadro 11x15 deitado, motores médios A e B embaixo com as rodas, rodízio de bola atrás, sensor de cor (D) no meio olhando o chão, hub em cima.",
-    "Engate: motor grande (C) de pé na frente, preso com 2 vigas conectoras 3x3. Eixo de 5 na saída dele, para o lado de fora. Sensor de distância (E) do outro lado, olhando para frente.",
-    "Ferramenta 1 (argolas, M3): viga de 13 com o furo de eixo da ponta no eixo do motor C; na outra ponta, 2 conectores angulares de 90° com um eixo de 3 fazem o gancho onde a argola fica pendurada.",
-    "Ferramenta 2 (pneus, M1): duas vigas dobradas de 11,5 unidas por 2 vigas de 11 formam uma gaiola em U; uma viga em T no meio tem o furo de eixo que entra no eixo do motor C.",
-    "Trocar: tire a bucha da ponta do eixo, puxe a ferramenta, encaixe a outra e recoloque a bucha. Treine até fazer em menos de 20 segundos.",
-    "Meça com cada ferramenta: no máximo 20 cm de comprimento (M3) e 14,8 cm de largura (M1)."
+    "Deite o quadro 11x15 e prenda embaixo os motores médios A e B, com as rodas.",
+    "Atrás, ponha o rodízio e o sensor de cor (porta D). Coloque o hub (com a bateria) em cima.",
+    "Monte a torre na frente: duas vigas em L 3x5 deitadas e dois quadros 5x7 em pé.",
+    "Ponha o motor grande (C) ao lado da torre.",
+    "Coloque a engrenagem de 12 dentes entre os quadros.",
+    "Monte o carrinho: prenda a cremalheira impressa na viga de 15, com os dentes virados para o pinhão.",
+    "Ferramenta 1 (para a M3): prenda um pino-eixo no furo de cima do carrinho, para a frente. A argola fica pendurada nele.",
+    "Ferramenta 2 (para a M1): prenda uma viga em T no carrinho com um pino longo.",
+    "Atravesse embaixo dela a viga de 11. Ela é a pá.",
+    "Para trocar de ferramenta, puxe o pino longo (sai a pá) ou o pino-eixo (sai o gancho).",
+    "Treine a troca até fazer em menos de 20 segundos.",
+    "Ponha o sensor de distância (porta E) na lateral da torre, olhando para a frente."
   ],
   "programa": [
     "Estratégia 1 (M3): argola na haste usando o sensor de distância.",
-    "Estratégia 2 (M1): pilha de pneus na gaiola até a linha vermelha.",
-    "Estratégia 3 (M1): a mesma, só por distância medida (sem o sensor de cor)."
+    "Estratégia 2 (M1): pilha de pneus com a pá até a linha vermelha.",
+    "Estratégia 3 (M1): a mesma, só por distância medida."
   ],
   "blocos": [
     {
@@ -161,7 +171,7 @@ window.IDEIAS = (window.IDEIAS || []).concat([
         },
         {
           "t": "motor",
-          "txt": "motor {C} ir para posição 0 (braço em pé: argola na altura da haste)"
+          "txt": "motor {C} ir para posição 0 (carrinho no alto: argola na altura da haste)"
         },
         {
           "t": "movimento",
@@ -183,7 +193,7 @@ window.IDEIAS = (window.IDEIAS || []).concat([
         },
         {
           "t": "motor",
-          "txt": "ligar motor {C} por 40 graus a 20% (o braço abaixa e a argola cai na haste)"
+          "txt": "ligar motor {C} por 120 graus a 20% (o carrinho desce 1 cm e a argola fica na haste)"
         },
         {
           "t": "movimento",
@@ -205,7 +215,7 @@ window.IDEIAS = (window.IDEIAS || []).concat([
       "ajustes": [
         "30 cm: distância da partida até a estação (meça).",
         "6 cm: o sensor vê a caixa de leite; ajuste até a haste ficar bem dentro da argola.",
-        "40 graus: só o suficiente para a argola sair do gancho. Se derrubar a haste, a estação sai do jogo: vá devagar (20%).",
+        "120 graus: só o suficiente para o carrinho descer 1 cm e a argola sair do gancho. Se derrubar a haste, a estação sai do jogo: vá devagar (20%).",
         "8 cm de ré: o gancho precisa sair da argola antes de o braço subir."
       ]
     },
@@ -224,7 +234,7 @@ window.IDEIAS = (window.IDEIAS || []).concat([
         },
         {
           "t": "motor",
-          "txt": "motor {C} ir para posição 0 (gaiola levantada)"
+          "txt": "motor {C} ir para posição 0 (pá levantada)"
         },
         {
           "t": "movimento",
@@ -232,7 +242,7 @@ window.IDEIAS = (window.IDEIAS || []).concat([
         },
         {
           "t": "motor",
-          "txt": "ligar motor {C} por 90 graus a 30% (gaiola desce em volta da frente da pilha)"
+          "txt": "ligar motor {C} por 375 graus a 30% (a pá desce 4 cm até o chão, na frente da pilha)"
         },
         {
           "t": "variavel",
@@ -268,7 +278,7 @@ window.IDEIAS = (window.IDEIAS || []).concat([
         },
         {
           "t": "motor",
-          "txt": "motor {C} ir para posição 0 (solta os pneus)"
+          "txt": "motor {C} ir para posição 0 (pá sobe e solta os pneus)"
         },
         {
           "t": "som",
@@ -277,7 +287,7 @@ window.IDEIAS = (window.IDEIAS || []).concat([
       ],
       "ajustes": [
         "20 cm: distância até a pilha de pneus (meça).",
-        "90 graus: a gaiola desce até 1 cm do chão sem prender os pneus por cima.",
+        "375 graus: 1 volta do motor = 12 dentes x 3,2 mm = 3,84 cm de cremalheira. Do alto até o chão são uns 4 cm; confira no robô.",
         "30%: mais rápido, a pilha tomba nas curvas e nos obstáculos.",
         "Cor da linha de progressão: confira na arena (aqui está azul)."
       ]
@@ -301,7 +311,7 @@ window.IDEIAS = (window.IDEIAS || []).concat([
         },
         {
           "t": "motor",
-          "txt": "motor {C} ir para posição 0 (gaiola levantada)"
+          "txt": "motor {C} ir para posição 0 (pá levantada)"
         },
         {
           "t": "movimento",
@@ -309,7 +319,7 @@ window.IDEIAS = (window.IDEIAS || []).concat([
         },
         {
           "t": "motor",
-          "txt": "ligar motor {C} por 90 graus a 30%"
+          "txt": "ligar motor {C} por 375 graus a 30% (pá no chão)"
         },
         {
           "t": "movimento",
@@ -337,7 +347,24 @@ window.IDEIAS = (window.IDEIAS || []).concat([
     "Marque cada ferramenta com uma cor e faça o robô ler qual está encaixada antes de começar."
   ],
   "desafio": "Troque a ferramenta e rode a outra prova em menos de 1 minuto, sem errar.",
-  "pergunta": "O que é mais fácil: um robô para cada prova ou um robô com ferramentas? O que se ganha e o que se perde?"
+  "pergunta": "O que é mais fácil: um robô para cada prova ou um robô com ferramentas? O que se ganha e o que se perde?",
+  "modelos3d": [
+    {
+      "id": "fira-prime-dois-em-um-argolas",
+      "rotulo": "Ferramenta 1: gancho de argola (M3)"
+    },
+    {
+      "id": "fira-prime-dois-em-um-pneus",
+      "rotulo": "Ferramenta 2: pá de pneus (M1)"
+    }
+  ],
+  "pecas_impressas": [
+    [
+      "Cremalheira LEGO impressa 3D (cópia da 64781)",
+      1,
+      "testada e aprovada em 15/10/2026. Em pé no carrinho, dentes para trás (no pinhão)."
+    ]
+  ]
 },
 {
   "id": "fira-prime-dupla-pneus",
@@ -528,9 +555,12 @@ window.IDEIAS = (window.IDEIAS || []).concat([
   },
   "passos": [
     "Robô 1: monte o 'Trator de pneus com pá elevatória' (montagem 3D abaixo).",
-    "Robô 2: monte o 'Mini trator com pá em cunha' do Essential (ideia da M1 no kit Essential). Meça: no máximo 21 x 14,8 cm com a pá.",
-    "Antes da largada: separe a pilha. 2 pneus na frente do Prime, 1 pneu na frente do Essential (confirme no regulamento se pode).",
-    "Largada: o Prime atrás, o Essential na frente, na mesma faixa, 20 cm à frente do Prime."
+    "Robô 2: monte o 'Mini trator com pá em cunha' do Essential (ideia da M1 no kit Essential).",
+    "Meça cada robô com a pá: no máximo 21 x 14,8 cm.",
+    "Antes da largada, separe a pilha: 2 pneus na frente do Prime e 1 pneu na frente do Essential.",
+    "Confirme no regulamento se pode separar a pilha.",
+    "Na largada, ponha o Essential na frente e o Prime atrás, na mesma faixa.",
+    "O Essential fica 20 cm à frente do Prime."
   ],
   "programa": [
     "Estratégia 1: o Essential vai na frente e o Prime segue a 15 cm (sensor de distância).",

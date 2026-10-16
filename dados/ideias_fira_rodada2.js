@@ -97,11 +97,16 @@ window.IDEIAS = (window.IDEIAS || []).concat([
     "D": "Sensor de cor SPIKE"
   },
   "passos": [
-    "Base: quadro 11x15 deitado, motores médios A e B embaixo com as rodas grandes na frente, sensor de cor (D) atrás no meio, hub mais para trás.",
-    "Atrás: vigas conectoras 3x3 em pé na face de trás do quadro e vigas em L 3x5 em pé; as rodas de trás ficam no furo de baixo, na mesma altura das da frente.",
-    "Na frente: vigas conectoras 3x3 em pé e duas vigas em L 3x5 como paredes da muleta.",
-    "Motor grande (C) por fora da parede direita, com o eixo de 11 da muleta (2 vigas em L 2x4 e uma barra embaixo).",
-    "Sem sensor de distância: com ele o robô passava de 14,8 cm de largura. O degrau é achado pela distância percorrida."
+    "Deite o quadro 11x15 e prenda embaixo os motores médios A e B, com as rodas grandes na frente.",
+    "Ponha o sensor de cor (porta D) atrás, no meio, e o hub mais para trás.",
+    "Atrás, prenda vigas conectoras 3x3 em pé na parte de trás do quadro.",
+    "Prenda vigas em L 3x5 em pé nelas. Ponha as rodas de trás no furo de baixo, na mesma altura das rodas da frente.",
+    "Na frente, prenda vigas conectoras 3x3 em pé.",
+    "Prenda duas vigas em L 3x5 como paredes da muleta.",
+    "Ponha o motor grande (C) por fora da parede da direita.",
+    "Monte a muleta: passe um eixo de 11 com duas vigas em L 2x4 e uma barra embaixo.",
+    "Não use o sensor de distância. Com ele o robô passa de 14,8 cm de largura.",
+    "Para achar o degrau, conte a distância que o robô andou."
   ],
   "programa": [
     "Estratégia 1: sobe só com as rodas (degraus de até ~1,2 cm).",
@@ -269,7 +274,7 @@ window.IDEIAS = (window.IDEIAS || []).concat([
     ],
     [
       "Viga 3 furos",
-      1
+      2
     ],
     [
       "Viga 11 furos",
@@ -309,7 +314,7 @@ window.IDEIAS = (window.IDEIAS || []).concat([
     ],
     [
       "Pino com atrito",
-      36
+      34
     ],
     [
       "Quadro 5x7",
@@ -317,7 +322,7 @@ window.IDEIAS = (window.IDEIAS || []).concat([
     ],
     [
       "Pino longo com atrito",
-      2
+      4
     ],
     [
       "Elástico 33 mm",
@@ -365,11 +370,17 @@ window.IDEIAS = (window.IDEIAS || []).concat([
     "E": "Sensor de distância SPIKE"
   },
   "passos": [
-    "Base: quadro 11x15, motores médios A e B, rodízio e sensor de cor (D) atrás, hub mais para trás. Limite: 20 x 20 cm.",
-    "Torre de 2 quadros 5x7 na frente: eles são o trilho. A cremalheira impressa deitada (dentes para baixo) desliza entre eles, por cima do hub, com uma viga de 15 e uma viga de 9 por cima.",
-    "Na ponta da viga de 9, um pino-eixo virado para cima: a argola fica deitada em volta dele. Elásticos dos quadros até os pinos de trás do carrinho puxam para frente.",
-    "Motor grande (C) de pé ao lado da torre (com uma viga de 5 de espaçador) e a engrenagem de 12 dentes embaixo da cremalheira. Girando, puxa o carrinho para trás; quando acabam os dentes, ele escapa e dispara.",
-    "Sensor de distância (E) na lateral da torre, olhando para frente. Sensor de cor (D) atrás, para achar a partida."
+    "Deite o quadro 11x15 e prenda embaixo os motores médios A e B.",
+    "Atrás, ponha o rodízio e o sensor de cor (porta D). Coloque o hub mais para trás.",
+    "Na frente, monte a torre com 2 quadros 5x7 em pé. Eles são o trilho.",
+    "Encaixe entre eles a cremalheira impressa deitada, com os dentes para baixo, por cima do hub.",
+    "Prenda uma viga de 15 e uma viga de 9 por cima da cremalheira.",
+    "Na ponta da viga de 9, prenda um pino-eixo virado para cima. A argola fica deitada em volta dele.",
+    "Ligue elásticos dos quadros até os pinos de trás do carrinho. Eles puxam o carrinho para a frente.",
+    "Ponha o motor grande (C) em pé ao lado da torre, com uma viga de 5 de espaçador.",
+    "Coloque a engrenagem de 12 dentes embaixo da cremalheira.",
+    "Ao girar, o motor puxa o carrinho para trás. Quando os dentes acabam, o carrinho escapa e dispara.",
+    "Ponha o sensor de distância (porta E) na lateral da torre, olhando para a frente."
   ],
   "programa": [
     "Estratégia 1: lança de longe (30 cm), mais rápido.",
@@ -541,7 +552,7 @@ window.IDEIAS = (window.IDEIAS || []).concat([
     ],
     [
       "Viga 3 furos",
-      1
+      2
     ],
     [
       "Viga 11 furos",
@@ -573,11 +584,11 @@ window.IDEIAS = (window.IDEIAS || []).concat([
     ],
     [
       "Pino com atrito",
-      34
+      32
     ],
     [
       "Pino longo com atrito",
-      2
+      4
     ]
   ],
   "eletronica": [
@@ -604,11 +615,13 @@ window.IDEIAS = (window.IDEIAS || []).concat([
     "D": "Sensor de cor SPIKE"
   },
   "passos": [
-    "Base: quadro 11x15 deitado, motores médios A e B embaixo com as rodas, rodízio de bola e sensor de cor (D) olhando o chão, hub em cima.",
-    "Fundo do corredor: duas vigas conectoras 3x3 em pé na face da frente do quadro.",
-    "Paredes: vigas em L 3x5 em pé nas laterais (7,2 cm entre elas).",
-    "Boca: por fora de cada parede, uma viga conectora 3x3 deitada e, embaixo dela, uma viga dobrada de 9 deitada com a ponta para fora.",
-    "Sem porta e sem motor grande: com a porta motorizada o motor e o sensor de distância ocupavam o lugar das abas (passava de 20 cm). Depósito por ré."
+    "Deite o quadro 11x15 e prenda embaixo os motores médios A e B, com as rodas.",
+    "Ponha o rodízio de bola e o sensor de cor (porta D) olhando para o chão. Coloque o hub em cima.",
+    "Faça o fundo do corredor: prenda duas vigas conectoras 3x3 em pé na frente do quadro.",
+    "Faça as paredes: prenda vigas em L 3x5 em pé nas laterais. Entre elas ficam 7,2 cm.",
+    "Faça a boca do funil: por fora de cada parede, prenda uma viga conectora 3x3 deitada.",
+    "Embaixo de cada uma, prenda uma viga dobrada de 9 deitada, com a ponta para fora. Elas são as abas.",
+    "Este robô não tem porta nem motor grande. Para soltar as esferas, o robô dá ré."
   ],
   "programa": [
     "Estratégia 1: varrer em faixas (cortador de grama).",
@@ -788,7 +801,7 @@ window.IDEIAS = (window.IDEIAS || []).concat([
     ],
     [
       "Viga 3 furos",
-      1
+      2
     ],
     [
       "Viga 11 furos",
@@ -828,7 +841,7 @@ window.IDEIAS = (window.IDEIAS || []).concat([
     ],
     [
       "Pino com atrito",
-      42
+      40
     ],
     [
       "Quadro 5x7",
@@ -840,7 +853,7 @@ window.IDEIAS = (window.IDEIAS || []).concat([
     ],
     [
       "Pino longo com atrito",
-      2
+      4
     ]
   ],
   "eletronica": [
@@ -877,11 +890,15 @@ window.IDEIAS = (window.IDEIAS || []).concat([
     "E": "Sensor de distância SPIKE"
   },
   "passos": [
-    "Base: quadro 11x15, motores médios A e B, rodízio e sensor de cor (D) atrás, hub mais para trás.",
-    "Torre: vigas em L 3x5 deitadas e dois quadros 5x7 em pé. Carrinho: cremalheira do kit (dentes para trás) numa viga de 15.",
-    "Garfos: viga conectora 3x3 em pé embaixo do carrinho e duas vigas em L 3x5 com a perna comprida para frente.",
-    "Motor grande (C) de pé ao lado da torre, com a engrenagem de 12 dentes no eixo de 7.",
-    "Sensor de distância (E) embaixo, à esquerda, numa viga conectora na face da frente do quadro."
+    "Deite o quadro 11x15 e prenda embaixo os motores médios A e B.",
+    "Atrás, ponha o rodízio e o sensor de cor (porta D). Coloque o hub mais para trás.",
+    "Monte a torre: duas vigas em L 3x5 deitadas e dois quadros 5x7 em pé.",
+    "Monte o carrinho: prenda a cremalheira do kit (dentes para trás) numa viga de 15 e encaixe entre os quadros.",
+    "Ponha o motor grande (C) em pé ao lado da torre.",
+    "Passe o eixo de 7 com a engrenagem de 12 dentes até a cremalheira.",
+    "Monte os garfos: prenda uma viga conectora 3x3 em pé embaixo do carrinho.",
+    "Prenda nela duas vigas em L 3x5, com a perna comprida para a frente.",
+    "Ponha o sensor de distância (porta E) embaixo, à esquerda, numa viga conectora na frente do quadro."
   ],
   "programa": [
     "Estratégia 1: um cubo por viagem (seguro).",
@@ -1104,13 +1121,19 @@ window.IDEIAS = (window.IDEIAS || []).concat([
     "B": "Motor pequeno SPIKE"
   },
   "passos": [
-    "Motor A deitado, saída para a direita: eixo de 6 com as DUAS rodas grandes lado a lado (giram juntas: o robô anda reto).",
-    "Do lado esquerdo do motor A: viga de 11 em pé (frente) e viga de 7 em pé (trás), 2 pinos cada. A ponta de baixo delas é o apoio que desliza no chão.",
-    "Hub pequeno deitado em cima do motor A, preso na viga de 11 com 2 pinos. Em cima do hub: viga de 7 deitada e o motor B.",
-    "Alavanca: eixo de 7 na saída do motor B, viga dobrada laranja na ponta (furo de eixo) e viga de 11 para a frente.",
-    "Gancho: viga em L com a perna longa para baixo (poste) e outra viga em L com o pé virado para a FRENTE.",
-    "O gancho fica 4 cm à direita das rodas: os copos ficam em linha reta e o corpo do robô passa AO LADO do copo A.",
-    "O palito precisa estar atravessado no copo (de lado para o robô). Monte a alavanca na horizontal com o motor B na posição 0."
+    "Deite o motor A com a saída para a direita.",
+    "Passe um eixo de 6 e prenda as DUAS rodas grandes lado a lado. Elas giram juntas, então o robô anda reto.",
+    "Do lado esquerdo do motor A, prenda uma viga de 11 em pé (frente) e uma viga de 7 em pé (trás), com 2 pinos cada.",
+    "A ponta de baixo dessas vigas é o apoio que desliza no chão.",
+    "Deite o hub pequeno em cima do motor A e prenda na viga de 11 com 2 pinos.",
+    "Em cima do hub, ponha uma viga de 7 deitada e o motor B.",
+    "Monte a alavanca: prenda um eixo de 7 na saída do motor B.",
+    "Na ponta do eixo, prenda a viga dobrada laranja (furo de eixo) e uma viga de 11 apontando para a frente.",
+    "Monte o gancho: uma viga em L com a perna longa para baixo (poste).",
+    "Prenda outra viga em L com o pé virado para a FRENTE.",
+    "O gancho fica 4 cm à direita das rodas. Assim os copos ficam em linha reta e o robô passa AO LADO do copo A.",
+    "Monte a alavanca na horizontal, com o motor B na posição 0.",
+    "O palito precisa estar atravessado no copo, de lado para o robô."
   ],
   "programa": [
     "Estratégia 1: o gancho entra no copo antes do palito e passa por baixo (testada no modelo 3D com um copo de 7 x 8 cm).",
@@ -1250,28 +1273,24 @@ window.IDEIAS = (window.IDEIAS || []).concat([
     "pontos": "Não pontua sozinho: deixa os outros programas certos"
   },
   "medidas_cm": [
-    16,
-    14.4,
-    10
+    17.6,
+    12.8,
+    8.8
   ],
-  "resumo": "Uma base simples que cabe em todas as provas, com os dois sensores e um botão. Serve para medir os números da sua arena e do seu robô antes de programar as missões.",
+  "resumo": "Robô simples com os sensores da prova, para medir na arena: quantos cm anda por rotação, quanto girar para 90° e o que o sensor de cor lê. Cabe em todas as provas (17,6 x 12,8 cm). Tem montagem em 3D passo a passo.",
   "aprende": "Calibrar: medir de verdade em vez de chutar. Cada robô e cada piso são um pouco diferentes.",
   "pecas": [
     [
-      "Quadro 7x11",
-      1
+      "Eixo 5",
+      2
+    ],
+    [
+      "Viga 3 furos",
+      2
     ],
     [
       "Viga 11 furos",
       2
-    ],
-    [
-      "Viga em L 3x5",
-      2
-    ],
-    [
-      "Pino com atrito",
-      16
     ],
     [
       "Roda 57 x 14 com pneu",
@@ -1282,8 +1301,24 @@ window.IDEIAS = (window.IDEIAS || []).concat([
       1
     ],
     [
+      "Quadro 11x15",
+      1
+    ],
+    [
+      "Viga conectora 3x3",
+      2
+    ],
+    [
       "Bola 19 mm",
       1
+    ],
+    [
+      "Pino com atrito",
+      24
+    ],
+    [
+      "Pino longo com atrito",
+      4
     ]
   ],
   "eletronica": [
@@ -1320,10 +1355,13 @@ window.IDEIAS = (window.IDEIAS || []).concat([
     "F": "Sensor de força SPIKE"
   },
   "passos": [
-    "Base: quadro 7x11, motores médios A e B, rodas grandes, rodízio atrás.",
-    "Sensor de cor (D) na frente, olhando o chão a 1 cm.",
-    "Sensor de distância (E) na frente, olhando para frente.",
-    "Sensor de força (F) em cima: é o botão para começar cada teste."
+    "Deite o quadro 11x15 e prenda embaixo os motores médios A e B, com as rodas grandes.",
+    "Atrás, ponha o rodízio de bola.",
+    "Ainda atrás, ponha o sensor de cor (porta D) olhando para o chão, a 0,8 cm dele.",
+    "Atravesse duas vigas de 11 e coloque o hub (com a bateria) em cima delas.",
+    "Na frente, prenda duas vigas conectoras 3x3 em pé.",
+    "Prenda o sensor de distância (porta E) no meio da frente, olhando para a frente.",
+    "Prenda o sensor de força (porta F) na lateral direita da frente. Ele é o botão para começar cada teste."
   ],
   "programa": [
     "Teste 1: cm por rotação e giro de 90°.",
@@ -1476,36 +1514,32 @@ window.IDEIAS = (window.IDEIAS || []).concat([
     "pontos": "Não pontua sozinho: deixa os outros programas certos"
   },
   "medidas_cm": [
-    14.4,
-    12.8,
-    8
+    6.6,
+    9.6,
+    7.4
   ],
-  "resumo": "Base mínima com dois motores, para descobrir os números do Essential: quanto anda em uma rotação e quanto girar para virar 90°.",
+  "resumo": "Robô mínimo do Essential para medir na arena: quantos cm anda por rotação e quanto girar para 90°. Cabe em todas as provas (9,6 x 6,6 cm). Tem montagem em 3D passo a passo.",
   "aprende": "Calibrar, e entender por que medir rotações é melhor que medir tempo.",
   "pecas": [
     [
-      "Placa Technic 2x8",
+      "Viga 7 furos",
+      3
+    ],
+    [
+      "Viga conectora 3x3",
       2
     ],
     [
-      "Placa Technic 2x6",
+      "Eixo 3",
       2
     ],
     [
-      "Tijolo Technic 1x8",
-      2
+      "Pino com atrito",
+      16
     ],
     [
       "Roda 43 x 14 com pneu",
       2
-    ],
-    [
-      "Rodinha de skate",
-      1
-    ],
-    [
-      "Pino com atrito",
-      10
     ]
   ],
   "eletronica": [
@@ -1527,9 +1561,13 @@ window.IDEIAS = (window.IDEIAS || []).concat([
     "B": "Motor pequeno SPIKE"
   },
   "passos": [
-    "Base com placas Technic e um motor pequeno de cada lado (A e B).",
-    "Rodinha de skate atrás.",
-    "Faça uma marca na frente do robô (ponto de medida)."
+    "Deite os motores pequenos, costas com costas (portas A e B), presos com 3 pinos.",
+    "Atravesse duas vigas de 7 em cima deles.",
+    "Coloque o hub pequeno (com a bateria) em cima das vigas.",
+    "Prenda uma roda grande na saída de cada motor, com eixo de 3.",
+    "Na frente (lado do 'rabo' dos motores), prenda uma viga de 7 em pé e duas vigas conectoras 3x3 em pé.",
+    "Elas são o apoio que desliza no chão.",
+    "A face das vigas conectoras é o ponto de medida. Meça a partir dela."
   ],
   "programa": [
     "Teste 1: cm por rotação.",
@@ -1759,12 +1797,14 @@ window.IDEIAS = (window.IDEIAS || []).concat([
     "4": "Sensor ultrassônico EV3"
   },
   "passos": [
-    "Base: os dois motores grandes (B e C) lado a lado, o Brick em cima e o rodízio de bola atrás.",
-    "Rodas: eixo de 6 e roda encostada no motor. Assim o robô fica com 14,6 cm de largura (meia A4).",
-    "Na frente do Brick: uma viga de 15 em pé de cada lado.",
-    "Em cima: o ultrassônico (porta 4) num eixo de 12, olhando para frente.",
-    "Embaixo: sensor de cor (porta 3) e giroscópio (porta 2) num eixo de 12, olhando para o chão. O giroscópio fica deitado e firme.",
-    "Atrás: o sensor de toque (porta 1) com o botão para cima. É o botão de começar."
+    "Junte os dois motores grandes (B e C) lado a lado.",
+    "Ponha o Brick em cima deles e o rodízio de bola atrás.",
+    "Faça as rodas: prenda a roda em um eixo de 6, encostada no motor. Assim o robô fica com 14,6 cm de largura (meia A4).",
+    "Na frente do Brick, prenda uma viga de 15 em pé de cada lado.",
+    "Em cima, prenda o sensor ultrassônico (porta 4) num eixo de 12, olhando para a frente.",
+    "Embaixo, prenda o sensor de cor (porta 3) e o giroscópio (porta 2) num eixo de 12, olhando para o chão.",
+    "O giroscópio precisa ficar deitado e firme.",
+    "Atrás, prenda o sensor de toque (porta 1) com o botão para cima. Ele é o botão de começar."
   ],
   "programa": [
     "Teste 1: distância e giro (rodas x giroscópio).",

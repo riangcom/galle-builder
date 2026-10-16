@@ -1,0 +1,70 @@
+{
+ "passos": [
+  "Base: placa 8x16.",
+  "A caixa: duas paredes laterais de 3 camadas de tijolos 1x4 (a de baixo é Technic) e a parede da frente com 2 tijolos Technic 1x4.",
+  "Sensor de cor (porta B) no meio da caixa, olhando para cima, com 1 pino de cada lado nos tijolos Technic.",
+  "O teto: duas peças lisas 1x8 por cima das paredes, com uma fenda no meio para a moeda.",
+  "Hub à direita, preso no lado direito a um tijolo Technic 1x4 (em cima de um tijolo 1x4) com 2 pinos (a bateria vai embaixo do hub).",
+  "A matriz de luz na frente, presa na parede da frente com 2 pinos, olhando para a frente.",
+  "A moeda (tijolo redondo 2x2) entra pela fenda e cai em cima do sensor de cor. Ponha as outras moedas ao lado."
+ ],
+ "pecas": [
+  [
+   "3010",
+   25,
+   5
+  ],
+  [
+   "3701",
+   26,
+   5
+  ],
+  [
+   "37308",
+   15,
+   1
+  ],
+  [
+   "3941",
+   2,
+   1
+  ],
+  [
+   "4162",
+   2,
+   2
+  ],
+  [
+   "47592",
+   322,
+   1
+  ],
+  [
+   "61332",
+   0,
+   6
+  ],
+  [
+   "66757",
+   14,
+   1
+  ],
+  [
+   "67351",
+   14,
+   1
+  ],
+  [
+   "92438",
+   15,
+   1
+  ]
+ ],
+ "impressas": [],
+ "extras": [],
+ "caixa_cm": [
+  9.2,
+  12.8,
+  4.0
+ ]
+}

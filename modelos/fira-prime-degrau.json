@@ -3,7 +3,7 @@
   "Base: quadro 11x15 deitado.",
   "Motores médios embaixo do quadro, na frente, presos com 2 pinos cada (portas A e B).",
   "Rodas grandes: eixo de 5 na saída de cada motor.",
-  "Atrás, embaixo: sensor de cor (porta D) no meio, olhando o chão.",
+  "Atrás, embaixo: sensor de cor (porta D) no meio, olhando o chão (alto, para não encalhar no degrau).",
   "Duas vigas de 11 atravessadas em cima do quadro (uma no meio, uma atrás).",
   "Hub (com a bateria encaixada embaixo) em cima das vigas, mais para trás, preso com 8 pinos.",
   "Atrás: duas vigas conectoras 3x3 em pé na face de trás do quadro (2 pinos cada).",

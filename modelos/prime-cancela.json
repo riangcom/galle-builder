@@ -1,0 +1,58 @@
+{
+ "passos": [
+  "Base: quadro 11x19 deitado (placa com furos em xadrez).",
+  "Hub no canto de trás à esquerda (bateria encaixada embaixo), preso com 8 pinos.",
+  "Na frente do quadro: duas vigas conectoras deitadas (3 pinos cada) e o sensor de distância olhando para a frente, com 1 pino de cada lado.",
+  "Motor médio (porta B) na lateral direita, com a saída para fora do quadro, preso com 4 pinos.",
+  "Cancela: viga de 15 em pé na saída do motor, presa com 2 pinos (o furo do meio fica no eixo)."
+ ],
+ "pecas": [
+  [
+   "32278",
+   0,
+   1
+  ],
+  [
+   "37316",
+   15,
+   1
+  ],
+  [
+   "39369",
+   14,
+   1
+  ],
+  [
+   "39793",
+   26,
+   2
+  ],
+  [
+   "45601",
+   14,
+   1
+  ],
+  [
+   "54696",
+   322,
+   1
+  ],
+  [
+   "55422",
+   14,
+   1
+  ],
+  [
+   "61332",
+   0,
+   22
+  ]
+ ],
+ "impressas": [],
+ "extras": [],
+ "caixa_cm": [
+  16.0,
+  10.4,
+  12.8
+ ]
+}

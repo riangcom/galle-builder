@@ -71,11 +71,16 @@ window.IDEIAS = (window.IDEIAS || []).concat([
     "B": "Motor pequeno SPIKE"
   },
   "passos": [
-    "Base: os dois motores pequenos deitados, costas com costas (saídas para fora, portas A e B), presos um no outro com 3 pinos.",
-    "Duas vigas de 7 atravessadas em cima dos motores e o hub pequeno (com a bateria) em cima delas.",
-    "Rodas grandes direto na saída de cada motor, com eixo de 3.",
-    "Frente = lado do 'rabo' dos motores: viga de 7 em pé presa nos motores, duas vigas conectoras 3x3 (fundo da pá) e duas vigas em L 3x5 com a perna longa no chão (paredes).",
-    "A pá também é o apoio do robô: ela desliza a 1,6 mm do chão. Corredor de 4,8 cm entre as paredes."
+    "Deite os dois motores pequenos, costas com costas, com as saídas para fora (portas A e B).",
+    "Prenda um no outro com 3 pinos.",
+    "Atravesse duas vigas de 7 em cima dos motores.",
+    "Coloque o hub pequeno (com a bateria) em cima delas.",
+    "Prenda uma roda grande na saída de cada motor, com eixo de 3.",
+    "A frente do robô é o lado do 'rabo' dos motores. Prenda ali uma viga de 7 em pé.",
+    "Faça o fundo da pá: duas vigas conectoras 3x3.",
+    "Faça as paredes: duas vigas em L 3x5, com a perna comprida no chão.",
+    "Confira: a pá desliza a 1,6 mm do chão. Ela também é o apoio do robô.",
+    "Confira: o corredor entre as paredes tem 4,8 cm."
   ],
   "programa": [
     "Estratégia 1: trajeto por rotações das rodas.",
@@ -214,60 +219,44 @@ window.IDEIAS = (window.IDEIAS || []).concat([
     "pontos": "Mira 50 (argola) + 100 (clipe) + 100 (voltar)"
   },
   "medidas_cm": [
-    19.2,
+    13.6,
     12.8,
-    16
+    12.4
   ],
-  "resumo": "Um motor anda (só para frente e para trás, em linha reta) e o outro gira uma alavanca com um gancho. O gancho sobe até a altura da haste, o robô encosta, a alavanca desce um pouco e a argola fica na haste.",
+  "resumo": "O mesmo robô do 'Gancho em L para o palito': motor A nas duas rodas (anda reto) e motor B numa alavanca alta. A argola fica pendurada no pé do gancho; a haste entra na argola, a alavanca abaixa e a argola fica na haste. Tem montagem em 3D passo a passo.",
   "aprende": "Usar bem 2 portas: quando o caminho é reto, um motor só basta para andar. O motor da alavanca sabe em que ângulo está.",
   "pecas": [
     [
-      "Placa Technic 2x8",
+      "Viga 7 furos",
       2
     ],
     [
-      "Tijolo Technic 1x8",
+      "Viga 11 furos",
       2
     ],
     [
-      "Tijolo Technic 1x12",
-      1
-    ],
-    [
-      "Tijolo Technic 1x4",
+      "Viga em L 3x5",
       2
-    ],
-    [
-      "Torre treliça",
-      1
-    ],
-    [
-      "Eixo 8",
-      1
     ],
     [
       "Eixo 6",
       1
     ],
     [
-      "Bucha",
-      4
+      "Eixo 7",
+      1
+    ],
+    [
+      "Pino com atrito",
+      16
     ],
     [
       "Roda 43 x 14 com pneu",
       2
     ],
     [
-      "Roda de cadeira de rodas",
-      2
-    ],
-    [
-      "Pino com atrito",
-      14
-    ],
-    [
-      "Conector angular nº 1",
-      2
+      "Viga dobrada 9 furos",
+      1
     ]
   ],
   "eletronica": [
@@ -289,11 +278,11 @@ window.IDEIAS = (window.IDEIAS || []).concat([
     "B": "Motor pequeno SPIKE"
   },
   "passos": [
-    "Chassi com placas Technic 2x8 e tijolos Technic 1x8. Eixo de 8 atrás com as rodas grandes, preso direto no motor A (as duas rodas giram juntas: o robô anda reto).",
-    "Na frente, eixo de 6 com as rodas de cadeira de rodas, soltas.",
-    "Torre treliça em pé no meio do robô. No alto, o motor B com a alavanca: tijolo Technic 1x12.",
-    "Na ponta da alavanca, conectores angulares formam o gancho onde a argola (e o clipe) ficam pendurados.",
-    "Alinhe o robô na partida apontando para a estação: ele só anda em linha reta."
+    "Monte o robô do 'Gancho em L para o palito' (montagem 3D abaixo). É o mesmo robô.",
+    "Pendure a argola no pé do gancho: é a viga em L de baixo, com o pé para a frente.",
+    "Gire a alavanca de 0 a 70 graus. O gancho vai de 8 a 18 cm do chão, sem bater no robô.",
+    "Na partida, aponte o robô para a estação. Ele só anda em linha reta.",
+    "O gancho fica 4 cm à direita das rodas. Alinhe a haste com o gancho, não com o meio do robô."
   ],
   "programa": [
     "Estratégia 1: uma viagem, só a argola (mais segura).",
@@ -400,12 +389,13 @@ window.IDEIAS = (window.IDEIAS || []).concat([
     "Volta com a alavanca baixa para o robô ficar mais estável."
   ],
   "desafio": "Volte exatamente para a área de partida (marque com fita) depois de soltar a argola.",
-  "pergunta": "Por que este robô consegue andar com um motor só? Em que prova isso não daria certo?"
+  "pergunta": "Por que este robô consegue andar com um motor só? Em que prova isso não daria certo?",
+  "modelo3d": "fira-essential-palito"
 },
 {
   "id": "fira-essential-pneus",
   "kit": "essential",
-  "titulo": "Mini trator com pá em cunha",
+  "titulo": "Mini trator com pá larga",
   "nivel": 1,
   "tempo": 50,
   "tags": [
@@ -419,44 +409,36 @@ window.IDEIAS = (window.IDEIAS || []).concat([
     "pontos": "Mira 50 (linha vermelha) + 25 por linha de progressão + 50 a 200 (pneus)"
   },
   "medidas_cm": [
-    20,
-    12.8,
-    9
+    7.4,
+    9.6,
+    7.4
   ],
-  "resumo": "Robô bem pequeno (cabe em meia A4 com folga) com uma pá em cunha na frente, que encaixa na pilha de pneus e empurra sem derrubar.",
+  "resumo": "Robô pequeno com uma pá larga de vigas (8,8 cm) na frente: empurra a pilha de pneus pelo percurso até a linha vermelha. Tem montagem em 3D passo a passo.",
   "aprende": "O formato da pá muda o resultado: uma cunha centraliza a pilha, uma pá reta deixa os pneus escorregarem para o lado.",
   "pecas": [
     [
-      "Placa Technic 2x8",
+      "Viga 7 furos",
+      3
+    ],
+    [
+      "Viga 11 furos",
       2
     ],
     [
-      "Placa Technic 2x6",
-      1
-    ],
-    [
-      "Placa em cunha 4x6",
+      "Viga conectora 3x3",
       2
     ],
     [
-      "Tijolo Technic 1x8",
+      "Eixo 3",
       2
     ],
     [
-      "Tijolo 1x4",
-      2
+      "Pino com atrito",
+      20
     ],
     [
       "Roda 43 x 14 com pneu",
       2
-    ],
-    [
-      "Rodinha de skate",
-      1
-    ],
-    [
-      "Pino com atrito",
-      10
     ]
   ],
   "eletronica": [
@@ -478,9 +460,13 @@ window.IDEIAS = (window.IDEIAS || []).concat([
     "B": "Motor pequeno SPIKE"
   },
   "passos": [
-    "Base com placas Technic e um motor pequeno de cada lado (A e B), rodinha de skate atrás.",
-    "Pá: duas placas em cunha 4x6 de pé, formando um V aberto para frente, presas nos tijolos Technic 1x8.",
-    "Meça: no máximo 26 x 18 furos (21 x 14,8 cm) com a pá."
+    "Deite os dois motores pequenos, costas com costas (portas A e B), presos com 3 pinos.",
+    "Atravesse duas vigas de 7 em cima deles.",
+    "Coloque o hub pequeno (com a bateria) em cima das vigas.",
+    "Prenda uma roda grande na saída de cada motor, com eixo de 3.",
+    "Na frente (lado do 'rabo' dos motores), prenda uma viga de 7 em pé e duas vigas conectoras 3x3 em pé.",
+    "Faça a pá: atravesse duas vigas de 11 na frente das vigas conectoras, uma em cima e outra rente ao chão.",
+    "A pá também é o apoio do robô. Ela desliza a 2 mm do chão."
   ],
   "programa": [
     "Estratégia 1: empurrar reto pelo meio da pista.",
@@ -518,7 +504,8 @@ window.IDEIAS = (window.IDEIAS || []).concat([
       ],
       "ajustes": [
         "8 rotações ≈ 108 cm: troque pela distância da arena.",
-        "30%: com 3 pneus, teste 20%."
+        "30%: com 3 pneus, teste 20%.",
+        "A frente deste robô é o lado da pá. Se ele andar de ré no 'para frente', troque a ordem: definir motores de movimento {B} e {A}."
       ]
     },
     {
@@ -566,7 +553,8 @@ window.IDEIAS = (window.IDEIAS || []).concat([
       ],
       "ajustes": [
         "Direção 40: curvas suaves seguram a pilha; 100 gira no lugar e derruba.",
-        "Número de repetições do 'S' depende da largura do obstáculo."
+        "Número de repetições do 'S' depende da largura do obstáculo.",
+        "A frente deste robô é o lado da pá. Se ele andar de ré no 'para frente', troque a ordem: definir motores de movimento {B} e {A}."
       ]
     }
   ],

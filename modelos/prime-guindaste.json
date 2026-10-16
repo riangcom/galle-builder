@@ -1,0 +1,117 @@
+{
+ "passos": [
+  "Base: quadro 11x19 deitado (placa com furos em xadrez).",
+  "Hub deitado no fundo do quadro (bateria encaixada embaixo), preso com 8 pinos.",
+  "Sensor de força deitado na frente do hub (porta D), com o botão para o lado direito.",
+  "Motor grande (porta C) deitado na frente: eixo para cima, preso no quadro com 6 pinos.",
+  "Pinhão: eixo de 4, bucha e engrenagem de 12 dentes no eixo do motor.",
+  "Mancal da torre: viga de 3 deitada, presa no quadro com 2 pinos.",
+  "Eixo de 7 no mancal, 4 buchas e a engrenagem de 36 dentes (3 furos do pinhão).",
+  "Mesa da torre: duas vigas de 7 deitadas em cima da engrenagem de 36, presas com 2 pinos.",
+  "Motor médio (porta B) em cima da mesa, eixo para a direita, preso com 4 pinos.",
+  "Viga de 5 em pé na frente do motor, presa com 2 pinos (o eixo do motor passa pelo furo do meio).",
+  "Eixo de 5 no motor, engrenagem de 12 dentes e bucha.",
+  "Eixo do braço 3 furos acima, com a engrenagem de 36 dentes (encostada na de 12).",
+  "Braço: viga de 15 presa na engrenagem de 36 com 2 pinos; bucha prende o eixo.",
+  "Na ponta do braço: viga de 3 pendurada (1 pino) e o gancho (pino com eixo) no furo de baixo."
+ ],
+ "pecas": [
+  [
+   "18651",
+   0,
+   1
+  ],
+  [
+   "32073",
+   71,
+   1
+  ],
+  [
+   "32270",
+   0,
+   2
+  ],
+  [
+   "32278",
+   0,
+   1
+  ],
+  [
+   "32316",
+   26,
+   1
+  ],
+  [
+   "32498",
+   0,
+   2
+  ],
+  [
+   "32523",
+   14,
+   2
+  ],
+  [
+   "32524",
+   322,
+   2
+  ],
+  [
+   "3705",
+   0,
+   2
+  ],
+  [
+   "3713",
+   71,
+   7
+  ],
+  [
+   "37312",
+   15,
+   1
+  ],
+  [
+   "39369",
+   14,
+   1
+  ],
+  [
+   "44294",
+   14,
+   1
+  ],
+  [
+   "45601",
+   14,
+   1
+  ],
+  [
+   "54675",
+   322,
+   1
+  ],
+  [
+   "54696",
+   322,
+   1
+  ],
+  [
+   "55422",
+   14,
+   1
+  ],
+  [
+   "61332",
+   0,
+   31
+  ]
+ ],
+ "impressas": [],
+ "extras": [],
+ "caixa_cm": [
+  20.0,
+  10.3,
+  11.9
+ ]
+}

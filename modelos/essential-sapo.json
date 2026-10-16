@@ -1,0 +1,74 @@
+{
+ "passos": [
+  "Motores pequenos costas com costas (saídas para fora), presos pela face de baixo com 3 pinos.",
+  "Pinos em cima dos motores e duas vigas de 7 deitadas, atravessadas.",
+  "Hub pequeno (com a bateria) em cima das vigas, preso com 3 pinos: é o corpo do sapo.",
+  "Na frente: 1 pino em cada motor e a viga de 7 em pé; duas vigas conectoras 3x3 em pé são as patas da frente, paradas.",
+  "As pernas de trás: eixo de 3 na saída de cada motor, tijolo Technic 1x2 com furo de eixo no eixo e, em cima dele, um tijolo Technic 1x8 apontando para trás."
+ ],
+ "pecas": [
+  [
+   "32064a",
+   14,
+   2
+  ],
+  [
+   "32524",
+   1,
+   3
+  ],
+  [
+   "3702",
+   321,
+   2
+  ],
+  [
+   "39793",
+   26,
+   2
+  ],
+  [
+   "4519",
+   14,
+   2
+  ],
+  [
+   "61332",
+   0,
+   16
+  ],
+  [
+   "66757",
+   14,
+   1
+  ],
+  [
+   "67351",
+   14,
+   1
+  ],
+  [
+   "68488",
+   15,
+   2
+  ]
+ ],
+ "impressas": [],
+ "extras": [
+  [
+   "Placa lisa redonda com desenho (olho)",
+   2,
+   "enfeite: os olhos do sapo, em cima do hub (não aparece no 3D)"
+  ],
+  [
+   "Tijolo curvo",
+   6,
+   "enfeite: o couro do sapo, em cima do hub (não aparece no 3D)"
+  ]
+ ],
+ "caixa_cm": [
+  10.0,
+  9.6,
+  7.2
+ ]
+}

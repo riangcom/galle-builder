@@ -1,0 +1,100 @@
+{
+ "passos": [
+  "Base: placa 16x16 (o chão do parque).",
+  "Dois tijolos Technic 1x4 deitados, um de cada lado do meio, e o motor pequeno em pé (porta A) entre eles, preso com 2 pinos.",
+  "Hub na frente, preso no lado esquerdo a um tijolo Technic 1x4 (em cima de um tijolo 1x4) com 2 pinos (a bateria vai embaixo do hub).",
+  "A torre da luz: dois tijolos Technic 1x4 empilhados no fundo à esquerda e a matriz de luz presa com 2 pinos.",
+  "Eixo de 6 no motor. Tijolo redondo 2x2 no eixo e a placa 8x8 por cima: é o disco que gira.",
+  "No disco: o sapo e o caranguejo (nos pinos) e os cones. Os assentos e o cachorro também ficam no disco."
+ ],
+ "pecas": [
+  [
+   "3010",
+   25,
+   1
+  ],
+  [
+   "33121",
+   191,
+   1
+  ],
+  [
+   "33320",
+   2,
+   1
+  ],
+  [
+   "3701",
+   26,
+   5
+  ],
+  [
+   "3706",
+   4,
+   1
+  ],
+  [
+   "3941",
+   2,
+   1
+  ],
+  [
+   "3942c",
+   25,
+   2
+  ],
+  [
+   "41539",
+   15,
+   1
+  ],
+  [
+   "47592",
+   322,
+   1
+  ],
+  [
+   "61332",
+   0,
+   6
+  ],
+  [
+   "66757",
+   14,
+   1
+  ],
+  [
+   "67351",
+   14,
+   1
+  ],
+  [
+   "68488",
+   15,
+   1
+  ],
+  [
+   "91405",
+   15,
+   1
+  ]
+ ],
+ "impressas": [],
+ "extras": [
+  [
+   "Assento",
+   4,
+   "peça sem arquivo 3D: encaixa no disco como os bichinhos"
+  ],
+  [
+   "Cachorro",
+   1,
+   "peça sem arquivo 3D: encaixa no disco"
+  ]
+ ],
+ "caixa_cm": [
+  12.8,
+  12.8,
+  7.0
+ ]
+}

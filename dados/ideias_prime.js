@@ -14,20 +14,16 @@ window.IDEIAS = (window.IDEIAS || []).concat([
   "aprende": "Usar um sensor para tomar decisões: SE estiver perto, ENTÃO vire.",
   "pecas": [
     [
-      "Quadro 7x11",
+      "Eixo 5",
+      2
+    ],
+    [
+      "Viga 3 furos",
       1
     ],
     [
-      "Viga 15 furos",
+      "Viga 11 furos",
       2
-    ],
-    [
-      "Viga 7 furos",
-      2
-    ],
-    [
-      "Pino com atrito",
-      20
     ],
     [
       "Roda 57 x 14 com pneu",
@@ -38,11 +34,23 @@ window.IDEIAS = (window.IDEIAS || []).concat([
       1
     ],
     [
+      "Quadro 11x15",
+      1
+    ],
+    [
+      "Viga conectora 3x3",
+      2
+    ],
+    [
       "Bola 19 mm",
       1
     ],
     [
-      "Viga em L 3x5",
+      "Pino com atrito",
+      22
+    ],
+    [
+      "Pino longo com atrito",
       2
     ]
   ],
@@ -65,11 +73,10 @@ window.IDEIAS = (window.IDEIAS || []).concat([
     ]
   ],
   "passos": [
-    "Prenda os dois motores médios lado a lado no quadro 7x11, com os eixos virados para fora.",
-    "Encaixe uma roda grande em cada motor.",
-    "Na parte de trás, monte o rodízio (viga com bola giratória + bola) para o carro não arrastar.",
-    "Prenda o hub em cima do quadro com as vigas de 15 furos.",
-    "Na frente, use as vigas em L para segurar o sensor de distância olhando para frente, um pouco acima do chão."
+    "Base: quadro 11x15 deitado, motores médios embaixo com as rodas grandes, rodízio de bola atrás.",
+    "Hub (com a bateria) em cima de duas vigas de 11.",
+    "Na frente: duas vigas conectoras 3x3 em pé, presas no quadro.",
+    "Sensor de distância no meio da frente, olhando para frente, preso nos furos do meio das vigas conectoras."
   ],
   "programa": [
     "Quando o programa começar: defina os motores das rodas como par de movimento.",
@@ -96,60 +103,60 @@ window.IDEIAS = (window.IDEIAS || []).concat([
     "engrenagens",
     "redução"
   ],
-  "resumo": "Uma torre que gira e um braço que levanta peças leves usando engrenagens para ganhar força.",
-  "aprende": "Redução: engrenagem pequena (12 dentes) girando a grande (36 dentes) deixa o movimento 3 vezes mais lento e mais forte.",
+  "resumo": "Uma torre que gira e um braço que sobe e desce, os dois movidos por engrenagens que ganham força (12 dentes empurrando 36).",
+  "aprende": "Redução: a engrenagem pequena (12 dentes) gira a grande (36 dentes) e o movimento fica 3 vezes mais lento e mais forte. Por isso o motor precisa girar 3 voltas para a engrenagem grande dar 1.",
   "pecas": [
     [
-      "Quadro 11x15",
+      "Pino longo com atrito + eixo 2",
       1
     ],
     [
-      "Viga 15 furos",
-      4
-    ],
-    [
-      "Viga 11 furos",
-      2
-    ],
-    [
-      "Viga 9 furos",
-      2
+      "Eixo 5",
+      1
     ],
     [
       "Engrenagem 12 dentes dupla cônica",
       2
     ],
     [
+      "Viga 15 furos",
+      1
+    ],
+    [
+      "Viga 5 furos",
+      1
+    ],
+    [
       "Engrenagem 36 dentes dupla cônica",
       2
     ],
     [
-      "Eixo 5",
+      "Viga 3 furos",
       2
     ],
     [
-      "Eixo 7",
+      "Viga 7 furos",
+      2
+    ],
+    [
+      "Eixo 4",
       2
     ],
     [
       "Bucha",
-      4
+      7
+    ],
+    [
+      "Quadro 11x19",
+      1
+    ],
+    [
+      "Eixo 7",
+      1
     ],
     [
       "Pino com atrito",
-      30
-    ],
-    [
-      "Pino longo com atrito",
-      6
-    ],
-    [
-      "Dente 1x3",
-      2
-    ],
-    [
-      "Viga em T 3x3",
-      2
+      31
     ]
   ],
   "eletronica": [
@@ -175,31 +182,33 @@ window.IDEIAS = (window.IDEIAS || []).concat([
     ]
   ],
   "passos": [
-    "Use o quadro 11x15 como base pesada. O hub pode ficar nela para servir de contrapeso.",
-    "Monte uma torre com duas vigas de 15 furos em pé, travadas com vigas em T.",
-    "Coloque o motor grande na base: ele gira a torre pela engrenagem de 12 dentes empurrando a de 36.",
-    "No alto da torre, prenda o braço (vigas de 11 e 9 furos) em um eixo que passa por uma engrenagem de 36.",
-    "O motor médio, com a engrenagem de 12, levanta e abaixa o braço. Na ponta, use os dentes 1x3 como gancho.",
-    "Prenda o sensor de força na base: ele vira o botão de comando."
+    "Deite o quadro 11x19 como base. Prenda o hub no fundo (a bateria vai encaixada embaixo) e o sensor de força na frente do hub, com o botão para o lado direito.",
+    "Prenda o motor grande no quadro, deitado, com o eixo para cima. Ele vai girar a torre. Ponha o eixo, a bucha e a engrenagem de 12 dentes no eixo dele.",
+    "Prenda a viga de 3 no quadro: ela é o apoio da torre. Monte o eixo de 7 nela, com 4 buchas e a engrenagem de 36 dentes. As duas engrenagens ficam a 3 furos uma da outra.",
+    "Em cima da engrenagem de 36 prenda as duas vigas de 7, deitadas. É a mesa da torre: ela gira junto com a engrenagem.",
+    "Prenda o motor médio na mesa, com o eixo virado para a direita. Ele vai levantar o braço.",
+    "Prenda a viga de 5 em pé na frente do motor médio. Ponha o eixo, a engrenagem de 12 dentes e a bucha no eixo do motor.",
+    "Três furos acima, monte o eixo do braço com a engrenagem de 36 dentes. Gire as engrenagens com a mão: os dentes têm de se encaixar sem pular.",
+    "Prenda a viga de 15 na engrenagem de 36 com 2 pinos: é o braço. Na ponta pendure a viga de 3 e coloque o gancho (pino com eixo) no furo de baixo."
   ],
   "programa": [
-    "Quando o sensor de força for pressionado: o motor médio levanta o braço 90 graus.",
-    "Quando o sensor de força for pressionado de novo: o motor grande gira a torre 180 graus.",
-    "Depois: o motor médio abaixa o braço e a torre volta para a posição inicial.",
-    "Dica: use velocidade baixa (30%) para o braço não balançar."
+    "Quando o sensor de força for pressionado: o motor médio levanta o braço 90 graus (o motor gira 270 graus, por causa da redução 3 para 1).",
+    "Quando o sensor de força for pressionado de novo: o motor grande gira a torre 180 graus (o motor gira 540 graus).",
+    "Depois: o motor médio abaixa o braço e o motor grande leva a torre de volta para o começo.",
+    "Dica: use velocidade baixa (30%) para o braço não balançar. O braço só desce uns 40 graus abaixo da horizontal; depois disso bate no quadro."
   ],
   "variacoes": [
-    "Troque a ordem das engrenagens (36 girando a 12) e compare: o braço fica rápido, mas consegue levantar o mesmo peso?",
+    "Troque a ordem das engrenagens (36 girando a 12) e compare: o braço fica mais rápido, mas consegue levantar o mesmo peso?",
     "Use a força do aperto: aperto leve gira devagar, aperto forte gira rápido.",
     "Adicione o sensor de distância para o guindaste parar se alguém chegar perto."
   ],
-  "desafio": "Transporte 3 peças de um lado da mesa para uma caixa sem derrubar nenhuma.",
-  "pergunta": "Por que os guindastes de obra têm um contrapeso do outro lado do braço?"
+  "desafio": "Transporte 3 peças leves de um lado da mesa para uma caixa sem derrubar nenhuma.",
+  "pergunta": "Por que os guindastes de obra têm um contrapeso do outro lado do braço? Onde você poderia pôr um contrapeso neste?"
 },
 {
   "id": "prime-garra",
   "kit": "prime",
-  "titulo": "Veículo com garra que busca objetos",
+  "titulo": "Veículo com garra-gaiola que busca objetos",
   "nivel": 3,
   "tempo": 100,
   "tags": [
@@ -207,31 +216,11 @@ window.IDEIAS = (window.IDEIAS || []).concat([
     "garra",
     "sensor de cor"
   ],
-  "resumo": "Um carro que encontra um objeto, fecha a garra, leva até a base e solta.",
+  "resumo": "Um carrinho com uma gaiola na frente: ele chega no objeto, a porta (o 'dedo' da garra) desce e prende o objeto, e ele leva para outro lugar. É a mesma montagem da 'Gaiola caçadora' das missões FIRA, com montagem em 3D.",
   "aprende": "Dividir um problema grande em partes: andar, achar, pegar, voltar.",
   "pecas": [
     [
-      "Quadro 7x11",
-      1
-    ],
-    [
-      "Quadro 5x7",
-      1
-    ],
-    [
-      "Viga 15 furos",
-      2
-    ],
-    [
-      "Viga 9 furos",
-      2
-    ],
-    [
-      "Viga dobrada 9 furos",
-      2
-    ],
-    [
-      "Engrenagem 20 dentes dupla cônica",
+      "Eixo 11",
       2
     ],
     [
@@ -239,12 +228,24 @@ window.IDEIAS = (window.IDEIAS || []).concat([
       2
     ],
     [
-      "Pino com atrito",
-      30
+      "Viga em L 2x4",
+      2
     ],
     [
-      "Pino-eixo sem atrito",
-      4
+      "Viga 3 furos",
+      2
+    ],
+    [
+      "Viga 11 furos",
+      2
+    ],
+    [
+      "Viga em L 3x5",
+      2
+    ],
+    [
+      "Bucha",
+      2
     ],
     [
       "Roda 57 x 14 com pneu",
@@ -255,12 +256,24 @@ window.IDEIAS = (window.IDEIAS || []).concat([
       1
     ],
     [
+      "Quadro 11x15",
+      1
+    ],
+    [
+      "Viga conectora 3x3",
+      2
+    ],
+    [
       "Bola 19 mm",
       1
     ],
     [
-      "Bucha",
-      4
+      "Pino com atrito",
+      23
+    ],
+    [
+      "Pino longo com atrito",
+      6
     ]
   ],
   "eletronica": [
@@ -290,26 +303,26 @@ window.IDEIAS = (window.IDEIAS || []).concat([
     ]
   ],
   "passos": [
-    "Monte a base de tração: dois motores médios com rodas grandes e rodízio atrás.",
-    "Na frente, prenda o quadro 5x7 em pé: ele segura a garra.",
-    "Garra: duas vigas dobradas de 9 furos, cada uma presa a uma engrenagem de 20 dentes. As duas engrenagens se tocam, então giram em sentidos opostos e a garra fecha.",
-    "O motor grande gira uma das engrenagens da garra.",
-    "Prenda o sensor de distância entre os dedos da garra e o sensor de cor apontado para o chão."
+    "Monte a 'Gaiola caçadora' (montagem 3D abaixo): base com os motores médios, gaiola na frente e a porta no motor grande.",
+    "A porta (vigas em L 2x4 amarelas e a barra de baixo) é o dedo da garra: desce e prende o objeto contra o fundo da gaiola.",
+    "O sensor de distância (por fora da parede esquerda) vê o objeto chegando; o sensor de cor (atrás, embaixo) acha o lugar de entregar.",
+    "Por que não duas engrenagens de 20 dentes? Elas só se encaixam com os eixos a 2,5 furos de distância, e os furos LEGO ficam a 1 furo um do outro. Para dedos que giram juntos, use 20 + 28 dentes (3 furos)."
   ],
   "programa": [
-    "Abra a garra (motor grande para a posição inicial).",
+    "Abra a garra: porta da gaiola para cima (motor grande na posição inicial).",
     "Ande para frente até o sensor de distância medir menos de 5 cm.",
-    "Feche a garra (motor grande gira até travar, com potência baixa para não forçar).",
+    "Feche a garra: a porta desce e prende o objeto (motor grande devagar, para não forçar).",
     "Gire 180 graus e ande até o sensor de cor ver a fita da base (ex.: azul).",
     "Abra a garra, dê ré e comemore com um som."
   ],
   "variacoes": [
     "Só pegue objetos de uma cor: se o objeto não for vermelho, desvie e procure outro.",
     "Conte quantos objetos já levou e mostre o número na matriz do hub.",
-    "Troque a garra de pinça por uma pá que empurra."
+    "Desafio de montagem: troque a porta por uma pinça de 2 dedos que giram juntos (engrenagens de 20 e 28 dentes, eixos a 3 furos)."
   ],
   "desafio": "Leve 3 objetos para a base em menos de 2 minutos.",
-  "pergunta": "Onde existem robôs que pegam e levam coisas? (fábricas, armazéns, hospitais)"
+  "pergunta": "Onde existem robôs que pegam e levam coisas? (fábricas, armazéns, hospitais)",
+  "modelo3d": "fira-prime-coletor"
 },
 {
   "id": "prime-seguidor",
@@ -326,20 +339,16 @@ window.IDEIAS = (window.IDEIAS || []).concat([
   "aprende": "Corrigir o caminho o tempo todo: se saiu da linha, volta.",
   "pecas": [
     [
-      "Quadro 7x11",
-      1
+      "Eixo 5",
+      2
+    ],
+    [
+      "Viga 3 furos",
+      2
     ],
     [
       "Viga 11 furos",
       2
-    ],
-    [
-      "Viga em L 3x5",
-      2
-    ],
-    [
-      "Pino com atrito",
-      16
     ],
     [
       "Roda 57 x 14 com pneu",
@@ -350,8 +359,20 @@ window.IDEIAS = (window.IDEIAS || []).concat([
       1
     ],
     [
+      "Quadro 11x15",
+      1
+    ],
+    [
       "Bola 19 mm",
       1
+    ],
+    [
+      "Pino com atrito",
+      16
+    ],
+    [
+      "Pino longo com atrito",
+      4
     ]
   ],
   "eletronica": [
@@ -373,8 +394,9 @@ window.IDEIAS = (window.IDEIAS || []).concat([
     ]
   ],
   "passos": [
-    "Monte a base com os dois motores médios, rodas grandes e rodízio.",
-    "Prenda o sensor de cor na frente, apontando para o chão, a cerca de 1 cm de altura.",
+    "Base: quadro 11x15 deitado, motores médios embaixo com as rodas grandes, rodízio de bola atrás.",
+    "Na frente, embaixo do quadro: viga de 3, 2 pinos longos e o sensor de cor olhando o chão. Ele fica a 0,8 cm do chão, na frente das rodas.",
+    "Hub (com a bateria) em cima de duas vigas de 11.",
     "Faça uma pista com fita isolante preta em papel ou piso claro."
   ],
   "programa": [
@@ -494,26 +516,18 @@ window.IDEIAS = (window.IDEIAS || []).concat([
     "sensor de força"
   ],
   "resumo": "Um braço que lança uma bolinha quando o botão de força é apertado.",
-  "aprende": "Alavanca: quanto mais longo o braço, mais longe vai a bolinha.",
+  "aprende": "Alavanca e redução: quanto mais longo o braço, mais longe vai a bolinha. A engrenagem de 12 dentes girando a de 36 deixa o braço 3 vezes mais lento e mais forte (o motor gira 3 voltas para o braço dar 1).",
   "pecas": [
     [
-      "Quadro 11x15",
+      "Eixo 5",
       1
-    ],
-    [
-      "Viga 15 furos",
-      1
-    ],
-    [
-      "Viga 7 furos",
-      2
-    ],
-    [
-      "Viga em T 3x3",
-      2
     ],
     [
       "Engrenagem 12 dentes dupla cônica",
+      1
+    ],
+    [
+      "Viga 5 furos",
       1
     ],
     [
@@ -521,24 +535,36 @@ window.IDEIAS = (window.IDEIAS || []).concat([
       1
     ],
     [
-      "Eixo 7",
-      2
+      "Viga em L 3x5",
+      1
+    ],
+    [
+      "Eixo 4",
+      1
     ],
     [
       "Bucha",
-      4
+      2
     ],
     [
-      "Pino com atrito",
-      16
+      "Quadro 11x19",
+      1
     ],
     [
-      "Prato (antena)",
+      "Viga conectora 3x3",
+      1
+    ],
+    [
+      "Viga 9 furos",
       1
     ],
     [
       "Bola 19 mm",
       1
+    ],
+    [
+      "Pino com atrito",
+      24
     ]
   ],
   "eletronica": [
@@ -560,16 +586,19 @@ window.IDEIAS = (window.IDEIAS || []).concat([
     ]
   ],
   "passos": [
-    "Fixe o motor grande na base (quadro 11x15).",
-    "Monte dois apoios com vigas de 7 furos e vigas em T.",
-    "Passe um eixo pelos apoios com a engrenagem de 36 dentes. O motor gira a engrenagem de 12, que empurra a de 36.",
-    "Prenda a viga de 15 furos no eixo como braço e o prato na ponta, para segurar a bola.",
-    "O sensor de força fica ao lado, como botão de disparo."
+    "Deite o quadro 11x19 e prenda o hub no fundo (a bateria vai embaixo do hub).",
+    "Prenda o sensor de força no lado esquerdo do quadro, com o botão para fora. Ele é o botão de disparo.",
+    "Prenda o motor grande deitado de lado na frente do quadro, com a saída virada para a direita.",
+    "Na saída do motor prenda a viga de 5 em pé. No eixo do motor ponha a engrenagem de 12 dentes e uma bucha.",
+    "Três furos acima, monte o eixo do braço com a engrenagem de 36 dentes. Os dentes têm de se encaixar sem pular.",
+    "Prenda a viga de 9 na engrenagem de 36 com 2 pinos, apontando para trás. É o braço.",
+    "Na ponta do braço prenda a viga conectora e, em cima dela, a viga em L deitada: é a colher. Ponha a bola de 19 mm na colher.",
+    "Gire o braço com a mão: ele roda de cerca de 50 graus abaixo da horizontal até quase 190 graus (para a frente) sem bater. Se chegar no limite de baixo, pare."
   ],
   "programa": [
     "Quando o sensor de força for pressionado:",
-    "  Gire o motor grande rápido (100%) por meia volta para lançar.",
-    "  Espere 1 segundo e volte devagar (20%) para a posição inicial."
+    "  Gire o motor grande rápido (100%) por 450 graus: o braço dá meia volta e lança a bola.",
+    "  Espere 1 segundo e volte devagar (20%) 450 graus para a posição inicial."
   ],
   "variacoes": [
     "Use a força do aperto para escolher a força do lançamento.",
@@ -594,19 +623,7 @@ window.IDEIAS = (window.IDEIAS || []).concat([
   "aprende": "Multiplicação de velocidade: a engrenagem grande girando a pequena faz a hélice girar 3 vezes mais rápido.",
   "pecas": [
     [
-      "Quadro 5x7",
-      1
-    ],
-    [
-      "Viga 9 furos",
-      2
-    ],
-    [
-      "Viga 15 furos",
-      2
-    ],
-    [
-      "Engrenagem 36 dentes dupla cônica",
+      "Eixo 5",
       1
     ],
     [
@@ -614,20 +631,44 @@ window.IDEIAS = (window.IDEIAS || []).concat([
       1
     ],
     [
-      "Eixo 5",
-      2
+      "Viga 5 furos",
+      1
     ],
     [
-      "Conector com 4 pinos",
+      "Engrenagem 36 dentes dupla cônica",
+      1
+    ],
+    [
+      "Viga 7 furos",
       1
     ],
     [
       "Bucha",
-      4
+      2
+    ],
+    [
+      "Quadro 11x19",
+      1
+    ],
+    [
+      "Viga conectora 3x3",
+      2
+    ],
+    [
+      "Eixo 7",
+      1
+    ],
+    [
+      "Viga 2 furos (pino + eixo)",
+      2
     ],
     [
       "Pino com atrito",
-      12
+      20
+    ],
+    [
+      "Pino longo com atrito",
+      1
     ]
   ],
   "eletronica": [
@@ -649,10 +690,12 @@ window.IDEIAS = (window.IDEIAS || []).concat([
     ]
   ],
   "passos": [
-    "Monte uma torre com o quadro 5x7 e as vigas de 9 furos.",
-    "O motor médio gira a engrenagem de 36 dentes, que gira a de 12 no eixo da hélice.",
-    "A hélice: duas vigas de 15 furos cruzadas, presas no conector com 4 pinos.",
-    "O sensor de distância fica na base, olhando para frente."
+    "Deite o quadro 11x19 e prenda o hub no fundo (a bateria vai embaixo do hub).",
+    "Na frente do quadro, prenda uma viga conectora em cada canto e encaixe o sensor de distância entre elas, olhando para a frente. Ele fica embaixo da hélice.",
+    "Ponha o motor médio em pé no meio do quadro, com a saída virada para a frente, preso com 2 pinos na ponta de baixo.",
+    "Prenda a viga de 5 deitada na frente do motor. No eixo do motor ponha a engrenagem de 36 dentes (a grande) e uma bucha.",
+    "Três furos ao lado, passe o eixo da hélice pela viga e ponha a engrenagem de 12 dentes (a pequena). Os dentes têm de se encaixar sem pular. A grande girando a pequena faz a hélice girar 3 vezes mais rápido.",
+    "Hélice: monte a viga de 7 entre as duas vigas de 2 no eixo, prenda com o pino longo e feche com a bucha. Gire com a mão: a hélice não pode bater no sensor."
   ],
   "programa": [
     "Repita para sempre:",
@@ -682,28 +725,20 @@ window.IDEIAS = (window.IDEIAS || []).concat([
   "aprende": "Medir tempo com o cronômetro do hub e transformar tempo em preço.",
   "pecas": [
     [
-      "Quadro 7x11",
-      1
-    ],
-    [
       "Viga 15 furos",
       1
     ],
     [
-      "Viga 7 furos",
-      2
+      "Quadro 11x19",
+      1
     ],
     [
-      "Viga em L 3x5",
+      "Viga conectora 3x3",
       2
     ],
     [
       "Pino com atrito",
-      12
-    ],
-    [
-      "Eixo 3",
-      1
+      22
     ]
   ],
   "eletronica": [
@@ -725,13 +760,16 @@ window.IDEIAS = (window.IDEIAS || []).concat([
     ]
   ],
   "passos": [
-    "Fixe o motor médio em pé na base (quadro 7x11).",
-    "Prenda a viga de 15 furos no motor: ela é a cancela.",
-    "Coloque o sensor de distância na altura de um carrinho, olhando para a pista."
+    "Deite o quadro 11x19 e prenda o hub no canto de trás à esquerda (a bateria vai embaixo do hub).",
+    "Na frente do quadro, prenda uma viga conectora em cada canto e encaixe o sensor de distância entre elas, olhando para a frente. Ele fica 1 furo acima do quadro.",
+    "Prenda o motor médio no lado direito do quadro, com a saída virada para fora.",
+    "Na saída do motor prenda a viga de 15 em pé, com 2 pinos. O furo do meio fica no eixo do motor. Em pé a cancela está aberta; girada 90 graus para a frente ela fecha a pista.",
+    "Ligue o motor e o sensor nas portas do hub. Antes de programar, gire a cancela com a mão: ela não pode bater em nada."
   ],
   "programa": [
-    "Quando o sensor ver um carro a menos de 10 cm: zere o cronômetro e levante a cancela 90 graus.",
-    "Espere o carro passar e abaixe a cancela.",
+    "No começo: gire o motor 90 graus para a cancela deitar na frente da pista (cancela fechada).",
+    "Quando o sensor ver um carro a menos de 10 cm: zere o cronômetro e levante a cancela 90 graus (volta a ficar em pé).",
+    "Espere o carro passar e abaixe a cancela de novo.",
     "Na saída (sensor vê o carro de novo): calcule preço = segundos x 2.",
     "Mostre o preço na matriz do hub e abra a cancela."
   ],
@@ -847,31 +885,31 @@ window.IDEIAS = (window.IDEIAS || []).concat([
   "aprende": "Medir força, calibrar e transformar medida em dinheiro.",
   "pecas": [
     [
-      "Quadro 11x15",
+      "Eixo 5",
       1
-    ],
-    [
-      "Quadro 5x7",
-      1
-    ],
-    [
-      "Viga 9 furos",
-      2
     ],
     [
       "Viga 15 furos",
       1
     ],
     [
+      "Viga 5 furos",
+      1
+    ],
+    [
+      "Quadro 11x19",
+      1
+    ],
+    [
+      "Viga 2 furos (pino + eixo)",
+      1
+    ],
+    [
       "Pino com atrito",
-      16
+      19
     ],
     [
-      "Pino-eixo sem atrito",
-      2
-    ],
-    [
-      "Eixo 3",
+      "Quadro 5x7",
       1
     ]
   ],
@@ -894,9 +932,12 @@ window.IDEIAS = (window.IDEIAS || []).concat([
     ]
   ],
   "passos": [
-    "Prenda o sensor de força em pé na base, com o botão para cima.",
-    "Faça um prato com o quadro 5x7 apoiado em uma alavanca (viga de 9 furos) que pressiona o botão.",
-    "O motor médio segura um ponteiro (viga de 15 furos), como numa balança antiga."
+    "Deite o quadro 11x19 e prenda o hub no canto de trás à esquerda (a bateria vai embaixo do hub).",
+    "Ponha o sensor de força em pé no lado esquerdo, com o botão para cima, preso com 2 pinos na ponta de baixo.",
+    "Encaixe o eixo de 5 no furo de eixo do botão e a viga de 2 deitada no eixo. Em cima dela vai a viga de 5, presa com 1 pino.",
+    "Prato: prenda o quadro 5x7 deitado em cima da viga de 5, com 2 pinos. O eixo passa pela abertura do quadro. Quando você pôr um peso, o eixo desce e aperta o botão.",
+    "Prenda o motor médio na lateral direita do quadro, com a saída virada para fora.",
+    "Ponteiro: prenda a viga de 15 em pé na saída do motor, com 2 pinos. Ela gira de 0 a 90 graus conforme o peso: quanto mais peso, mais o motor gira o ponteiro."
   ],
   "programa": [
     "Repita para sempre:",

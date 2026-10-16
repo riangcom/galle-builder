@@ -1,0 +1,101 @@
+{
+ "passos": [
+  "Base: quadro 11x19 deitado (placa com furos em xadrez).",
+  "Hub deitado no fundo do quadro (bateria encaixada embaixo), preso com 8 pinos.",
+  "Na frente do quadro: duas vigas conectoras deitadas (3 pinos cada) e o sensor de distância olhando para a frente, com 1 pino de cada lado.",
+  "Motor médio em pé no meio do quadro (porta B), com a saída para a frente, preso com 2 pinos na ponta de baixo.",
+  "Viga de 5 deitada na frente do motor, presa com 2 pinos. O eixo do motor passa pelo 2º furo.",
+  "Eixo de 5 no motor, engrenagem de 36 dentes e bucha.",
+  "Eixo da hélice, 3 furos ao lado do eixo do motor, com a engrenagem de 12 dentes (os dentes têm de engrenar nos da de 36).",
+  "Hélice: viga de 2 (furo de eixo no eixo), a viga de 7 e outra viga de 2, presas com um pino longo; bucha na ponta."
+ ],
+ "pecas": [
+  [
+   "32073",
+   71,
+   1
+  ],
+  [
+   "32270",
+   0,
+   1
+  ],
+  [
+   "32316",
+   26,
+   1
+  ],
+  [
+   "32498",
+   0,
+   1
+  ],
+  [
+   "32524",
+   322,
+   1
+  ],
+  [
+   "3713",
+   71,
+   2
+  ],
+  [
+   "37316",
+   15,
+   1
+  ],
+  [
+   "39369",
+   14,
+   1
+  ],
+  [
+   "39793",
+   26,
+   2
+  ],
+  [
+   "44294",
+   14,
+   1
+  ],
+  [
+   "45601",
+   14,
+   1
+  ],
+  [
+   "54696",
+   322,
+   1
+  ],
+  [
+   "55422",
+   14,
+   1
+  ],
+  [
+   "60483",
+   322,
+   2
+  ],
+  [
+   "61332",
+   0,
+   20
+  ],
+  [
+   "6558",
+   1,
+   1
+  ]
+ ],
+ "impressas": [],
+ "extras": [],
+ "caixa_cm": [
+  17.6,
+  10.4,
+  8.7
+ ]
+}

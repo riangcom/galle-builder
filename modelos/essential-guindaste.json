@@ -1,0 +1,106 @@
+{
+ "passos": [
+  "Base: placa 16x16.",
+  "Hub na frente, preso no lado esquerdo a um tijolo Technic 1x4 (em cima de um tijolo 1x4) com 2 pinos (a bateria vai embaixo do hub).",
+  "A torre: 3 torres treliça empilhadas no meio da placa e a placa 8x8 no alto.",
+  "No alto: dois tijolos Technic 1x4 e, entre eles, o motor do braço (porta A) em pé, preso com 2 pinos.",
+  "Contrapeso e braço: eixo de 3 no motor, tijolo redondo 2x2 e o braço (tijolo Technic 1x16) por cima; 2 tijolos 2x2 na ponta da esquerda.",
+  "Na ponta da direita do braço: o motor da alavanca (porta B), atrás do braço, preso nos furos com 2 pinos.",
+  "Eixo de 4 pelo furo do braço; na frente do braço o tijolo Technic 1x2 com furo de eixo e, por cima dele, a alavanca (tijolo Technic 1x8)."
+ ],
+ "pecas": [
+  [
+   "3010",
+   25,
+   1
+  ],
+  [
+   "30145",
+   4,
+   2
+  ],
+  [
+   "32064a",
+   14,
+   1
+  ],
+  [
+   "3701",
+   26,
+   3
+  ],
+  [
+   "3702",
+   321,
+   1
+  ],
+  [
+   "3703",
+   10,
+   1
+  ],
+  [
+   "3705",
+   0,
+   1
+  ],
+  [
+   "3941",
+   2,
+   1
+  ],
+  [
+   "41539",
+   15,
+   1
+  ],
+  [
+   "4519",
+   14,
+   1
+  ],
+  [
+   "61332",
+   0,
+   6
+  ],
+  [
+   "66757",
+   14,
+   1
+  ],
+  [
+   "67351",
+   14,
+   1
+  ],
+  [
+   "68488",
+   15,
+   2
+  ],
+  [
+   "91405",
+   15,
+   1
+  ],
+  [
+   "95347",
+   14,
+   3
+  ]
+ ],
+ "impressas": [],
+ "extras": [
+  [
+   "Bola / esfera",
+   1,
+   "a carga: fica solta na ponta da alavanca (não aparece no 3D)"
+  ]
+ ],
+ "caixa_cm": [
+  12.8,
+  13.2,
+  37.8
+ ]
+}

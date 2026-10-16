@@ -1,0 +1,84 @@
+{
+ "passos": [
+  "Base: placa 8x16.",
+  "O vidro: parede de tijolos Technic ao fundo da placa: duas camadas de 1x16 e duas de 1x8 (2 tijolos por camada).",
+  "Atrás do vidro: motor pequeno em pé (porta A), com a face de saída encostada na parede, preso com 2 pinos nos furos da parede.",
+  "Hub na frente, preso no lado esquerdo a um tijolo Technic 1x4 (em cima de um tijolo 1x4), com 2 pinos.",
+  "Sensor de cor (porta B) no lado direito do vidro, olhando para a frente, preso com 2 pinos na parede.",
+  "Eixo de 3 no motor, atravessando a parede. Na frente do vidro: tijolo Technic 1x2 com furo de eixo no eixo e a palheta (peça lisa 1x4) por cima."
+ ],
+ "pecas": [
+  [
+   "2431",
+   321,
+   1
+  ],
+  [
+   "3010",
+   25,
+   1
+  ],
+  [
+   "32064a",
+   14,
+   1
+  ],
+  [
+   "3701",
+   26,
+   1
+  ],
+  [
+   "3702",
+   321,
+   4
+  ],
+  [
+   "3703",
+   10,
+   2
+  ],
+  [
+   "37308",
+   15,
+   1
+  ],
+  [
+   "4519",
+   14,
+   1
+  ],
+  [
+   "61332",
+   0,
+   6
+  ],
+  [
+   "66757",
+   14,
+   1
+  ],
+  [
+   "67351",
+   14,
+   1
+  ],
+  [
+   "68488",
+   15,
+   1
+  ],
+  [
+   "92438",
+   15,
+   1
+  ]
+ ],
+ "impressas": [],
+ "extras": [],
+ "caixa_cm": [
+  9.6,
+  12.8,
+  4.6
+ ]
+}

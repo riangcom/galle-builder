@@ -48,7 +48,16 @@
   <script src="app.js"></script>
   <script>
     // Funciona offline depois do primeiro acesso (só em https ou localhost)
-    if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(() => {});
+    if ("serviceWorker" in navigator) {
+      // Quando sai versão nova, o service worker novo assume e a página recarrega uma vez sozinha
+      // (antes era preciso abrir o app duas vezes para ver a versão nova). Não recarrega na 1ª instalação.
+      const tinhaVersao = !!navigator.serviceWorker.controller;
+      let recarregou = false;
+      navigator.serviceWorker.addEventListener("controllerchange", () => {
+        if (tinhaVersao && !recarregou) { recarregou = true; location.reload(); }
+      });
+      navigator.serviceWorker.register("sw.js").catch(() => {});
+    }
   </script>
 </body>
 </html>

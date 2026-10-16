@@ -15,36 +15,24 @@ window.IDEIAS = (window.IDEIAS || []).concat([
   "aprende": "Para virar, uma roda gira mais rápido que a outra.",
   "pecas": [
     [
-      "Placa Technic 2x8",
+      "Viga 7 furos",
+      3
+    ],
+    [
+      "Viga conectora 3x3",
       2
     ],
     [
-      "Placa Technic 2x6",
+      "Eixo 3",
       2
     ],
     [
-      "Tijolo Technic 1x8",
-      2
+      "Pino com atrito",
+      16
     ],
     [
       "Roda 43 x 14 com pneu",
       2
-    ],
-    [
-      "Rodinha de skate",
-      1
-    ],
-    [
-      "Pino com atrito",
-      8
-    ],
-    [
-      "Tijolo 2x2",
-      2
-    ],
-    [
-      "Placa lisa 2x4",
-      4
     ]
   ],
   "eletronica": [
@@ -62,10 +50,11 @@ window.IDEIAS = (window.IDEIAS || []).concat([
     ]
   ],
   "passos": [
-    "Monte a base com as placas Technic 2x8 e 2x6.",
-    "Prenda um motor pequeno de cada lado, com o eixo para fora, e encaixe uma roda grande em cada.",
-    "Na frente, prenda a rodinha de skate para o carro não arrastar.",
-    "Encaixe o hub em cima e decore com as placas lisas."
+    "Motores pequenos deitados, costas com costas, presos um no outro com 3 pinos.",
+    "Duas vigas de 7 atravessadas em cima e o hub pequeno (com a bateria) em cima delas.",
+    "Rodas grandes direto na saída de cada motor, com eixo de 3.",
+    "Na frente: viga de 7 em pé e duas vigas conectoras 3x3. Elas deslizam no chão como apoio.",
+    "Decore com as placas lisas por cima, sem cobrir os botões do hub. É o mesmo robô do 'treino' do Essential (montagem 3D abaixo)."
   ],
   "programa": [
     "Ligue os dois motores na mesma velocidade: o carro anda reto.",
@@ -78,7 +67,8 @@ window.IDEIAS = (window.IDEIAS || []).concat([
     "Troque as rodas grandes pelas rodas da cadeira de rodas: o que muda?"
   ],
   "desafio": "Faça o carro dar uma volta completa em um cone e voltar ao início.",
-  "pergunta": "Por que um carro de verdade precisa fazer as rodas girarem diferente na curva?"
+  "pergunta": "Por que um carro de verdade precisa fazer as rodas girarem diferente na curva?",
+  "modelo3d": "fira-essential-treino"
 },
 {
   "id": "essential-carrossel",
@@ -95,35 +85,7 @@ window.IDEIAS = (window.IDEIAS || []).concat([
   "aprende": "Motor girando um eixo central e luzes avisando o que está acontecendo.",
   "pecas": [
     [
-      "Placa 16x16",
-      1
-    ],
-    [
-      "Placa 8x8",
-      1
-    ],
-    [
-      "Tijolo Technic 1x4",
-      4
-    ],
-    [
-      "Eixo 6",
-      1
-    ],
-    [
-      "Bucha",
-      2
-    ],
-    [
-      "Assento",
-      4
-    ],
-    [
-      "Sapo",
-      2
-    ],
-    [
-      "Cachorro",
+      "Tijolo 1x4",
       1
     ],
     [
@@ -131,12 +93,44 @@ window.IDEIAS = (window.IDEIAS || []).concat([
       1
     ],
     [
-      "Cone",
-      4
+      "Sapo",
+      1
+    ],
+    [
+      "Tijolo Technic 1x4",
+      5
+    ],
+    [
+      "Eixo 6",
+      1
     ],
     [
       "Tijolo redondo",
+      1
+    ],
+    [
+      "Cone",
+      2
+    ],
+    [
+      "Placa 8x8",
+      1
+    ],
+    [
+      "Pino com atrito",
+      6
+    ],
+    [
+      "Placa 16x16",
+      1
+    ],
+    [
+      "Assento",
       4
+    ],
+    [
+      "Cachorro",
+      1
     ]
   ],
   "eletronica": [
@@ -159,10 +153,11 @@ window.IDEIAS = (window.IDEIAS || []).concat([
   ],
   "passos": [
     "Use a placa 16x16 como chão do parque.",
-    "Prenda o motor em pé no meio, com o eixo para cima.",
-    "Encaixe o eixo 6 no motor e a placa 8x8 em cima: ela é o disco que gira.",
-    "Coloque os assentos e os bichinhos no disco.",
-    "Prenda a matriz de luz numa torre ao lado (tijolos redondos e cones)."
+    "No meio, prenda um tijolo Technic 1x4 de cada lado e o motor pequeno em pé entre eles, com 2 pinos. A saída do motor fica para cima.",
+    "Encaixe o eixo de 6 no motor. Ponha o tijolo redondo 2x2 no eixo e a placa 8x8 em cima dele: ela é o disco que gira.",
+    "Coloque o sapo, o caranguejo, os cones, os assentos e o cachorro no disco, bem encaixados nos pinos.",
+    "Na frente, prenda o tijolo Technic 1x4 em cima de um tijolo 1x4 e encaixe o hub no lado dele com 2 pinos (a bateria vai embaixo do hub).",
+    "No fundo, à esquerda, monte a torre da luz: dois tijolos Technic 1x4 empilhados com a matriz de luz presa por 2 pinos. Gire o disco com a mão: ele dá a volta inteira sem bater."
   ],
   "programa": [
     "Quando o programa começar: a matriz mostra verde.",
@@ -193,16 +188,20 @@ window.IDEIAS = (window.IDEIAS || []).concat([
   "aprende": "Sequência e tempo: cada passo do programa acontece na ordem certa.",
   "pecas": [
     [
-      "Placa 8x16",
+      "Tijolo 1x4",
       1
     ],
     [
-      "Tijolo Technic 1x8",
-      2
+      "Tijolo Technic 1x2 com furo de eixo e pino",
+      1
     ],
     [
-      "Tijolo 1x4",
-      2
+      "Tijolo Technic 1x4",
+      5
+    ],
+    [
+      "Eixo 4",
+      1
     ],
     [
       "Tijolo Technic 1x12",
@@ -210,11 +209,11 @@ window.IDEIAS = (window.IDEIAS || []).concat([
     ],
     [
       "Pino com atrito",
-      4
+      6
     ],
     [
-      "Placa lisa 1x8",
-      2
+      "Placa 8x16",
+      1
     ],
     [
       "Torre treliça",
@@ -240,9 +239,12 @@ window.IDEIAS = (window.IDEIAS || []).concat([
     ]
   ],
   "passos": [
-    "Monte um poste com a torre treliça e prenda a matriz de luz no alto.",
-    "Na base (placa 8x16), prenda o motor deitado ao lado da rua.",
-    "A cancela é o tijolo Technic 1x12 preso no eixo do motor."
+    "Ponha a placa 8x16 deitada. No canto de trás à esquerda prenda a torre treliça: é o poste. No alto dela encaixe dois tijolos Technic 1x4 empilhados.",
+    "Na frente, prenda o tijolo Technic 1x4 em cima de um tijolo 1x4, no lado direito. Encaixe o hub no lado dele com 2 pinos (a bateria vai embaixo do hub).",
+    "Prenda a matriz de luz no tijolo do alto do poste com 2 pinos, olhando para a frente. Ela é a luz do semáforo.",
+    "À direita monte o pilar da cancela: dois tijolos Technic 1x4 empilhados. Atrás dele prenda o motor pequeno em pé, com a saída encostada no pilar, usando 2 pinos.",
+    "Passe o eixo de 4 pelo pilar. Na frente, ponha o tijolo Technic 1x2 com furo de eixo no eixo e, por cima dele, a cancela (tijolo Technic 1x12) deitada sobre a rua.",
+    "Gire o eixo com a mão: a cancela sobe até ficar em pé (cerca de 120 graus) sem bater."
   ],
   "programa": [
     "Repita para sempre:",
@@ -273,32 +275,36 @@ window.IDEIAS = (window.IDEIAS || []).concat([
   "aprende": "Usar o sensor de cor para conferir uma 'senha' de cor.",
   "pecas": [
     [
-      "Placa 8x16",
+      "Tijolo 1x4",
       1
+    ],
+    [
+      "Tijolo Technic 1x2 com furo de eixo e pino",
+      1
+    ],
+    [
+      "Tijolo Technic 1x4",
+      5
     ],
     [
       "Tijolo Technic 1x8",
-      2
-    ],
-    [
-      "Tijolo Technic 1x16",
       1
     ],
     [
-      "Tijolo 1x4",
-      4
+      "Eixo 4",
+      1
     ],
     [
-      "Tijolo 1x2",
-      4
+      "Pino com atrito",
+      6
     ],
     [
       "Placa lisa 2x4",
       4
     ],
     [
-      "Pino com atrito",
-      6
+      "Placa 8x16",
+      1
     ]
   ],
   "eletronica": [
@@ -320,14 +326,16 @@ window.IDEIAS = (window.IDEIAS || []).concat([
     ]
   ],
   "passos": [
-    "Monte um muro com tijolos dos dois lados do portão.",
-    "O portão é o tijolo Technic 1x16 preso no eixo do motor.",
-    "Prenda o sensor de cor no muro, olhando para fora: ali a gente encosta o cartão.",
-    "Cartões: placas lisas 2x4 de cores diferentes."
+    "Ponha a placa 8x16 deitada. Ao fundo monte o muro: dois pilares de tijolos Technic 1x4, com 2 camadas cada, e um vão no meio.",
+    "Na frente, prenda o tijolo Technic 1x4 em cima de um tijolo 1x4, no lado direito. Encaixe o hub no lado dele com 2 pinos (a bateria vai embaixo do hub).",
+    "No pilar esquerdo prenda o sensor de cor com 2 pinos, olhando para a frente. É nele que o cartão encosta.",
+    "Atrás do pilar direito prenda o motor pequeno em pé, com a saída encostada no pilar, usando 2 pinos. Ele fica pendurado para fora da placa.",
+    "Passe o eixo de 4 pelo pilar, do motor até a frente. Ponha o tijolo Technic 1x2 com furo de eixo no eixo e, por cima dele, o portão (tijolo Technic 1x8) deitado sobre o vão.",
+    "Separe os 4 cartões (placas lisas 2x4 de cores diferentes). Gire o eixo com a mão: o portão sobe até ficar em pé (cerca de 120 graus) sem bater; para baixo ele não pode passar da horizontal."
   ],
   "programa": [
     "Espere o sensor ver uma cor.",
-    "Se for azul (o cartão certo): abra o portão, espere 3 segundos e feche.",
+    "Se for azul (o cartão certo): abra o portão (o motor gira 90 graus para ele subir), espere 3 segundos e feche (volte a 0 grau).",
     "Se for outra cor: o hub toca um som de erro e o portão continua fechado."
   ],
   "variacoes": [
@@ -353,43 +361,47 @@ window.IDEIAS = (window.IDEIAS || []).concat([
   "aprende": "Polia e elástico passam o giro de um eixo para outro, longe dele.",
   "pecas": [
     [
-      "Tijolo Technic 1x12",
-      2
+      "Tijolo 1x4",
+      1
+    ],
+    [
+      "Tijolo Technic 1x2 com furo de eixo e pino",
+      1
     ],
     [
       "Tijolo Technic 1x4",
-      2
-    ],
-    [
-      "Placa 8x8",
       1
     ],
     [
-      "Polia",
-      2
-    ],
-    [
-      "Elástico 33 mm",
-      1
-    ],
-    [
-      "Eixo 7",
-      1
+      "Tijolo Technic 1x8",
+      5
     ],
     [
       "Eixo 4",
       1
     ],
     [
-      "Bucha",
+      "Tijolo Technic 1x12",
       2
     ],
     [
-      "Viga 11 furos",
+      "Polia",
       2
     ],
     [
-      "Conector de eixo (emenda)",
+      "Eixo 3",
+      1
+    ],
+    [
+      "Pino com atrito",
+      4
+    ],
+    [
+      "Placa 8x16",
+      1
+    ],
+    [
+      "Elástico 33 mm",
       1
     ]
   ],
@@ -408,11 +420,11 @@ window.IDEIAS = (window.IDEIAS || []).concat([
     ]
   ],
   "passos": [
-    "Monte uma torre com dois tijolos Technic 1x12 em pé sobre a placa 8x8.",
-    "Prenda o motor na base com uma polia no eixo.",
-    "No alto da torre, passe um eixo com outra polia.",
-    "Ligue as duas polias com o elástico.",
-    "Faça a hélice com as duas vigas de 11 furos no eixo de cima."
+    "Ponha a placa 8x16 deitada. Ao fundo monte a torre: 4 camadas de tijolos Technic 1x8 e, por cima, 2 camadas de tijolos Technic 1x12.",
+    "Na frente, prenda o tijolo Technic 1x4 em cima de um tijolo 1x4, no lado direito. Encaixe o hub no lado dele com 2 pinos (a bateria vai embaixo do hub).",
+    "Atrás da torre prenda o motor pequeno em pé, na 2ª camada, com 2 pinos. Passe o eixo de 4 pelo furo do meio e ponha uma polia nele, na frente da torre.",
+    "Na 6ª camada (a de cima) passe o eixo de 3 pelo furo do meio e ponha a outra polia na frente da torre. Ligue as duas polias com o elástico.",
+    "A hélice: tijolo Technic 1x2 com furo de eixo no eixo de cima e, por cima dele, um tijolo Technic 1x8. Gire com a mão: a hélice dá a volta inteira sem bater."
   ],
   "programa": [
     "Ligue o motor na velocidade máxima por 10 segundos.",
@@ -441,32 +453,36 @@ window.IDEIAS = (window.IDEIAS || []).concat([
   "aprende": "O motor girando uma alavanca pode empurrar o corpo para cima.",
   "pecas": [
     [
-      "Placa Technic 2x8",
+      "Tijolo Technic 1x2 com furo de eixo e pino",
       2
     ],
     [
       "Viga 7 furos",
+      3
+    ],
+    [
+      "Tijolo Technic 1x8",
       2
     ],
     [
-      "Viga dobrada 9 furos",
+      "Viga conectora 3x3",
+      2
+    ],
+    [
+      "Eixo 3",
       2
     ],
     [
       "Pino com atrito",
-      8
-    ],
-    [
-      "Tijolo curvo",
-      6
+      16
     ],
     [
       "Placa lisa redonda com desenho (olho)",
       2
     ],
     [
-      "Sapo",
-      1
+      "Tijolo curvo",
+      6
     ]
   ],
   "eletronica": [
@@ -484,10 +500,11 @@ window.IDEIAS = (window.IDEIAS || []).concat([
     ]
   ],
   "passos": [
-    "O corpo do sapo é o hub, preso entre as placas Technic.",
-    "Prenda um motor de cada lado, atrás, com uma viga de 7 furos: são as pernas que empurram o chão.",
-    "Na frente, as vigas dobradas fazem as patas da frente, paradas.",
-    "Decore com tijolos curvos e os olhos."
+    "Prenda os dois motores pequenos costas com costas, com a saída de cada um virada para fora, usando 3 pinos.",
+    "Ponha duas vigas de 7 deitadas em cima dos motores e o hub em cima delas, com 3 pinos (a bateria vai embaixo do hub). O hub é o corpo do sapo.",
+    "Na frente prenda a viga de 7 em pé e as duas vigas conectoras: são as patas da frente, paradas.",
+    "Atrás, em cada motor, ponha o eixo de 3, o tijolo Technic 1x2 com furo de eixo e, em cima dele, um tijolo Technic 1x8 apontando para trás: são as pernas.",
+    "Decore com os tijolos curvos e os olhos. Gire as pernas com a mão: elas dão a volta inteira sem bater no corpo; quando passam por baixo, empurram o chão e o sapo levanta."
   ],
   "programa": [
     "Os dois motores giram juntos, rápido, meia volta para baixo: o sapo levanta.",
@@ -517,32 +534,28 @@ window.IDEIAS = (window.IDEIAS || []).concat([
   "aprende": "Somar valores com variável e acompanhar uma meta de poupança.",
   "pecas": [
     [
-      "Placa 8x8",
-      1
-    ],
-    [
-      "Tijolo 2x2",
-      4
-    ],
-    [
       "Tijolo 1x4",
-      4
+      5
     ],
     [
-      "Tijolo 1x2",
-      4
-    ],
-    [
-      "Placa lisa 2x4",
-      4
-    ],
-    [
-      "Telhado (tijolo inclinado)",
-      4
+      "Tijolo Technic 1x4",
+      5
     ],
     [
       "Tijolo redondo",
+      1
+    ],
+    [
+      "Placa lisa 1x8",
+      2
+    ],
+    [
+      "Pino com atrito",
       6
+    ],
+    [
+      "Placa 8x16",
+      1
     ]
   ],
   "eletronica": [
@@ -564,10 +577,11 @@ window.IDEIAS = (window.IDEIAS || []).concat([
     ]
   ],
   "passos": [
-    "Monte uma caixa (o cofrinho) com tijolos sobre a placa 8x8 e o telhado em cima.",
-    "Deixe uma abertura no topo e prenda o sensor de cor logo abaixo dela, olhando para cima.",
-    "Prenda a matriz de luz na frente do cofrinho.",
-    "Use os tijolos redondos coloridos como moedas."
+    "Ponha a placa 8x16 deitada. Monte a caixa: duas paredes laterais de 3 camadas de tijolos 1x4 (a de baixo é Technic) e, na frente, a parede de 2 tijolos Technic 1x4.",
+    "Entre as paredes laterais prenda o sensor de cor, olhando para cima, com 1 pino de cada lado.",
+    "Cubra a caixa com as duas peças lisas 1x8, deixando uma fenda no meio: é por ali que a moeda entra e cai em cima do sensor.",
+    "À direita, prenda o tijolo Technic 1x4 em cima de um tijolo 1x4 e encaixe o hub no lado dele com 2 pinos (a bateria vai embaixo do hub).",
+    "Na parede da frente prenda a matriz de luz com 2 pinos. Use os tijolos redondos coloridos como moedas: a fenda tem a largura exata de uma moeda, então ponha de pé e sem inclinar."
   ],
   "programa": [
     "Crie a variável 'poupança' começando em 0.",
@@ -598,36 +612,56 @@ window.IDEIAS = (window.IDEIAS || []).concat([
   "aprende": "Estrutura firme (treliça) e contrapeso para a torre não cair.",
   "pecas": [
     [
-      "Placa 16x16",
+      "Tijolo 1x4",
       1
     ],
     [
-      "Torre treliça",
+      "Tijolo 2x2",
+      2
+    ],
+    [
+      "Tijolo Technic 1x2 com furo de eixo e pino",
+      1
+    ],
+    [
+      "Tijolo Technic 1x4",
       3
+    ],
+    [
+      "Tijolo Technic 1x8",
+      1
     ],
     [
       "Tijolo Technic 1x16",
       1
     ],
     [
-      "Tijolo Technic 1x8",
-      2
-    ],
-    [
-      "Tijolo 2x2",
-      4
-    ],
-    [
       "Eixo 4",
       1
     ],
     [
-      "Pino com atrito",
-      8
+      "Tijolo redondo",
+      1
     ],
     [
-      "Pino longo sem atrito + eixo 2",
-      2
+      "Placa 8x8",
+      1
+    ],
+    [
+      "Eixo 3",
+      1
+    ],
+    [
+      "Pino com atrito",
+      6
+    ],
+    [
+      "Placa 16x16",
+      1
+    ],
+    [
+      "Torre treliça",
+      3
     ],
     [
       "Bola / esfera",
@@ -649,11 +683,12 @@ window.IDEIAS = (window.IDEIAS || []).concat([
     ]
   ],
   "passos": [
-    "Empilhe as torres treliça sobre a placa 16x16.",
-    "No alto, prenda um motor em pé: ele gira o braço.",
-    "O braço é o tijolo Technic 1x16. Numa ponta, coloque tijolos 2x2 como contrapeso.",
-    "Na outra ponta, o segundo motor levanta uma pequena alavanca (tijolo Technic 1x8) que segura a carga.",
-    "A carga é a esfera."
+    "Ponha a placa 16x16 deitada. Na frente, prenda o tijolo Technic 1x4 em cima de um tijolo 1x4 e encaixe o hub no lado dele com 2 pinos (a bateria vai embaixo do hub).",
+    "No meio da placa empilhe as 3 torres treliça e ponha a placa 8x8 no alto.",
+    "No alto da torre prenda dois tijolos Technic 1x4 e, entre eles, o motor do braço em pé, com 2 pinos.",
+    "Encaixe o eixo de 3 no motor, o tijolo redondo 2x2 e, por cima dele, o braço (tijolo Technic 1x16). Na ponta da esquerda ponha os 2 tijolos 2x2 de contrapeso.",
+    "Na ponta da direita do braço prenda o segundo motor atrás do braço, com 2 pinos nos furos do tijolo.",
+    "Passe o eixo de 4 pelo furo do braço. Na frente do braço ponha o tijolo Technic 1x2 com furo de eixo e, por cima dele, a alavanca (tijolo Technic 1x8). A carga (a esfera) fica na ponta da alavanca. Atenção: a alavanca só desce uns 20 graus abaixo da horizontal; mais que isso ela bate na torre."
   ],
   "programa": [
     "O motor do braço gira 90 graus devagar.",
@@ -683,28 +718,40 @@ window.IDEIAS = (window.IDEIAS || []).concat([
   "aprende": "O motor sabe em que ângulo está: dá para mandar ele ir até uma posição e voltar.",
   "pecas": [
     [
-      "Placa 8x16",
-      1
-    ],
-    [
-      "Tijolo Technic 1x8",
-      2
-    ],
-    [
-      "Viga 7 furos",
+      "Placa lisa 1x4",
       1
     ],
     [
       "Tijolo 1x4",
+      1
+    ],
+    [
+      "Tijolo Technic 1x2 com furo de eixo e pino",
+      1
+    ],
+    [
+      "Tijolo Technic 1x4",
+      1
+    ],
+    [
+      "Tijolo Technic 1x8",
       4
     ],
     [
-      "Placa lisa 1x8",
+      "Tijolo Technic 1x16",
       2
     ],
     [
+      "Eixo 3",
+      1
+    ],
+    [
       "Pino com atrito",
-      4
+      6
+    ],
+    [
+      "Placa 8x16",
+      1
     ]
   ],
   "eletronica": [
@@ -726,18 +773,20 @@ window.IDEIAS = (window.IDEIAS || []).concat([
     ]
   ],
   "passos": [
-    "Monte um 'vidro' em pé com os tijolos e a placa 8x16.",
-    "Prenda o motor embaixo, no meio, com o eixo virado para o vidro.",
-    "A palheta é a viga de 7 furos presa no motor.",
-    "O sensor de cor fica ao lado: ele 'sente a chuva'."
+    "Ponha a placa 8x16 deitada. Ao fundo monte o 'vidro': uma parede de tijolos Technic, duas camadas de tijolo 1x16 e duas de tijolos 1x8 por cima.",
+    "Atrás do vidro prenda o motor pequeno em pé, com a saída encostada na parede, usando 2 pinos nos furos do tijolo. Ele fica pendurado para fora da placa.",
+    "Na frente, prenda o tijolo Technic 1x4 em cima de um tijolo 1x4, no lado esquerdo. Encaixe o hub no lado dele com 2 pinos (a bateria vai embaixo do hub).",
+    "No lado direito do vidro, prenda o sensor de cor com 2 pinos, olhando para a frente. Ele 'sente a chuva'.",
+    "Passe o eixo de 3 pelo furo do meio do vidro até o motor. Do outro lado do vidro, ponha o tijolo Technic 1x2 com furo de eixo no eixo e, por cima dele, a palheta (a peça lisa 1x4).",
+    "Gire o eixo com a mão: a palheta sobe até ficar para trás sem bater. Ela só não pode descer: abaixo da horizontal ela bate na placa."
   ],
   "programa": [
-    "Quando o sensor ver azul (chuva): mova o motor para 60 graus e depois para -60 graus, 5 vezes.",
-    "Quando ver branco (sem chuva): pare a palheta no meio."
+    "Quando o sensor ver azul (chuva): mova o motor até 90 graus (a palheta sobe) e depois volte para 0 grau (a palheta deita), 5 vezes.",
+    "Quando ver branco (sem chuva): pare a palheta deitada, em 0 grau."
   ],
   "variacoes": [
     "Chuva forte (azul escuro) = limpador rápido; chuva fraca = devagar.",
-    "Coloque duas palhetas com a mesma viga e um pino sem atrito.",
+    "Use o botão do hub para ligar e desligar o limpador.",
     "Faça o limpador parar sempre deitado, na posição de descanso."
   ],
   "desafio": "Faça a palheta varrer exatamente de uma ponta à outra do vidro, sem bater.",

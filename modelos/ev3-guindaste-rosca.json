@@ -1,0 +1,112 @@
+{
+ "passos": [
+  "Base: o motor grande (porta A) deitado de lado na mesa, com a saída (laranja) para cima.",
+  "Torre: eixo de 12 em pé na saída do motor, 2 blocos cruzados (embaixo e em cima) e um eixo de 10 atrás, passando pelos blocos.",
+  "Duas vigas de 13 em pé, uma de cada lado dos blocos, presas com 2 pinos longos.",
+  "Braço: 2 vigas de 13 deitadas para a frente, por fora da torre, e 2 blocos cruzados por fora delas.",
+  "Eixo de 9 no alto (bloco, braço, torre, torre, braço, bloco e a engrenagem de 24 à direita) e eixo de 7 no 3º furo do braço.",
+  "Gancho: eixo de 7 no último furo do braço, com uma bucha de cada lado.",
+  "Motor médio (porta B) em pé atrás da torre, à direita, saída para cima: viga de 3 de espaçador e 2 pinos longos.",
+  "Eixo de 5 na saída do motor médio e a rosca sem-fim no alto, encostada na engrenagem de 24.",
+  "Brick (com a bateria recarregável) deitado na mesa, à esquerda. Sensor de toque (porta 1) na lateral dele, botão para a frente."
+ ],
+ "pecas": [
+  [
+   "2780",
+   0,
+   2
+  ],
+  [
+   "32073",
+   71,
+   1
+  ],
+  [
+   "32184",
+   0,
+   4
+  ],
+  [
+   "32523",
+   1,
+   1
+  ],
+  [
+   "3648b",
+   72,
+   1
+  ],
+  [
+   "3708",
+   0,
+   1
+  ],
+  [
+   "3713",
+   71,
+   2
+  ],
+  [
+   "3737",
+   0,
+   1
+  ],
+  [
+   "41239",
+   71,
+   4
+  ],
+  [
+   "44294",
+   71,
+   2
+  ],
+  [
+   "4716",
+   71,
+   1
+  ],
+  [
+   "60485",
+   71,
+   1
+  ],
+  [
+   "6558",
+   1,
+   4
+  ],
+  [
+   "95646c01",
+   15,
+   1
+  ],
+  [
+   "95648",
+   71,
+   1
+  ],
+  [
+   "95656",
+   71,
+   1
+  ],
+  [
+   "95658",
+   71,
+   1
+  ],
+  [
+   "99455",
+   71,
+   1
+  ]
+ ],
+ "impressas": [],
+ "extras": [],
+ "caixa_cm": [
+  17.9,
+  20.4,
+  15.2
+ ]
+}

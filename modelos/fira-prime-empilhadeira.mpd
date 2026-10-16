@@ -342,15 +342,16 @@
 1 71 -110 40 -80 1 0 0 0 1 0 0 0 1 32073.dat
 1 0 -130 40 -80 0 0 -1 0 1 0 1 0 0 39367p01.dat
 0 STEP
-0 // Passo 4: Atrás, embaixo: viga de 3 + 2 pinos longos + rodízio com a bola. Sensor de cor ao lado (porta D), olhando o chão.
+0 // Passo 4: Atrás, embaixo: viga de 3 + 2 pinos longos + rodízio com a bola. Sensor de cor ao lado (porta D), embaixo de uma viga de 3, olhando o chão.
 1 14 40 20 140 0 0 1 0 1 0 -1 0 0 32523.dat
 1 1 20 20 140 0 -1 0 1 0 0 0 0 1 6558.dat
 1 1 60 20 140 0 -1 0 1 0 0 0 0 1 6558.dat
 1 322 40 40 140 0 0 1 0 1 0 -1 0 0 39370.dat
 1 15 40 85 140 1 0 0 0 1 0 0 0 1 52629.dat
-1 0 -60 10 140 0 -1 0 1 0 0 0 0 1 61332.dat
-1 0 -20 10 140 0 -1 0 1 0 0 0 0 1 61332.dat
-1 15 -40 20 140 1 0 0 0 0 -1 0 1 0 37308.dat
+1 14 -40 20 140 0 0 1 0 1 0 -1 0 0 32523.dat
+1 1 -60 20 140 0 -1 0 1 0 0 0 0 1 6558.dat
+1 1 -20 20 140 0 -1 0 1 0 0 0 0 1 6558.dat
+1 15 -40 40 140 1 0 0 0 0 -1 0 1 0 37308.dat
 0 STEP
 0 // Passo 5: Duas vigas de 11 atravessadas em cima do quadro (uma no meio, uma atrás).
 1 0 100 -10 -60 0 -1 0 1 0 0 0 0 1 61332.dat

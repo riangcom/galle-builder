@@ -1,0 +1,95 @@
+{
+ "passos": [
+  "Base: placa 8x16.",
+  "O muro: dois pilares de tijolos Technic 1x4 ao fundo da placa, 2 camadas cada, com um vão no meio.",
+  "Hub na frente, preso no lado direito a um tijolo Technic 1x4 (em cima de um tijolo 1x4), com 2 pinos (a bateria vai embaixo do hub).",
+  "Sensor de cor (porta B) no pilar esquerdo, olhando para a frente, preso com 2 pinos. É onde o cartão encosta.",
+  "Atrás do pilar direito: motor pequeno em pé (porta A), com a saída encostada no muro, preso com 2 pinos.",
+  "Eixo de 4 no motor, atravessando o pilar. Na frente: tijolo Technic 1x2 com furo de eixo no eixo e, por cima, o portão (tijolo Technic 1x8) deitado sobre o vão.",
+  "Os cartões: 4 placas lisas 2x4 de cores diferentes (azul, amarela, verde e vermelha), ao lado, para testar o sensor."
+ ],
+ "pecas": [
+  [
+   "3010",
+   25,
+   1
+  ],
+  [
+   "32064a",
+   14,
+   1
+  ],
+  [
+   "3701",
+   26,
+   5
+  ],
+  [
+   "3702",
+   321,
+   1
+  ],
+  [
+   "3705",
+   0,
+   1
+  ],
+  [
+   "37308",
+   15,
+   1
+  ],
+  [
+   "61332",
+   0,
+   6
+  ],
+  [
+   "66757",
+   14,
+   1
+  ],
+  [
+   "67351",
+   14,
+   1
+  ],
+  [
+   "68488",
+   15,
+   1
+  ],
+  [
+   "87079",
+   1,
+   1
+  ],
+  [
+   "87079",
+   2,
+   1
+  ],
+  [
+   "87079",
+   4,
+   1
+  ],
+  [
+   "87079",
+   14,
+   1
+  ],
+  [
+   "92438",
+   15,
+   1
+  ]
+ ],
+ "impressas": [],
+ "extras": [],
+ "caixa_cm": [
+  9.2,
+  12.8,
+  4.6
+ ]
+}

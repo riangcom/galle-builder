@@ -1,0 +1,98 @@
+{
+ "passos": [
+  "Coloque dois quadros 5x7 em pé, paralelos, com 3 furos de espaço entre eles: são as paredes.",
+  "Teto: 4 pinos em pé no alto das paredes e o terceiro quadro 5x7 deitado em cima, 1 furo para a frente.",
+  "Fundo: 4 pinos atrás das paredes e 2 vigas de 7 deitadas, uma em cima e outra embaixo.",
+  "Suporte da dobradiça: viga de 7 deitada sobre o teto, à esquerda, presa com 2 pinos, saindo 1 furo para a frente.",
+  "Porta: 4 vigas de 5 deitadas, uma em cima da outra, presas com 3 pinos em pé.",
+  "Dobradiça: eixo de 8 em pé passando pela bucha, pela viga de cima, pela meia bucha e pelo furo da esquerda das 4 vigas da porta.",
+  "Botões: 2 sensores de toque (portas 1 e 2) por fora da parede esquerda, um em cima do outro, com 2 pinos cada e o botão para a frente.",
+  "Motor médio (porta A) por fora da parede direita: viga de 3 de espaçador e 2 pinos longos. Saída para a frente.",
+  "Trava: eixo de 3 na saída do motor, a viga triângulo deitada para a esquerda (na frente da porta) e uma meia bucha.",
+  "Brick (com a bateria recarregável) deitado na mesa, à direita do cofre. Ligue os cabos: motor na porta A, botões nas portas 1 e 2."
+ ],
+ "pecas": [
+  [
+   "2780",
+   0,
+   17
+  ],
+  [
+   "32123b",
+   14,
+   2
+  ],
+  [
+   "32316",
+   71,
+   4
+  ],
+  [
+   "32523",
+   1,
+   1
+  ],
+  [
+   "32524",
+   71,
+   3
+  ],
+  [
+   "3707",
+   0,
+   1
+  ],
+  [
+   "3713",
+   71,
+   1
+  ],
+  [
+   "4519",
+   71,
+   1
+  ],
+  [
+   "64179",
+   71,
+   3
+  ],
+  [
+   "6558",
+   1,
+   2
+  ],
+  [
+   "95646c01",
+   15,
+   1
+  ],
+  [
+   "95648",
+   71,
+   2
+  ],
+  [
+   "95656",
+   71,
+   1
+  ],
+  [
+   "99455",
+   71,
+   1
+  ],
+  [
+   "99773",
+   71,
+   1
+  ]
+ ],
+ "impressas": [],
+ "extras": [],
+ "caixa_cm": [
+  11.1,
+  17.6,
+  6.6
+ ]
+}
