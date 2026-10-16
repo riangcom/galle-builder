@@ -1,6 +1,6 @@
 // Service worker: guarda o app no iPad para funcionar sem internet.
 // Ao mudar qualquer arquivo do app, aumente a VERSAO para os iPads baixarem de novo.
-const VERSAO = "galle-builder-v8";
+const VERSAO = "galle-builder-v9";
 const ARQUIVOS = [
   "./", "index.html", "styles.css", "app.js", "manifest.webmanifest",
   "dados/kits.js", "dados/inventario.js", "dados/desafios.js",

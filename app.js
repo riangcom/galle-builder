@@ -21,8 +21,18 @@ function pintarKit(id) {
   const raiz = document.documentElement.style;
   raiz.setProperty("--kit", k ? k.cor : "#1d2330");
   raiz.setProperty("--kit-texto", k ? k.corTexto : "#ffffff");
-  topoKit.textContent = k ? k.nome : "";
+  // Selo do topo = menu de troca rápida (mantém a aba atual: Peças, Ideias, FIRA...)
+  topoKit.hidden = !k;
+  topoKit.open = false;
+  if (!k) return;
+  topoKit.querySelector("summary").textContent = k.nome;
+  const aba = new URLSearchParams(location.hash.split("?")[1] || "").get("aba");
+  topoKit.querySelector("#menu-kits").innerHTML = Object.entries(KITS).map(([kid, kk]) =>
+    `<a href="#/kit/${kid}${aba ? "?aba=" + aba : ""}" aria-current="${kid === id}">${esc(kk.nome)}</a>`).join("")
+    + `<a href="#/misturar">Misturar peças</a>`;
 }
+// fecha o menu ao tocar fora dele
+document.addEventListener("click", (e) => { if (topoKit.open && !topoKit.contains(e.target)) topoKit.open = false; });
 
 // Cabos, baterias e tampas aparecem no catálogo, mas não contam como "componente" para ideias.
 const ehComponente = (p) => p.grupo === "eletronica" && !/^(Cabo|Bateria|Tampa)/.test(p.nome);
@@ -218,7 +228,7 @@ function abaIdeias(el, amb, idIdeia, caminho, fira) {
       : `<div class="aviso">Ainda não há ideias para este kit. Experimente o <b>Desafio surpresa</b>.</div>`;
     return;
   }
-  let nivel = 0;
+  let nivel = 0, so3d = false;
   el.innerHTML = `
     ${fira ? `<div class="provas">${Object.entries(PROVAS_FIRA).filter(([k]) => k !== "todas").map(([k, p]) =>
       `<div class="prova"><b>${k}</b> ${esc(p.nome)}<span>${esc(p.limite)} · ${esc(p.tempo)}</span></div>`).join("")}</div>
@@ -226,27 +236,34 @@ function abaIdeias(el, amb, idIdeia, caminho, fira) {
     <div class="filtros">
       <button class="filtro" data-n="0" aria-pressed="true">Todas</button>
       ${Object.entries(NIVEIS).map(([n, r]) => `<button class="filtro" data-n="${n}" aria-pressed="false">${"★".repeat(n)} ${r}</button>`).join("")}
+      <button class="filtro" id="so3d" aria-pressed="false">Só com 3D (${ideias.filter(tem3d).length})</button>
     </div>
     <div class="grade-ideias" id="lista-ideias"></div>`;
   const lista = el.querySelector("#lista-ideias");
   function desenhar() {
-    lista.innerHTML = ideias.filter((i) => !nivel || i.nivel === nivel).map((i) => `
+    lista.innerHTML = ideias.filter((i) => (!nivel || i.nivel === nivel) && (!so3d || tem3d(i))).map((i) => `
       <a class="card-ideia" href="${caminho}?aba=${aba}&ideia=${i.id}">
-        <span class="nivel">${i.missao ? `<b class="selo-prova">${i.missao.prova === "todas" ? "Treino" : provasDe(i).join(" + ")}</b> ` : ""}${"★".repeat(i.nivel)}${"☆".repeat(3 - i.nivel)} ${NIVEIS[i.nivel]} · ${i.tempo} min</span>
+        <span class="nivel">${i.missao ? `<b class="selo-prova">${i.missao.prova === "todas" ? "Treino" : provasDe(i).join(" + ")}</b> ` : ""}${"★".repeat(i.nivel)}${"☆".repeat(3 - i.nivel)} ${NIVEIS[i.nivel]} · ${i.tempo} min
+          ${tem3d(i) ? `<b class="selo-3d" title="Montagem 3D passo a passo">3D</b>` : `<span class="selo-texto" title="Montagem com passos em texto">texto</span>`}</span>
         <strong>${esc(i.titulo)}</strong>
         <span>${esc(i.resumo)}</span>
         <span class="chips">${(i.tags || []).map((t) => `<span class="chip">${esc(t)}</span>`).join("")}</span>
       </a>`).join("");
   }
-  el.querySelectorAll(".filtro").forEach((b) => {
+  el.querySelectorAll(".filtro[data-n]").forEach((b) => {
     b.onclick = () => {
       nivel = Number(b.dataset.n);
-      el.querySelectorAll(".filtro").forEach((x) => x.setAttribute("aria-pressed", x === b));
+      el.querySelectorAll(".filtro[data-n]").forEach((x) => x.setAttribute("aria-pressed", x === b));
       desenhar();
     };
   });
+  const b3d = el.querySelector("#so3d");
+  b3d.onclick = () => { so3d = !so3d; b3d.setAttribute("aria-pressed", so3d); desenhar(); };
   desenhar();
 }
+
+// A ideia tem montagem 3D? (pode usar o modelo de outra ideia: campo modelo3d)
+const tem3d = (i) => !!(window.MODELOS3D || {})[i.modelo3d || i.id];
 
 // Lista exata de peças de um modelo 3D: [código, cor LDraw, qtd] -> [nome, qtd]
 function pecasDoModelo(mod, kit) {
@@ -391,6 +408,10 @@ function detalheIdeia(el, i, caminho, aba = "ideias") {
            <button class="btn secundario" id="girar3d">Girar sozinho</button>
          </div>
          <p class="dica">Gire com um dedo, aproxime com dois. Cabos não aparecem no modelo.</p>
+         <details class="passos-texto" id="passos-texto">
+           <summary>Ver os passos em texto</summary>
+           <ol>${itens(mod.passos)}</ol>
+         </details>
        </div>`
     : `<ol>${itens(i.passos)}</ol>`;
   el.innerHTML = `
@@ -403,6 +424,10 @@ function detalheIdeia(el, i, caminho, aba = "ideias") {
       <p class="aprende"><b>O que vamos aprender:</b> ${esc(i.aprende)}</p>
 
       <h3>1. Separe as peças</h3>
+      <div class="progresso-separar" id="prog-sep" aria-live="polite">
+        <span id="prog-txt"></span><div class="barra"><span id="prog-barra"></span></div>
+        <button class="btn secundario" id="prog-limpar">Desmarcar tudo</button>
+      </div>
       ${listaPecas}
       ${impressas}
 
@@ -418,8 +443,39 @@ function detalheIdeia(el, i, caminho, aba = "ideias") {
       <div class="caixa-desafio"><b>Desafio extra:</b> ${esc(i.desafio)}</div>
       <div class="caixa-pergunta"><b>Para conversar:</b> ${esc(i.pergunta)}</div>
     </article>`;
+  ligarSeparar(el, i.id);
   if (mod) ligarVisor3d(el, mod);
   if (i.blocos) ligarEstrategias(el, i);
+}
+
+// WebGL existe? (sem ele, o 3D não abre: mostra os passos em texto)
+function temWebGL() {
+  try {
+    const c = document.createElement("canvas");
+    return !!(window.WebGLRenderingContext && (c.getContext("webgl2") || c.getContext("webgl")));
+  } catch { return false; }
+}
+
+// Separar as peças: contador, barra e marcações guardadas neste iPad (por ideia)
+function ligarSeparar(el, id) {
+  const caixas = [...el.querySelectorAll(".separar input")];
+  const chave = "separar:" + id;
+  let salvo = [];
+  try { salvo = JSON.parse(lerPref(chave, "[]")); } catch { salvo = []; }
+  caixas.forEach((c, k) => { c.checked = salvo.includes(k); });
+  const prog = el.querySelector("#prog-sep");
+  const atualizar = () => {
+    const feitas = caixas.filter((c) => c.checked).length;
+    const pct = caixas.length ? Math.round((feitas / caixas.length) * 100) : 0;
+    el.querySelector("#prog-txt").textContent = feitas === caixas.length && feitas
+      ? `Tudo separado! ${feitas} de ${caixas.length}` : `${feitas} de ${caixas.length} separadas · ${pct}%`;
+    el.querySelector("#prog-barra").style.width = pct + "%";
+    prog.classList.toggle("completo", feitas === caixas.length && feitas > 0);
+    gravarPref(chave, JSON.stringify(caixas.map((c, k) => (c.checked ? k : -1)).filter((k) => k >= 0)));
+  };
+  caixas.forEach((c) => { c.onchange = atualizar; });
+  el.querySelector("#prog-limpar").onclick = () => { caixas.forEach((c) => { c.checked = false; }); atualizar(); };
+  atualizar();
 }
 
 // O three.js (1,3 MB) só é carregado quando a pessoa toca em "Ver montagem em 3D".
@@ -431,7 +487,15 @@ function fecharVisor() {
 function ligarVisor3d(el, mod) {
   const tela = el.querySelector("#visor3d");
   const botao = el.querySelector("#abrir3d");
+  const planoB = (motivo) => {
+    tela.innerHTML = `<div class="aviso aviso-3d"><b>O 3D não abriu neste aparelho</b> (${esc(motivo)}).<br>
+      Siga os passos em texto logo abaixo. No iPad do laboratório o 3D funciona; se falhar, feche outras abas e tente de novo.</div>`;
+    el.querySelector("#controles3d").hidden = true;
+    el.querySelector("#extras3d").hidden = true;
+    el.querySelector("#passos-texto").open = true;
+  };
   botao.onclick = async () => {
+    if (!temWebGL()) return planoB("sem WebGL");
     botao.disabled = true;
     botao.textContent = "Carregando peças…";
     try {
@@ -457,7 +521,8 @@ function ligarVisor3d(el, mod) {
         e.target.textContent = girando ? "Parar de girar" : "Girar sozinho";
       };
     } catch (erro) {
-      tela.innerHTML = `<div class="aviso">Não foi possível abrir o 3D neste aparelho. (${esc(erro.message)})</div>`;
+      fecharVisor();
+      planoB(erro.message);
     }
   };
 }
@@ -525,7 +590,33 @@ function telaProfessor() {
         <option value="">Nenhuma / não sei</option>
         <option value="45681">45681 · Expansão SPIKE Prime</option>
         <option value="45560">45560 · Expansão EV3</option>
-      </select></label>`;
+      </select></label>
+
+    <h2>Usar sem internet</h2>
+    <p class="sub">Baixa de uma vez o visor 3D e todas as montagens para este iPad (cerca de 10 MB). Faça uma vez em cada iPad, com Wi-Fi, e de novo quando o app avisar versão nova.</p>
+    <div class="acoes"><button class="btn" id="offline">Preparar este iPad para usar sem internet</button></div>
+    <p class="dica" id="offline-st" aria-live="polite"></p>`;
+
+  document.getElementById("offline").onclick = async (e) => {
+    const st = document.getElementById("offline-st");
+    if (!("serviceWorker" in navigator) || !navigator.serviceWorker.controller) {
+      st.textContent = "Abra o app pelo link (https) e recarregue a página uma vez antes de preparar.";
+      return;
+    }
+    e.target.disabled = true;
+    // pede ao iPad para não apagar o que foi guardado (o Safari pode ignorar)
+    try { await navigator.storage?.persist?.(); } catch { /* sem suporte */ }
+    const lista = ["visor3d.js", "vendor/three/three.module.js", "vendor/three/LDrawLoader.js", "vendor/three/OrbitControls.js",
+      ...Object.values(window.MODELOS3D || {}).map((m) => m.mpd)];
+    let ok = 0, falhas = 0;
+    for (const url of lista) {
+      try { (await fetch(url)).ok ? ok++ : falhas++; } catch { falhas++; }
+      st.textContent = `Baixando ${ok + falhas} de ${lista.length}…`;
+    }
+    st.textContent = falhas ? `${ok} de ${lista.length} baixados; ${falhas} falharam: tente de novo com Wi-Fi.`
+      : `Pronto: ${ok} arquivos guardados. O 3D funciona sem internet neste iPad.`;
+    e.target.disabled = false;
+  };
 
   const sel = document.getElementById("p-exp");
   sel.value = exp;

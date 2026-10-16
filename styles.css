@@ -259,3 +259,38 @@ textarea { min-height: 220px; font-size: 15px; }
 .opcao input { width: 24px; height: 24px; }
 .duas-col { display: grid; grid-template-columns: 1fr 1fr; gap: 0 18px; }
 @media (max-width: 700px) { .duas-col { grid-template-columns: 1fr; } h1 { font-size: 25px; } }
+
+/* ---------- melhorias 16/10/2026 (revisão do relatório do Gemini) ---------- */
+/* [hidden] precisa ganhar de display:flex/grid (antes os botões do 3D apareciam antes de abrir) */
+[hidden] { display: none !important; }
+
+/* Selo do kit no topo vira menu de troca rápida */
+.topo-kit { position: relative; }
+.topo-kit summary { list-style: none; cursor: pointer; min-height: 40px; display: flex; align-items: center; gap: 6px; }
+.topo-kit summary::-webkit-details-marker { display: none; }
+.topo-kit summary::after { content: "▾"; font-size: 14px; }
+.menu-kits {
+  position: absolute; right: 0; top: calc(100% + 8px); min-width: 230px; z-index: 10;
+  background: var(--cartao); color: var(--texto); border: 1px solid var(--borda); border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.18); padding: 6px; display: grid;
+}
+.menu-kits a { padding: 12px 14px; border-radius: 10px; text-decoration: none; color: inherit; font-weight: 600; min-height: 48px; display: flex; align-items: center; }
+.menu-kits a:active, .menu-kits a[aria-current="true"] { background: var(--fundo); }
+
+/* Separar as peças: contador e barra de progresso */
+.progresso-separar { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin: 4px 0 12px; font-weight: 700; }
+.progresso-separar .barra { flex: 1 1 200px; height: 14px; border-radius: 999px; background: var(--borda); overflow: hidden; }
+.progresso-separar .barra span { display: block; height: 100%; width: 0; background: var(--kit); transition: width .25s; }
+.progresso-separar.completo { color: #1a7f37; }
+.progresso-separar.completo .barra span { background: #1a7f37; }
+.progresso-separar button { min-height: 40px; padding: 6px 14px; font-size: 15px; }
+
+/* Selos nos cartões: 3D x passos em texto */
+.selo-3d, .selo-texto { border-radius: 6px; padding: 0 6px; font-size: 14px; white-space: nowrap; }
+.selo-3d { background: var(--kit); color: var(--kit-texto); }
+.selo-texto { border: 1px solid var(--borda); color: var(--suave); }
+
+/* Passos em texto do modelo 3D (e plano B quando o 3D não abre) */
+.passos-texto { margin-top: 12px; }
+.passos-texto summary { cursor: pointer; font-weight: 700; min-height: 44px; display: flex; align-items: center; }
+.aviso-3d { padding: 16px; text-align: center; }
